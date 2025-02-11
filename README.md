@@ -16,9 +16,10 @@ System to provide Asset Management for maintenance managers. More information is
 5. ...
 
 
-Lessons Learned:
+## Project Outcomes
+### Lessons Learned:
 * ...
 
 
-Future Additions/Improvements:
+### Future Additions/Improvements:
 * ...
