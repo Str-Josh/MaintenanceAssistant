@@ -1,0 +1,550 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 13:13:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 13:13:50] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 13:13:52] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 13:13:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 13:13:52] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 13:13:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 13:13:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 13:13:55] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 13:13:57] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 13:13:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 13:13:58] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:01:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:01:15] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:01:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:01:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:01:21] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:01:24] "[33mGET /AccessTeams HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:02:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:02:25] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:02:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:02:28] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:02:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:02:29] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:app:is_logged_in:  True
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:02:33] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:02:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:02:33] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:11:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:11:51] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:11:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:11:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 17:11:55] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 21:25:08] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 21:25:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 21:25:08] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2025 21:25:12] "[31m[1mGET /asset-information HTTP/1.1[0m" 401 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:39:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:39:47] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:39:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:39:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:39:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:39:52] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:58:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:58:21] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:58:23] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:58:24] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:58:24] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:59:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:59:47] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:59:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:59:50] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 08:59:50] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:09:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:09:12] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:09:14] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:09:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:09:14] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:10:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:10:24] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:11:35] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:11:35] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:11:35] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:15:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:15:10] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:15:13] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:15:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:15:13] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:15:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:15:18] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:15:18] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:16:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:16:38] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:16:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:16:43] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:16:43] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:16:53] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:16:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:16:54] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:20:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:20:21] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:20:21] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /home [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\app.py", line 109, in main_page
+    return render_template("main.html", is_logged_in=True, role=role_placeholder)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\main.html", line 1, in top-level template code
+    {% extends "navbar.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\navbar.html", line 5, in top-level template code
+    <a class="active" href="{{url_for(main_page)}}">Home</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1068, in url_for
+    if endpoint[:1] == ".":
+       ~~~~~~~~^^^^
+jinja2.exceptions.UndefinedError: 'main_page' is undefined
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:21:33] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\app.py", line 103, in home
+    return render_template("index.html", is_logged_in=is_logged_in, role='admin')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\index.html", line 1, in top-level template code
+    {% extends "navbar.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\navbar.html", line 5, in top-level template code
+    <a class="active" href="{{url_for(main_page)}}">Home</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1068, in url_for
+    if endpoint[:1] == ".":
+       ~~~~~~~~^^^^
+jinja2.exceptions.UndefinedError: 'main_page' is undefined
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:21:36] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\app.py", line 103, in home
+    return render_template("index.html", is_logged_in=is_logged_in, role='admin')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\index.html", line 1, in top-level template code
+    {% extends "navbar.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\navbar.html", line 5, in top-level template code
+    <a class="active" href="{{url_for(main_page)}}">Home</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1068, in url_for
+    if endpoint[:1] == ".":
+       ~~~~~~~~^^^^
+jinja2.exceptions.UndefinedError: 'main_page' is undefined
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:21:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\app.py", line 103, in home
+    return render_template("index.html", is_logged_in=is_logged_in, role='admin')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\index.html", line 1, in top-level template code
+    {% extends "navbar.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\navbar.html", line 5, in top-level template code
+    <a class="active" href="{{url_for(main_page)}}">Home</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1068, in url_for
+    if endpoint[:1] == ".":
+       ~~~~~~~~^^^^
+jinja2.exceptions.UndefinedError: 'main_page' is undefined
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:21:39] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\app.py", line 103, in home
+    return render_template("index.html", is_logged_in=is_logged_in, role='admin')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\index.html", line 1, in top-level template code
+    {% extends "navbar.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\navbar.html", line 5, in top-level template code
+    <a class="active" href="{{url_for(main_page)}}">Home</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1068, in url_for
+    if endpoint[:1] == ".":
+       ~~~~~~~~^^^^
+jinja2.exceptions.UndefinedError: 'main_page' is undefined
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:21:39] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\app.py", line 103, in home
+    return render_template("index.html", is_logged_in=is_logged_in, role='admin')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\index.html", line 1, in top-level template code
+    {% extends "navbar.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\navbar.html", line 5, in top-level template code
+    <a class="active" href="{{url_for(main_page)}}">Home</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1068, in url_for
+    if endpoint[:1] == ".":
+       ~~~~~~~~^^^^
+jinja2.exceptions.UndefinedError: 'main_page' is undefined
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:21:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\app.py", line 103, in home
+    return render_template("index.html", is_logged_in=is_logged_in, role='admin')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\index.html", line 1, in top-level template code
+    {% extends "navbar.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\navbar.html", line 5, in top-level template code
+    <a class="active" href="{{url_for(main_page)}}">Home</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1068, in url_for
+    if endpoint[:1] == ".":
+       ~~~~~~~~^^^^
+jinja2.exceptions.UndefinedError: 'main_page' is undefined
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:21:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\app.py", line 103, in home
+    return render_template("index.html", is_logged_in=is_logged_in, role='admin')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\index.html", line 1, in top-level template code
+    {% extends "navbar.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\navbar.html", line 5, in top-level template code
+    <a class="active" href="{{url_for(main_page)}}">Home</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1068, in url_for
+    if endpoint[:1] == ".":
+       ~~~~~~~~^^^^
+jinja2.exceptions.UndefinedError: 'main_page' is undefined
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:21:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\app.py", line 103, in home
+    return render_template("index.html", is_logged_in=is_logged_in, role='admin')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\index.html", line 1, in top-level template code
+    {% extends "navbar.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\CS483\_InitialDevelopment\templates\navbar.html", line 5, in top-level template code
+    <a class="active" href="{{url_for(main_page)}}">Home</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1068, in url_for
+    if endpoint[:1] == ".":
+       ~~~~~~~~^^^^
+jinja2.exceptions.UndefinedError: 'main_page' is undefined
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:27:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:01] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:08] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:12] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:12] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:12] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:15] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:36] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:38] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:38] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:38] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:41] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:41] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:44] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:45] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:46] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:46] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:47] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:47] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:48] "[33mGET /AccessTeams HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:53] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 13:29:53] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:16:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:16:38] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:16:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:16:41] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:16:41] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:16:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:16:53] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:23:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:23:23] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:23:49] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:23:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:23:49] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:23:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:23:52] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:23:52] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:26:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:26:49] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:26:56] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:26:56] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:26:56] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:26:59] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:26:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:26:59] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:27:01] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:27:01] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:27:02] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:27:05] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:27:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:27:05] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:27:07] "GET /register HTTP/1.1" 200 -

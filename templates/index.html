@@ -1,0 +1,54 @@
+{% extends "navbar.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+        <!-- <title>Maintenance Assistant</title> -->
+        <title>Home</title>
+    </head>
+    <body>
+        <div class="container" style="text-align: center;">
+            <h1>Maintenance Assistant - Sign in</h1>
+            <form action="/login" method="post" style="text-align: center;">
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" />
+                </div>
+                
+                <br />
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" />
+                </div>
+                
+                <br /><br />
+                <div>
+                    <button type="submit">Login</button>
+                </div>
+
+                {% if role == 'pswd-fail' %}
+                    <p>Wrong password. Try again.</p>
+                {% endif %}
+
+                <br /><br />
+                <div>
+                    <label>Don't have an account?</label>
+                    <a href="/register">Create an account</href>
+                </div>
+                
+                <br /><br /><br />
+                <button type="submit">Forgot Password?</button>
+            </form>
+            <!-- { if current_user.is_authenticated }
+                -- <h1>You are logged in</h1> --
+                <a href="/logout">Logout</a>
+            { else }
+                -- <h1>You are not logged in</h1> --
+            { endif } -->
+        </div>
+    </body>
+</html>
+{% endblock %}
