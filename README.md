@@ -10,12 +10,20 @@ System to provide Asset Management for maintenance managers. More information is
 
 ### Installation
 1. Install Python 3.12.2
-2. Clone the repo: <br> `git clone https://github.com/Str-Josh/Financial-Derivatives-Strategy-Backtester.git`
-3. Change git remote url to avoid accidental pushes to main project
+2. Clone the repo:
+<br> `git clone https://github.com/Str-Josh/MaintenanceAssistant.git`
+<br> `cd MaintenanceAssistant`
+4. Change git remote url to avoid accidental pushes to main project
 <br>`git remote set-url origin github_username/repo_name`
 <br>`git remote -v`
-4. Go to local project repo folder in Command Prompt
-5. run <br>`pip install -r requirements.txt`
+5. Initialize and activate a virtual environment:
+<br> `python -m venv env`
+<br> `source env/bin/activate`
+7. Install dependencies:
+<br>`pip install -r requirements.txt`
+8. Run development server:
+<br> `python app.py`
+9. Goto http://localhost:5000
 
 
 ## Project Outcomes
