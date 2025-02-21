@@ -1,12 +1,9 @@
 # Maintenance Assistant
 System to provide Asset Management for maintenance managers. More information is available in the Wiki.
 
-## Developed Using
-* ...
-
 ## Getting Started
 ### Prerequisites
-* ...
+* Python 3.12.x
 
 ### Installation
 1. Install Python 3.12.2
@@ -27,9 +24,5 @@ System to provide Asset Management for maintenance managers. More information is
 
 
 ## Project Outcomes
-### Lessons Learned:
-* ...
-
-
 ### Future Additions/Improvements:
 * ...
