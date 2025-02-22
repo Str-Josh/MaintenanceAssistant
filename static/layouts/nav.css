@@ -1,0 +1,38 @@
+
+
+.nav-bar {
+    text-align: center;
+    background-color: darkslateblue;
+    /* box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25); */
+    padding: 10px;
+    color: white;
+}
+
+.nav-bar-elem {
+    padding: 10px;
+    font-weight: bold;
+    font-size: medium;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: inline-block;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+    background-color: darkslateblue;
+}
+
+.nav-bar a:hover {
+    background-color: rgb(195, 155, 155);
+}
+
+.nav-bar-far-left {
+    position: fixed;
+    left: 5px;
+}
+
+.nav-bar-far-right {
+    position: fixed;
+    right: 5px;
+}

@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='layouts/navbar_styles.css') }}">
+
+<div class="nav-bar">
+    <div class="nav-bar-elem">
+        <a class="active" href="{{url_for('home')}}">Home</a>
+    </div>
+    {% if is_logged_in %}
+        <div class="nav-bar-elem nav-bar-far-right">
+            <a href="/logout">Logout</a>
+        </div>
+
+        {% if role == 'admin' %}
+        <div class="nav-bar-elem">
+            <a href="/AccessTeams">Team Information</a>
+        </div>
+        <div class="nav-bar-elem">
+            <a href="#">Asset Information</a>
+        </div>
+        <div class="nav-bar-elem">
+            <a href="#">Schedules</a>
+        </div>
+        {% else %}
+            <p>TEST - FAIL</p>
+        {% endif %}
+    {% endif %}
+
+    <!-- {% if role == 'admin' %}
+        <div class="nav-bar-elem">
+            <a href="/AccessTeams">Team Information</a>
+        </div>
+        <div class="nav-bar-elem">
+            <a href="#">Asset Information</a>
+        </div>
+        <div class="nav-bar-elem">
+            <a href="#">Schedules</a>
+        </div>
+    {% else %}
+        <p>TEST - FAIL</p>
+    {% endif %} -->
+
+    {% if role == 'director' %}
+        <!---->
+    {% else %}
+        <!---->
+    {% endif %}
+
+    {% if role == 'manager' %}
+        <!---->
+    {% else %}
+        <!---->
+    {% endif %}
+
+    {% if role == 'staff' %}
+        <!---->
+    {% else %}
+        <!---->
+    {% endif %}
+</div>
+
+{% block content %}
+
+{% endblock %}
