@@ -24,50 +24,53 @@ System to provide Asset Management for maintenance managers. More information is
 
 
 ### File Structure
-├── README.md
-├── app.py
-├── config.py
-├── database.db
-├── errors.log
-├── mymodels.py
-├── requirements.txt
-├── utils.py
-├── static
-│   ├── pages
-│   │   ├── stylesheet.css
-│   ├── layouts
-│   │   ├── nav.css
-│   │   └── navbar_styles.css
-│   ├── img
-│       ├── Logout.png
-│       ├── alert.png
-│       ├── logo.png
-│       ├── mail.png
-│       ├── search.png
-│       └── time.png
-└── templates
-    ├── index.html
-    ├── user_profile.html
-    ├── errors
-    │   ├── 404.html
-    │   ├── unauth.html
-    │   └── 500.html
-    ├── forms
-    │   ├── forgot.html
-    │   └── sign_up.html
-    ├── layouts
-    │   ├── nav.html
-    │   └── navbar.html
-    ├── pages
-    │   ├── DepartmentHome.html
-    │   ├── devicedetail.html
-    │   ├── reportbreak.html
-    │   ├── sendrequest.html
-    │   ├── updateusage.html
-    │   └── viewdevices.html
-    └── tests
-        └── main.html
+--------
 
+  ```sh
+    ├── README.md
+    ├── app.py
+    ├── config.py
+    ├── database.db
+    ├── errors.log
+    ├── mymodels.py
+    ├── requirements.txt
+    ├── utils.py
+    ├── static
+    │   ├── pages
+    │   │   ├── stylesheet.css
+    │   ├── layouts
+    │   │   ├── nav.css
+    │   │   └── navbar_styles.css
+    │   ├── img
+    │       ├── Logout.png
+    │       ├── alert.png
+    │       ├── logo.png
+    │       ├── mail.png
+    │       ├── search.png
+    │       └── time.png
+    └── templates
+        ├── index.html
+        ├── user_profile.html
+        ├── errors
+        │   ├── 404.html
+        │   ├── unauth.html
+        │   └── 500.html
+        ├── forms
+        │   ├── forgot.html
+        │   └── sign_up.html
+        ├── layouts
+        │   ├── nav.html
+        │   └── navbar.html
+        ├── pages
+        │   ├── DepartmentHome.html
+        │   ├── devicedetail.html
+        │   ├── reportbreak.html
+        │   ├── sendrequest.html
+        │   ├── updateusage.html
+        │   └── viewdevices.html
+        └── tests
+            └── main.html
+  ```
 
 ## Project Outcomes
 ### Future Additions/Improvements:
