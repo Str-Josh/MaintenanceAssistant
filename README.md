@@ -34,7 +34,6 @@ System to provide Asset Management for maintenance managers. More information is
     ├── errors.log
     ├── mymodels.py
     ├── requirements.txt
-    ├── utils.py
     ├── static
     │   ├── pages
     │   │   ├── stylesheet.css
