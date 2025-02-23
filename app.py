@@ -5,7 +5,7 @@ from flask_login import LoginManager, UserMixin, login_required, login_user, log
 #from flask_login import FlaskLoginClient as LoginClient
 # from flask_user import current_user, login_required, roles_required
 
-from utils import roles_required
+#from utils import roles_required
 # from models import db, Users
 # from db import db
 #from init_db import db
