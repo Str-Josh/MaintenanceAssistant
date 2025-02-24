@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Starter Front End/CSS/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<header>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="home"><a href="/Starter Front End/HTML/Admin Maintenance/home.html">Home</a></div>
+        <a href="#">New Device</a>
+        <a href="#">Lookup Device</a>
+        <button class="dropdown-btn">Department <i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-container">
+            <a href="#">Emergency Department</a>
+            <a href="#">Intensive Care Unit (ICU)</a>
+            <a href="#">Operating Room (OR)</a>
+            <a href="#">Medical-Surgical Unit</a>
+            <a href="#">Obstetrics and Gynecology (OB/GYN)</a>
+            <a href="#">Pediatrics</a>
+            <a href="#">Radiology</a>
+            <a href="#">Laboratory</a>
+            <a href="#">Pharmacy</a>
+            <a href="#">Physical Therapy</a>
+          </div>
+    </div>
+    
+    <span class="hamburgerbutton" onclick="openNav()">&#9776;</span>
+    <img src="/Starter Front End/images/logo.png">
+    <h1>Project 3 Temporary Name</h1>
+    <a href="/Starter Front End/HTML/login.html"><img src="/Starter Front End/images/Logout.png"></a>
+</header>
+<body>
+    <div class="alerts">
+        <img class="icon" src="/Starter Front End/images/AlertRed.png">
+        <div class="slider">
+            <div class="slides">
+            <div id="slide-1">
+                <p>Replace<br>April 25</p>
+                <img src="/Starter Front End/images/mri.png">
+            </div>
+            <div id="slide-2">
+                <p>Replace<br>April 30</p>
+                <img src="/Starter Front End/images/pagewriter.png">
+            </div>
+            <div id="slide-3">
+                <p>Replace<br>May 2</p>
+                <img src="/Starter Front End/images/ultrasound.png">
+            </div>
+            <div id="slide-1">
+                <p>Replace<br>April 25</p>
+                <img src="/Starter Front End/images/mri.png">
+            </div>
+            <div id="slide-2">
+                <p>Replace<br>April 30</p>
+                <img src="/Starter Front End/images/pagewriter.png">
+            </div>
+            <div id="slide-3">
+                <p>Replace<br>May 2</p>
+                <img src="/Starter Front End/images/ultrasound.png">
+            </div>
+            <div id="slide-1">
+                <p>Replace<br>April 25</p>
+                <img src="/Starter Front End/images/mri.png">
+            </div>
+            <div id="slide-2">
+                <p>Replace<br>April 30</p>
+                <img src="/Starter Front End/images/pagewriter.png">
+            </div>
+            <div id="slide-3">
+                <p>Replace<br>May 2</p>
+                <img src="/Starter Front End/images/ultrasound.png">
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="messages">
+        <img src="/Starter Front End/images/bell.png" class="icon">
+        <div class="messageSection">
+            <div class="messageSlider">
+                <i class="fa fa-angle-left fa-5x" aria-hidden="true"></i>
+                <div class="requestRecieve">
+                    <div class="from">Jane Doe - Pediatrics</div>
+                    <div class="subject">New Pediatric Ventilator Needed</div>
+                    <div class="content">Lorem ipsum odor amet, consectetuer adipiscing elit. Urna fermentum et egestas, parturient maecenas leo. Adictum aenean nunc aenean luctus dictum nullam tortor. Bibendum placerat praesent euismod himenaeos ex eget aenean ultrices. Feugiat aenean curae sodales ex efficitur vehicula fusce. Interdum placerat congue eu platea accumsan nunc tristique donec. Consectetur sollicitudin luctus mi porttitor euismod est morbi aliquam. Consequat sagittis metus pulvinar cras feugiat nunc.</div>
+                </div>
+                <i class="fa fa-angle-right fa-5x" aria-hidden="true"></i>
+            </div>
+            <div class="responseButtons">
+                <button>
+                    Reply
+                </button>
+                <button>
+                    Delete
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+        });
+        }
+    </script>
+</body>
+</html>
