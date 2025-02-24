@@ -5,7 +5,6 @@ from flask_login import LoginManager, UserMixin, login_required, login_user, log
 #from flask_login import FlaskLoginClient as LoginClient
 # from flask_user import current_user, login_required, roles_required
 
-from utils import roles_required
 # from models import db, Users
 # from db import db
 #from init_db import db
@@ -124,5 +123,5 @@ def unauthorized():
     return redirect(url_for(""))
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 8000))
     blueprint.run(host="0.0.0.0", port=port)

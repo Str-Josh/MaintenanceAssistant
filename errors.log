@@ -548,3 +548,222 @@ INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:27:05] "[32mGET /logout HTTP/1.1[0
 INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:27:05] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:27:05] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [17/Feb/2025 15:27:07] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.171.6.204:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-154-099
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1", inode=36381952, flags=20400, id=18446744071899793984): is_directory, is_inode_meta_mod
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/app.py", inode=36382021, flags=418000, id=18446744071899794017): is_cloned, is_file, is_xattr_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/app.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+INFO:werkzeug: * Detected change in '/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-154-099
+INFO:werkzeug:127.0.0.1 - - [24/Feb/2025 14:55:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Feb/2025 14:55:28] "GET /static/navbar_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Feb/2025 14:55:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [24/Feb/2025 14:55:32] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [24/Feb/2025 14:55:32] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Feb/2025 14:55:32] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Feb/2025 14:55:36] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [24/Feb/2025 14:55:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Feb/2025 14:55:36] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Feb/2025 14:55:39] "GET /register HTTP/1.1" 200 -
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/__pycache__/config.cpython-312.pyc", inode=36741830, flags=18000, id=18446744071899800981): is_file, is_xattr_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/__pycache__/config.cpython-312.pyc', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/__pycache__/mymodels.cpython-312.pyc", inode=36741831, flags=18000, id=18446744071899801014): is_file, is_xattr_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/__pycache__/mymodels.cpython-312.pyc', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/__pycache__/app.cpython-312.pyc", inode=36741828, flags=18000, id=18446744071899801080): is_file, is_xattr_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/__pycache__/app.cpython-312.pyc', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/__pycache__/utils.cpython-312.pyc", inode=36741829, flags=18000, id=18446744071899801119): is_file, is_xattr_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/__pycache__/utils.cpython-312.pyc', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1", inode=36381952, flags=20400, id=18446744071899801134): is_directory, is_inode_meta_mod
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/__pycache__", inode=36741827, flags=20400, id=18446744071899801161): is_directory, is_inode_meta_mod
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/__pycache__', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD", inode=36382225, flags=10400, id=18446744071899801218): is_file, is_inode_meta_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD", inode=36382225, flags=11400, id=18446744071899801279): is_file, is_inode_meta_mod, is_modified
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/maintenance.lock", inode=36742372, flags=18300, id=18446744071899801294): is_coalesced, is_created, is_file, is_removed, is_xattr_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event FileCreatedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/maintenance.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/maintenance.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event FileDeletedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/maintenance.lock', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/errors.log", inode=36382024, flags=410000, id=18446744071899801449): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD", inode=36382225, flags=410000, id=18446744071899801470): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/errors.log", inode=36382024, flags=410000, id=18446744071899802395): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/errors.log", inode=36382024, flags=410000, id=18446744071899802800): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD", inode=36382225, flags=18000, id=18446744071899804705): is_file, is_xattr_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1", inode=36381952, flags=20400, id=18446744071899805057): is_directory, is_inode_meta_mod
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/errors.log", inode=36382024, flags=410000, id=18446744071899805072): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1", inode=36381952, flags=20400, id=18446744071899805284): is_directory, is_inode_meta_mod
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/errors.log", inode=36382024, flags=410000, id=18446744071899805732): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1", inode=36381952, flags=20400, id=18446744071899806103): is_directory, is_inode_meta_mod
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/errors.log", inode=36382024, flags=410000, id=18446744071899807672): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1", inode=36381952, flags=20400, id=18446744071899808063): is_directory, is_inode_meta_mod
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/errors.log", inode=36382024, flags=410000, id=18446744071899810273): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1", inode=36381952, flags=20400, id=18446744071899810589): is_directory, is_inode_meta_mod
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/errors.log", inode=36382024, flags=410000, id=18446744071899956521): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1", inode=36381952, flags=20400, id=18446744071899956934): is_directory, is_inode_meta_mod
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/errors.log", inode=36382024, flags=410000, id=18446744071900010731): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1", inode=36381952, flags=20400, id=18446744071900012215): is_directory, is_inode_meta_mod
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+INFO:app:User session:  1
+INFO:werkzeug:127.0.0.1 - - [24/Feb/2025 15:18:46] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [24/Feb/2025 15:18:46] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Feb/2025 15:18:46] "[36mGET /static/navbar_styles.css HTTP/1.1[0m" 304 -
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png", inode=36755585, flags=10800, id=18446744071900041374): is_file, is_renamed
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png", inode=36229374, flags=10800, id=18446744071900041378): is_file, is_renamed
+DEBUG:fsevents:queue_event FileCreatedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileDeletedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png", inode=36755585, flags=18000, id=18446744071900041446): is_file, is_xattr_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png", inode=36755585, flags=410000, id=18446744071900041461): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png", inode=36755585, flags=18000, id=18446744071900044268): is_file, is_xattr_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1", inode=36381952, flags=20400, id=18446744071900044274): is_directory, is_inode_meta_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End", inode=36228299, flags=20400, id=18446744071900044277): is_directory, is_inode_meta_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images", inode=36229256, flags=20400, id=18446744071900044280): is_directory, is_inode_meta_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png", inode=36755892, flags=10800, id=18446744071900046167): is_file, is_renamed
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png", inode=36755585, flags=10800, id=18446744071900046171): is_file, is_renamed
+DEBUG:fsevents:queue_event FileCreatedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileDeletedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png", inode=36755892, flags=410000, id=18446744071900046293): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End", inode=36228299, flags=20400, id=18446744071900047534): is_directory, is_inode_meta_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1", inode=36381952, flags=20400, id=18446744071900047537): is_directory, is_inode_meta_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images", inode=36229256, flags=20400, id=18446744071900047543): is_directory, is_inode_meta_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png", inode=36755892, flags=18000, id=18446744071900047546): is_file, is_xattr_mod
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/errors.log", inode=36382024, flags=410000, id=18446744071900047808): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1", inode=36381952, flags=20400, id=18446744071900049171): is_directory, is_inode_meta_mod
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD", inode=36382225, flags=10400, id=18446744071900059364): is_file, is_inode_meta_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD", inode=36382225, flags=410000, id=18446744071900059381): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD", inode=36382225, flags=11400, id=18446744071900059452): is_file, is_inode_meta_mod, is_modified
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/maintenance.lock", inode=36756676, flags=18300, id=18446744071900059461): is_coalesced, is_created, is_file, is_removed, is_xattr_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event FileCreatedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/maintenance.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/maintenance.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event FileDeletedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/maintenance.lock', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD", inode=36382225, flags=410000, id=18446744071900059544): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD", inode=36382225, flags=418000, id=18446744071900060236): is_cloned, is_file, is_xattr_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD", inode=36382225, flags=10400, id=18446744071900570515): is_file, is_inode_meta_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8", inode=36786288, flags=28100, id=18446744071900573343): is_created, is_directory, is_xattr_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8/tmp_obj_i6mZOP", inode=36786289, flags=18100, id=18446744071900573349): is_created, is_file, is_xattr_mod
+DEBUG:fsevents:queue_event DirCreatedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8', dest_path='', event_type='created', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileCreatedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8/tmp_obj_i6mZOP', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8/tmp_obj_i6mZOP', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8/430c47e5d49622b30be38fe7b46254ffdc8929", inode=36786289, flags=110100, id=18446744071900573369): is_created, is_file, is_hardlink
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8", inode=36786288, flags=28500, id=18446744071900573372): is_created, is_directory, is_inode_meta_mod, is_xattr_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8/tmp_obj_i6mZOP", inode=36786289, flags=119300, id=18446744071900573378): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed, is_xattr_mod
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8/tmp_obj_i6mZOP', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event FileDeletedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8/tmp_obj_i6mZOP', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin/Carter", inode=36786294, flags=19100, id=18446744071900573396): is_created, is_file, is_modified, is_xattr_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/Carter.lock", inode=36786293, flags=19900, id=18446744071900573399): is_coalesced, is_created, is_file, is_modified, is_renamed, is_xattr_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/Carter", inode=36786293, flags=10800, id=18446744071900573400): is_file, is_renamed
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin/main", inode=36786296, flags=19100, id=18446744071900573421): is_created, is_file, is_modified, is_xattr_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/main.lock", inode=36786295, flags=19900, id=18446744071900573424): is_coalesced, is_created, is_file, is_modified, is_renamed, is_xattr_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/main", inode=36786295, flags=10800, id=18446744071900573425): is_file, is_renamed
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD", inode=36382225, flags=11400, id=18446744071900573428): is_file, is_inode_meta_mod, is_modified
+DEBUG:fsevents:queue_event FileCreatedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin/Carter', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin/Carter', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event FileCreatedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/Carter.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/Carter.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:Destination event for rename is NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/Carter", inode=36786293, flags=10800, id=18446744071900573400)
+DEBUG:fsevents:queue_event FileMovedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/Carter.lock', dest_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/Carter', event_type='moved', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileCreatedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin/main', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin/main', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event FileCreatedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/main.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/main.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:Destination event for rename is NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/main", inode=36786295, flags=10800, id=18446744071900573425)
+DEBUG:fsevents:queue_event FileMovedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/main.lock', dest_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/main', event_type='moved', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/maintenance.lock", inode=36786298, flags=18300, id=18446744071900573454): is_coalesced, is_created, is_file, is_removed, is_xattr_mod
+DEBUG:fsevents:queue_event FileCreatedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/maintenance.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/maintenance.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event FileDeletedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/maintenance.lock', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8/430c47e5d49622b30be38fe7b46254ffdc8929", inode=36786289, flags=110400, id=18446744071900574246): is_file, is_hardlink, is_inode_meta_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/objects/a8/430c47e5d49622b30be38fe7b46254ffdc8929', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin/Carter", inode=36786294, flags=10400, id=18446744071900574282): is_file, is_inode_meta_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/Carter", inode=36786293, flags=10400, id=18446744071900574318): is_file, is_inode_meta_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin/main", inode=36786296, flags=10400, id=18446744071900574379): is_file, is_inode_meta_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/main", inode=36786295, flags=10400, id=18446744071900574401): is_file, is_inode_meta_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin/Carter', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/Carter', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin/main', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/main', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin/Carter", inode=36786294, flags=410400, id=18446744071900575888): is_cloned, is_file, is_inode_meta_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin/main", inode=36786296, flags=410400, id=18446744071900575909): is_cloned, is_file, is_inode_meta_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/Carter", inode=36786293, flags=410400, id=18446744071900575927): is_cloned, is_file, is_inode_meta_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/main", inode=36786295, flags=410400, id=18446744071900575945): is_cloned, is_file, is_inode_meta_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin/Carter', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/logs/refs/remotes/origin/main', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/Carter', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/refs/remotes/origin/main', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/FETCH_HEAD", inode=36382225, flags=410000, id=18446744071900575963): is_cloned, is_file
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png", inode=36755892, flags=10200, id=18446744071900610967): is_file, is_removed
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png", inode=36788480, flags=19100, id=18446744071900610981): is_created, is_file, is_modified, is_xattr_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/index.lock", inode=36788479, flags=19900, id=18446744071900610992): is_coalesced, is_created, is_file, is_modified, is_renamed, is_xattr_mod
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/index", inode=36788479, flags=10800, id=18446744071900610993): is_file, is_renamed
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/index", inode=36673872, flags=10800, id=18446744071900610994): is_file, is_renamed
+DEBUG:fsevents:queue_event FileDeletedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileCreatedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event FileCreatedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/index.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/index.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:Destination event for rename is NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/index", inode=36788479, flags=10800, id=18446744071900610993)
+DEBUG:fsevents:queue_event FileMovedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/index.lock', dest_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/index', event_type='moved', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:queue_event FileDeletedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git/index', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png", inode=36788480, flags=18000, id=18446744071900611003): is_file, is_xattr_mod
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
