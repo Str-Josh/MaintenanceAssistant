@@ -1,0 +1,11 @@
+# Python==3.12.2
+
+# Flask Framework
+Flask==3.1.0
+
+# Flask Packages
+Flask-Login==0.6.3
+Flask-SQLAlchemy==3.1.1
+Flask-User==1.0.2.2
+
+# pip install -r requirements.txt

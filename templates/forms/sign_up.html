@@ -1,0 +1,54 @@
+{% extends "layouts/nav.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maintenance Assistant - Register</title>
+  </head>
+  <body>
+    <div class="container" style="text-align: center;">
+        <h1>Maintenance Assistant - Register</h1>
+        <form action="/register" method="post">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" name="username" />
+            </div>
+
+            <div>
+                <label for="firstname">First name:</label>
+                <input type="text" name="firstname" />
+            </div>
+
+            <div>
+                <label for="lastname">Last name:</label>
+                <input type="text" name="lastname" />
+            </div>
+
+            <div>
+                <label for="user_role">User role:</label>
+                <select class="dropdown-content" name="user_role" multiple>
+                    <!-- <option value="" disabled selected>Select a role</option> -->
+                    <option value="Admin">Admin</option>
+                    <option value="Director">Director</option>
+                    <option value="Manager">Maintenance Manager</option>
+                    <option value="Staff">Maintenance Staff</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" />
+            </div>
+
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+  </body>
+</html>
+
+{% endblock %}

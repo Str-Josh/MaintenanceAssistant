@@ -1,0 +1,144 @@
+/* VARIABLES */
+:root{
+    --grey: #DDDDDE;
+    --main-blue: #285162;
+    --usage: #bc7241;
+    --devices: #41bca6;
+    --message: #4198bc;
+    --break: #bc4f41;
+}
+
+/* OVERALL STYLE */
+header{
+    background: var(--main-blue);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    margin: 0%;
+}
+
+body{
+    background: var(--grey);
+    margin: 0%;
+}
+
+/* DEPARTMENT */
+.request{
+    background: var(--message);
+}
+.usage{
+    background: var(--usage);
+}
+.break{
+    background: var(--break)
+}
+.device{
+    background: var(--devices);
+}
+
+.subheader{
+    width: 100%;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-columns: 20% 80%;
+    justify-items: center;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    margin: 0%;
+}
+/* .title{
+    
+} */
+
+.returnHome{
+    background-color: var(--main-blue);
+    width: 189px;
+    height: 80px;
+    color: #FFF;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* department home */
+.buttons{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    justify-content: space-evenly;
+    margin: 1%
+}
+
+.buttons button:hover {
+    background-color: #285162;
+    cursor: pointer;
+}
+
+.homePageButton{
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 487px;
+    height: 283px;
+    margin: 5%;
+}
+
+/* send request */
+.subjectText {
+    width: 20%;
+}
+
+.dateText {
+    width: 20%;
+}
+
+.messageText {
+    width: 20%;
+}
+.subjectBox {
+    width: 80%;
+}
+
+.dateBox {
+    width: 80%;
+}
+
+.messageBox {
+    width: 80%;
+    height: 325px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+      "subject date"
+      "message message";
+    grid-template-columns: auto auto;
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .container > div.subjectClass {
+    display: grid;
+    grid-area: subject;
+    grid-template-columns: 10% 90%;
+  }
+  .container > div.dateClass {
+    display: grid;
+    grid-area: date;
+    grid-template-columns: 10% 90%;
+  }
+  .container > div.messageClass {
+    display: grid;
+    grid-area: message;
+    grid-template-columns: 10% 90%;
+  }
+
+

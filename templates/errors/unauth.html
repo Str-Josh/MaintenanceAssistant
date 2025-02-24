@@ -1,0 +1,18 @@
+{% extends "navbar.html" %}
+{% block content %}
+<html>
+    <head>
+        <title>Unauthorized</title>
+    </head>
+    <body>
+        <div>
+            <h3>You are unauthorized or the system messed up.</h3>
+            <form action="{{ url_for('home') }}" method="get" style="text-align: center;">
+                <div>
+                    <button>Sign in</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+{% endblock %}
