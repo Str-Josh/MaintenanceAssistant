@@ -1,13 +1,13 @@
-{% extends "navbar.html" %}
+{% extends "layouts/nav.html" %}
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- <title>Maintenance Assistant</title> -->
-        <title>Home</title>
+        <title>Maintenance Assistant - Sign In</title>
     </head>
     <body>
         <div class="container" style="text-align: center;">
@@ -19,18 +19,30 @@
                 </div>
                 
                 <br />
+                
                 <div>
                     <label for="password">Password:</label>
                     <input type="password" name="password" />
                 </div>
                 
-                <br /><br />
+                <br />
+                
                 <div>
                     <button type="submit">Login</button>
                 </div>
+                
+                <br />
+                
+                <div>
+                    <label for="rememberMe">Remember me?</label>
+                    <input type="checkbox" name="rememberMe" />
+                </div>
+                
+                <br />
 
-                {% if role == 'pswd-fail' %}
+                {% if pswd_fail == 'True' %}
                     <p>Wrong password. Try again.</p>
+                {% else %}
                 {% endif %}
 
                 <br /><br />

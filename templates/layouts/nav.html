@@ -1,0 +1,57 @@
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='layouts/nav.css') }}">
+<link rel="icon" type="image/png" href="static/img/logo.png">
+
+<div class="nav-bar">
+    <div class="nav-bar-elem nav-bar-far-left">
+        <a class="active" href="{{ url_for('home') }}">Home</a>
+    </div>
+    {% if current_user.is_authenticated %}
+        <div class="nav-bar-elem nav-bar-far-right">
+            <a href="/logout">Logout</a>
+        </div>
+
+        {% if current_user.role == 'admin' %}
+            <div class="nav-bar-elem">
+                <a href="#">Team Information</a>
+            </div>
+            <div class="nav-bar-elem">
+                <a href="#">Asset Information</a>
+            </div>
+            <div class="nav-bar-elem">
+                <a href="#">Manage Scheduling</a>
+            </div>
+
+        {% elif current_user.role == 'director' %}
+            <!-- <p>role - director</p> -->
+            <div class="nav-bar-elem">
+                <a href="#">Manage Assets</a>
+            </div>
+
+        {% elif current_user.role == 'manager' %}
+            <!-- <p>role - manager</p> -->
+            <div class="nav-bar-elem">
+                <a href="#">Manage Scheduling</a>
+            </div>
+            <div class="nav-bar-elem">
+                <a href="#">Manage Teams</a>
+            </div>
+
+        {% elif current_user.role == 'staff' %}
+            <!-- <p>role - staff</p> -->
+            <div class="nav-bar-elem">
+                <a href="#">Team Information</a>
+            </div>
+
+        {% else %}
+            <!-- <p>TEST - FAIL</p> -->
+            <p>role - UNVERIFIED</p>
+
+        {% endif %}
+    {% endif %}
+</div>
+
+{% block content %}
+
+{% endblock %}
