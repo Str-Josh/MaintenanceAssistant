@@ -7,27 +7,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maintenance Assistant - Register</title>
+    <link rel="stylesheet" href="/static/pages/stylesheet.css">
   </head>
-  <body>
+  <body class="loginPage">
     <div class="container" style="text-align: center;">
         <h1>Maintenance Assistant - Register</h1>
-        <form action="/register" method="post">
-            <div>
+        <form action="/register" method="post" class="loginForm">
+            <div class="loginInput">
                 <label for="username">Username:</label>
-                <input type="text" name="username" />
+                <input type="text" name="username" class="loginTextBox"/>
             </div>
 
-            <div>
+            <div class="loginInput">
                 <label for="firstname">First name:</label>
-                <input type="text" name="firstname" />
+                <input type="text" name="firstname" class="loginTextBox"/>
             </div>
 
-            <div>
+            <div class="loginInput">
                 <label for="lastname">Last name:</label>
-                <input type="text" name="lastname" />
+                <input type="text" name="lastname" class="loginTextBox"/>
             </div>
 
-            <div>
+            <div class="loginInput">
                 <label for="user_role">User role:</label>
                 <select class="dropdown-content" name="user_role" multiple>
                     <!-- <option value="" disabled selected>Select a role</option> -->
@@ -38,13 +39,13 @@
                 </select>
             </div>
 
-            <div>
+            <div class="loginInput">
                 <label for="password">Password:</label>
-                <input type="password" name="password" />
+                <input type="password" name="password" class="loginTextBox"/>
             </div>
 
-            <div>
-                <button type="submit">Submit</button>
+            <div class="buttonRow loginInput">
+                <button type="submit" class="loginButton">Submit</button>
             </div>
         </form>
     </div>
