@@ -1,0 +1,16 @@
+.buttons{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    justify-content: space-evenly;
+    margin: 5%
+}
+
+.homePageButton{
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 487px;
+    height: 283px;
+    margin: 5%;
+}
