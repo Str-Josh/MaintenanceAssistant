@@ -2,8 +2,7 @@
 
   .searchbar{
     display: flex;
-    padding: 20px;
-    align-items: baseline;
+    justify-content: center;
   }
   .labeltext{
     text-align: right;
@@ -19,15 +18,11 @@
   }
 
   .searchbar .labeltext{
-    text-align: center;
     width: 10%;
-    height: 25px;
-    align-self: center;
+    
   }
   .searchbar .textbox{
-    width: 90%;
-    height: 25px;
-    align-self: center;
+    width: 70%;
   }
 
   .results{
