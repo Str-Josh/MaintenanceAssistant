@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Starter Front End/CSS/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<header>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="home"><a href="/Starter Front End/HTML/Admin Maintenance/home.html">Home</a></div>
+        <a href="#">New Device</a>
+        <a href="#">Lookup Device</a>
+        <button class="dropdown-btn">Department <i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-container">
+            <a href="#">Emergency Department</a>
+            <a href="#">Intensive Care Unit (ICU)</a>
+            <a href="#">Operating Room (OR)</a>
+            <a href="#">Medical-Surgical Unit</a>
+            <a href="#">Obstetrics and Gynecology (OB/GYN)</a>
+            <a href="#">Pediatrics</a>
+            <a href="#">Radiology</a>
+            <a href="#">Laboratory</a>
+            <a href="#">Pharmacy</a>
+            <a href="#">Physical Therapy</a>
+          </div>
+    </div>
+    
+    <span class="hamburgerbutton" onclick="openNav()">&#9776;</span>
+    <img src="/Starter Front End/images/logo.png">
+    <h1>Maintenance Manager</h1>
+    <a href="/Starter Front End/HTML/login.html"><img src="/Starter Front End/images/Logout.png"></a>
+</header>
+<body>
+    <div class="device subheader">
+        <h1 class="title">
+            Find Asset
+        </h1>
+    </div>
+
+    <form class="searchbar">
+            <label for="lookup" class="labeltext"><h4>Search Asset:</h4></label>
+            <input type="text" id="lookup" name="lookup" class="textbox">
+    </form>
+
+    <div class="results">
+        <div class="gridLeft upperLeft">
+            <a href="#"><img src="/Starter Front End/images/mri.png"></a>
+        </div>
+        <div class="gridRight upperRight">
+            <div class="assetDescrip">
+                MR 770: Room 42
+            </div>
+            <div class="scheduled">
+                Maintenance Scheduled on April 20
+            </div>
+        </div>
+        <div class="gridLeft">
+            <a href="#"><img src="/Starter Front End/images/ultrasound.png"></a>
+        </div>
+        <div class="gridRight">
+            <div class="assetDescrip">
+                EPIQ Elite: Room 20A
+            </div>
+            <div class="scheduled" style="display:none">
+                Maintenance Scheduled on April 20
+            </div>
+        </div>
+        <div class="gridLeft">
+            <a href="#"><img src="/Starter Front End/images/pagewriter.png"></a>
+        </div>
+        <div class="gridRight">
+            <div class="assetDescrip">
+                PageWriter TC70: Room 64B
+            </div>
+            <div class="scheduled" style="display:none">
+                Maintenance Scheduled on April 20
+            </div>
+        </div>
+        <div class="gridLeft bottomLeft">
+            <a href="#"><img src="/Starter Front End/images/logo.png"></a>
+        </div>
+        <div class="gridRight bottomRight">
+            <div class="assetDescrip">
+                MR 770: Room 42
+            </div>
+            <div class="scheduled" style="display:none">
+                Maintenance Scheduled on April 20
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+        });
+        }
+    </script>
+</body>
+</html>

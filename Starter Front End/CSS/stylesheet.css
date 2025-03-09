@@ -10,6 +10,7 @@
     --light-blue: #8AA4AF;
     --text-box: #F5F2F2;
     --pale-blue: #B8CDD6;
+    --grid-info: #E6E9EA;
 }
 
 /* OVERALL STYLE */
@@ -98,23 +99,12 @@ body{
 }
 
 /* send request */
-.subjectText {
-    text-align: right;
-    padding: 0 5px;
-    color: var(--main-blue);
-}
 
-.dateText {
-    text-align: right;
-    padding: 0 5px;
-    color: var(--main-blue);
-}
+
+
 
 .messageText {
-    text-align: right;
-    padding: 0 5px;
     padding: 10px;
-    color: var(--main-blue);
 }
 .subjectBox {
     fill: var(--text-box);
@@ -379,3 +369,78 @@ body{
     font-weight: bold;
     border: none;
   }
+
+  /* Find asset */
+
+  .searchbar{
+    display: flex;
+    padding: 20px;
+    align-items: baseline;
+  }
+  .labeltext{
+    text-align: right;
+    padding: 0 5px;
+    color: var(--main-blue);
+  }
+  .textbox{
+    fill: var(--text-box);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 20px;
+    border: none;
+    margin: 20px;
+  }
+
+  .searchbar .labeltext{
+    text-align: center;
+    width: 10%;
+    height: 25px;
+    align-self: center;
+  }
+  .searchbar .textbox{
+    width: 90%;
+    height: 25px;
+    align-self: center;
+  }
+
+  .results{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 40px;
+  }
+  .gridLeft{
+    background-color: var(--light-blue);
+    border: #B8CDD6 solid 1px;
+    display: grid;
+    justify-content: center;
+    padding: 10px;
+  }
+  .gridRight{
+    align-content: center;
+    background-color: var(--grid-info);
+    border: #B8CDD6 solid 1px;
+  }
+  .upperLeft{
+    border-radius: 20px 0 0 0;
+  }
+  .bottomLeft{
+    border-radius: 0 0 0 20px;
+  }
+  .upperRight{
+    border-radius: 0 20px 0 0;
+  }
+  .bottomRight{
+    border-radius: 0 0 20px 0;
+  }
+  .assetDescrip{
+    padding: 10px;
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: center;
+  }
+  .scheduled{
+    padding: 10px;
+    font-weight: lighter;
+    font-size: large;
+    text-align: center;
+  }
+  
