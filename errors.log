@@ -6986,3 +6986,4 @@ INFO:app:*******We hit the function buddy!!!
 INFO:werkzeug:127.0.0.1 - - [21/Feb/2025 20:03:13] "GET /send-request HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [21/Feb/2025 20:03:13] "[36mGET /static/layouts/nav.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [21/Feb/2025 20:03:13] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
