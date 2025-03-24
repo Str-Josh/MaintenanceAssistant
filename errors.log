@@ -769,3 +769,5 @@ DEBUG:fsevents:queue_event DirModifiedEvent(src_path='/Users/elizabethbridges/De
 DEBUG:fsevents:NativeEvent(path="/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png", inode=36788480, flags=18000, id=18446744071900611003): is_file, is_xattr_mod
 DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/elizabethbridges/Desktop/MaintenanceAssistant-1/Starter Front End/images/logo.png', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
 
+DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG:passlib.registry:registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
