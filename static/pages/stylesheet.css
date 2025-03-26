@@ -585,4 +585,10 @@ img{
     font-size: large;
   }
 
+  /* Temp home bar styling NEEDS TO DELETE */
+  .logout{
+    color: var(--grey);
+    text-decoration: none;
+  }
+
 
