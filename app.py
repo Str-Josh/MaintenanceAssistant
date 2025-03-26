@@ -209,6 +209,11 @@ def equipment_failure_report():
 def asset_details():
     return render_template("pages/devicedetail.html")
 
+@app.route("/view-usage")
+@login_required
+def viewusage():
+    return render_template("pages/usagelog.html")
+
 @app.route("/user/<username>", methods=["GET"])
 def user_profile(username):
     user = User.query.filter_by(username=username).first()
