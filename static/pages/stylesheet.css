@@ -1,15 +1,16 @@
 /* VARIABLES */
 :root{
-    --grey: #DDDDDE;
-    --main-blue: #285162;
-    --usage: #bc7241;
-    --devices: #41bca6;
-    --message: #4198bc;
-    --break: #bc4f41;
-    --secondary-blue: #3B5C6A;
-    --light-blue: #8AA4AF;
-    --text-box: #F5F2F2;
-    --pale-blue: #B8CDD6;
+  --grey: #DDDDDE;
+  --main-blue: #285162;
+  --usage: #bc7241;
+  --devices: #41bca6;
+  --message: #4198bc;
+  --break: #bc4f41;
+  --secondary-blue: #3B5C6A;
+  --light-blue: #8AA4AF;
+  --text-box: #F5F2F2;
+  --pale-blue: #B8CDD6;
+  --grid-info: #E6E9EA;
 }
 
 /* OVERALL STYLE */
@@ -130,6 +131,7 @@ img{
     border-radius: 20px;
     border: none;
     padding: 5px;
+    margin: 0 2%;
 }
 
 .dateBox {
@@ -138,6 +140,7 @@ img{
     border-radius: 20px;
     border: none;
     padding: 5px;
+    margin: 0 2%;
 }
 
 .messageBox {
@@ -147,6 +150,7 @@ img{
     padding: 5px;
     border: none;
     height: 325px;
+    margin: 0 0 0 2%;
 }
 
 .form {
@@ -439,6 +443,146 @@ img{
 
   .loginInput{
     padding: 10px;
+  }
+
+  /* Find asset */
+
+  .searchbar{
+    display: flex;
+    justify-content: center;
+  }
+
+  .searchbar .labeltext{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  .searchbar .textbox{
+    padding: 5px 10px;
+  }
+
+  .labeltext{
+    text-align: right;
+    padding: 0 5px;
+    color: var(--main-blue);
+  }
+  .textbox{
+    fill: var(--text-box);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 20px;
+    border: none;
+    margin: 20px;
+  }
+
+  .searchbar .labeltext{
+    width: 10%;
+    
+  }
+  .searchbar .textbox{
+    width: 70%;
+  }
+
+  .results{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 0 2%;
+    width: 96%;
+    border: none;
+    background: unset;
+  }
+  .gridLeft{
+    background-color: var(--light-blue);
+    border: #B8CDD6 solid 1px;
+    display: grid;
+    justify-content: center;
+    padding: 10px;
+  }
+  .gridRight{
+    align-content: center;
+    background-color: var(--grid-info);
+    border: #B8CDD6 solid 1px;
+  }
+  .upperLeft{
+    border-radius: 20px 0 0 0;
+  }
+  .bottomLeft{
+    border-radius: 0 0 0 20px;
+  }
+  .upperRight{
+    border-radius: 0 20px 0 0;
+  }
+  .bottomRight{
+    border-radius: 0 0 20px 0;
+  }
+  .assetDescrip{
+    padding: 10px;
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: center;
+  }
+  .scheduled{
+    padding: 10px;
+    font-weight: lighter;
+    font-size: large;
+    text-align: center;
+  }
+
+  /* view usage */
+  .usagedate{
+    display: flex;
+    flex-direction: column;
+  }
+  .dateHead{
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+  }
+
+  .timeSubHead{
+    font-size: medium;
+    font-weight: lighter;
+    text-align: center;
+    color: white;
+  }
+  .notes{
+    padding: 10px;
+    inset: 20px;
+    padding: 10px;
+    text-indent: 20px;
+  }
+
+  .assetDisplay{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .assetCircle{
+    height: 150px;
+    width: 150px;
+    background: var(--light-blue);
+    border-radius: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .assetInfo{
+    text-align: center;
+  }
+
+  .assetHead{
+    font-size: xx-large;
+    font-weight: bolder;
+    padding: 10px;
+  }
+
+  .assetSubHead{
+    font-size: large;
   }
 
 

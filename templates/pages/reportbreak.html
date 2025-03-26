@@ -6,12 +6,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <title>Machine Failure Report</title> -->
-    <!-- <link rel="stylesheet" href="/static/pages/stylesheet.css"> -->
+    <title>Machine Failure Report</title>
+    <link rel="stylesheet" href="/static/pages/stylesheet.css">
 </head>
 
 <body>
-    
+    <div class="break subheader">
+        <h1 class="title">
+            Report Breakage
+        </h1>
+    </div>
+
+    <form class="form">
+        <div class="subjectClass">
+            <label for="subject" class="subjectText">Subject:</label>
+            <input type="text" id="subject" name="subject" class="subjectBox">
+        </div>
+        <div class="dateClass">
+            <label for="date" class="dateText">Date:</label>
+            <input type="date" id="date" name="date" class="dateBox">
+        </div>
+        <div class="messageClass">
+            <label for="message" class="messageText">Message:</label>
+            <input type="message" id="message" name="message" class="messageBox">
+        </div>
+        <div class="gapClass"></div>
+        <input type="submit" value="Submit" class="submitbutton buttonClass">
+    </form>
 </body>
 </html>
 
