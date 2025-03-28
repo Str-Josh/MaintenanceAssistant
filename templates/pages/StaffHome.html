@@ -1,0 +1,99 @@
+{% extends "layouts/nav.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/pages/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<header>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="home"><a href="/manager_dashboard">Home</a></div>
+        <a href="/staff_find_asset">Lookup Device</a>
+        
+    </div>
+    
+    <span class="hamburgerbutton" onclick="openNav()">&#9776;</span>
+    <img src="/static/img/logo.png">
+    <h1>Maintenance Staff</h1>
+    <a href="/logout" class="logout"><img src="/static/img/Logout.png"></a>
+</header>
+
+<body>
+    <div class="alerts">
+        <img class="icon" src="/static/img/AlertRed.png">
+        <div class="slider">
+            <div class="slides">
+            <a href="/staff-asset-details" id="slide-1">
+                <p>Replace<br>April 25</p>
+                <img src="/static/img/mri.png">
+            </a>
+            <a href="/staff-asset-details" id="slide-2">
+                <p>Replace<br>April 30</p>
+                <img src="/static/img/pagewriter.png">
+            </a>
+            <a href="/staff-asset-details" id="slide-3">
+                <p>Replace<br>May 2</p>
+                <img src="/static/img/ultrasound.png">
+            </a>
+            <a href="/staff-asset-details" id="slide-4">
+                <p>Replace<br>April 25</p>
+                <img src="/static/img/mri.png">
+            </a>
+            <a href="/staff-asset-details" id="slide-5">
+                <p>Replace<br>April 30</p>
+                <img src="/static/img/pagewriter.png">
+            </a>
+            <a href="/staff-asset-details" id="slide-6">
+                <p>Replace<br>May 2</p>
+                <img src="/static/img/ultrasound.png">
+            </a>
+            <a href="/staff-asset-details" id="slide-7">
+                <p>Replace<br>April 25</p>
+                <img src="/static/img/mri.png">
+            </a>
+            <a href="/staff-asset-details" id="slide-8">
+                <p>Replace<br>April 30</p>
+                <img src="/static/img/pagewriter.png">
+            </a>
+            <a href="/staff-asset-details" id="slide-9">
+                <p>Replace<br>May 2</p>
+                <img src="/static/img/mri.png">
+            </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+        });
+        }
+    </script>
+</body>
+</html>
+{% endblock %}

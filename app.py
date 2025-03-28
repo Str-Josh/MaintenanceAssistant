@@ -224,6 +224,11 @@ def viewusage():
 def manager_dashboard():
     return render_template("pages/ManagerHome.html")
 
+@app.route("/staff_dashboard")
+@login_required
+def staff_dashboard():
+    return render_template("pages/StaffHome.html")
+
 @app.route("/add_asset")
 @login_required
 def add_asset():
@@ -238,6 +243,21 @@ def finish_maintenance():
 @login_required
 def information():
     return render_template("pages/assetinfo.html")
+
+@app.route("/staff-asset-details")
+@login_required
+def staff_asset_details():
+    return render_template("pages/staffassetdetails.html")
+
+@app.route("/work_maintenance")
+@login_required
+def work_maintenance():
+    return render_template("pages/workmaintenance.html")
+
+@app.route("/staff_find_asset")
+@login_required
+def staff_find_asset():
+    return render_template("pages/viewassetsstaff.html")
 
 @app.route("/user/<username>", methods=["GET"])
 def user_profile(username):

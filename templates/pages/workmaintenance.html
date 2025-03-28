@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finish Maintenance</title>
+    <title>Add Asset</title>
     <link rel="stylesheet" href="/static/pages/stylesheet.css">
     <!-- <link rel="icon" type="image/png" href="static/img/logo.png"> -->
 </head>
@@ -19,25 +19,36 @@
 <body>
     <div class="good-news subheader">
         <h1 class="title">
-            Finish Maintenance
+            Maintenance Work
         </h1>
     </div>
 
-    <form class="fin-main-form">
+    <form class="main-work-form">  
         <div class="dateClass">
             <label for="date" class="labeltext">Date:</label>
             <input type="date" id="date" name="date" class="inputBox fixover">
         </div>
         <div class="timeClass">
             <label for="time" class="labeltext">Time:</label>
-            <input type="time" id="time" name="time" class="inputBox fixover">
+            <input type="time" id="time" name="time" class="inputBox">
+        </div>
+        <div class="statusClass">
+            <div class="labeltext">
+                Status:
+            </div>
+            <div class="radioButtons">
+                <input type="radio" id="in_progress" name="status" value="in_progress" class="radioButton">
+                <label for="in_progress">In Progress</label>
+                <input type="radio" id="complete" name="status" value="complete">
+                <label for="complete">Complete</label>
+            </div>
         </div>
         <div class="descClass">
             <label for="description" class="bigText">Description:</label>
-            <input type="description" id="description" name="description" class="bigBox fixover">
+            <input type="description" id="description" name="description" class="bigBox">
         </div>
         <div class="gapClass"></div>
-        <input type="submit" value="Submit" class="submitbutton buttonClass">
+        <input type="submit"  class="submitbutton buttonClass">
     </form>
 </body>
 </html>
