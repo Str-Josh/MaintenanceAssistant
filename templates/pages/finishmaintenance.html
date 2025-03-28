@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Send Request</title>
+    <title>Add Asset</title>
     <link rel="stylesheet" href="/static/pages/stylesheet.css">
     <!-- <link rel="icon" type="image/png" href="static/img/logo.png"> -->
 </head>
@@ -17,24 +17,28 @@
     <a href="/logout"><img src="/static/img/Logout.png"></a>
 </header> -->
 <body>
-    <div class="request subheader">
+    <div class="good-news subheader">
         <h1 class="title">
-            Send Request
+            Finish Maintenance
         </h1>
     </div>
 
-    <form class="form">
-        <div class="subjectClass">
-            <label for="subject" class="labeltext">Subject:</label>
-            <input type="text" id="subject" name="subject" class="inputBox">
+    <form class="fin-main-form">
+        <div class="nameClass">
+            <label for="asset_name" class="labeltext">Name:</label>
+            <input type="text" id="asset_name" name="asset_name" class="inputBox">
         </div>
         <div class="dateClass">
             <label for="date" class="labeltext">Date:</label>
-            <input type="date" id="date" name="date" class="inputBox">
+            <input type="date" id="date" name="date" class="inputBox fixover">
         </div>
-        <div class="messageClass">
-            <label for="message" class="bigText">Message:</label>
-            <input type="message" id="message" name="message" class="bigBox">
+        <div class="timeClass">
+            <label for="time" class="labeltext">Time:</label>
+            <input type="time" id="time" name="time" class="inputBox fixover">
+        </div>
+        <div class="descClass">
+            <label for="description" class="bigText">Description:</label>
+            <input type="description" id="description" name="description" class="bigBox fixover">
         </div>
         <div class="gapClass"></div>
         <input type="submit" value="Submit" class="submitbutton buttonClass">

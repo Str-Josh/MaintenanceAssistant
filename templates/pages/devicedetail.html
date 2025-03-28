@@ -6,17 +6,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <title>Document</title> -->
-    <!-- <link rel="stylesheet" href="/static/pages/stylesheet.css"> -->
+    <title>Asset Details</title>
+    <link rel="stylesheet" href="/static/pages/stylesheet.css">
 </head>
-<!-- <header>
-    <a href="/admin_dashboard"><img src="static/img/logo.png"></a>
-    <h1>Project 3 Temporary Name</h1>
-    <h1>Department</h1>
-    <a href="/logout"><img src="static/img/Logout.png"></a>
-</header> -->
+
 <body>
-    
+    <div class="assetDisplay">
+        <div class="assetCircle">
+            <img src="/static/img/mri.png">
+        </div>
+        <div class="assetInfo">
+            <div class="assetHead">
+                MR 770: Radiology Room 42
+            </div>
+            <div class="assetSubHead"> 
+                Maintenance Scheduled on April 20
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button type="button" onclick="window.location.href='#'" class="request homePageButton" >
+            <H2>Assign Maintenance Team</H2><br>
+            <img src="/static/img/mail.png">
+        </button>
+        <button type="button" onclick="window.location.href='/view-usage'" class="usage homePageButton">
+            <H2>View Usage</H2><br>
+            <img src="/static/img/time.png">
+        </button>
+        <button type="button" onclick="window.location.href='/finish_maintenance'" class="good-news homePageButton">
+            <H2>Finish Maintenance</H2><br>
+            <img src="/static/img/alert.png">
+        </button>
+        <button type="button" onclick="window.location.href='/info'" class="device homePageButton">
+            <H2>Information on Asset</H2><br>
+            <img src="/static/img/search.png">
+        </button>
+    </div>
 </body>
 </html>
 

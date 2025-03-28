@@ -1,0 +1,57 @@
+{% extends "layouts/nav.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Asset</title>
+    <link rel="stylesheet" href="/static/pages/stylesheet.css">
+    <!-- <link rel="icon" type="image/png" href="static/img/logo.png"> -->
+</head>
+<!-- <header>
+    <a href="/home"><img src="static/img/logo.png"></a>
+    <h1>Project 3 Temporary Name</h1>
+    <h1>Department</h1>
+    <a href="/logout"><img src="/static/img/Logout.png"></a>
+</header> -->
+<body>
+    <div class="good-news subheader">
+        <h1 class="title">
+            New Asset
+        </h1>
+    </div>
+
+    <form class="add-asset-form">
+        <div class="nameClass">
+            <label for="asset_name" class="labeltext">Name:</label>
+            <input type="text" id="asset_name" name="asset_name" class="inputBox">
+        </div>
+        <div class="depClass">
+            <label for="deparment" class="labeltext">Department:</label>
+            <input type="department" id="deparment" name="deparment" class="inputBox fixover">
+        </div>
+        <div class="roomClass">
+            <label for="room" class="labeltext">Room:</label>
+            <input type="room" id="room" name="room" class="inputBox fixover">
+        </div>
+        <div class="dateClass">
+            <label for="date" class="labeltext">Date:</label>
+            <input type="date" id="date" name="date" class="inputBox fixover">
+        </div>
+        <div class="timeClass">
+            <label for="time" class="labeltext">Time:</label>
+            <input type="time" id="time" name="time" class="inputBox fixover">
+        </div>
+        <div class="descClass">
+            <label for="description" class="bigText">Description:</label>
+            <input type="description" id="description" name="description" class="bigBox fixover">
+        </div>
+        <div class="gapClass"></div>
+        <input type="submit" value="Submit" class="submitbutton buttonClass">
+    </form>
+</body>
+</html>
+
+{% endblock %}

@@ -199,6 +199,11 @@ def update_usage():
 def view_assets():
     return render_template("pages/viewdevices.html")
 
+@app.route("/view-assets-dep")
+@login_required
+def view_assets_dep():
+    return render_template("pages/viewassetsdep.html")
+
 @app.route("/report-equipment-failure")
 @login_required
 def equipment_failure_report():
@@ -213,6 +218,26 @@ def asset_details():
 @login_required
 def viewusage():
     return render_template("pages/usagelog.html")
+
+@app.route("/manager_dashboard")
+@login_required
+def manager_dashboard():
+    return render_template("pages/ManagerHome.html")
+
+@app.route("/add_asset")
+@login_required
+def add_asset():
+    return render_template("pages/addasset.html")
+
+@app.route("/finish_maintenance")
+@login_required
+def finish_maintenance():
+    return render_template("pages/finishmaintenance.html")
+
+@app.route("/info")
+@login_required
+def information():
+    return render_template("pages/assetinfo.html")
 
 @app.route("/user/<username>", methods=["GET"])
 def user_profile(username):
@@ -233,5 +258,5 @@ def user_profile(username):
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 8200))
     app.run(host="0.0.0.0", port=port)
