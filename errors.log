@@ -10729,3 +10729,50 @@ INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 22:17:50] "[36mGET /static/layouts/nav
 INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 22:17:50] "GET /static/pages/viewdevices_page.css HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 22:17:50] "GET /js/jquery.min.js HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 22:17:50] "GET /js/bootstrap.min.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:20:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:20:28] "GET /static/layouts/nav_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:20:28] "GET /static/img/mail.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:20:28] "GET /static/pages/Director/DirectorHome_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:20:28] "GET /static/img/time.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:20:28] "GET /static/img/search.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:20:56] "GET /asset-manager HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:20:57] "[36mGET /static/layouts/nav_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:20:58] "GET /view-assets HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:20:58] "[36mGET /static/layouts/nav_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:20:58] "GET /static/pages/viewdevices_page.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:20:58] "GET /js/bootstrap.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:20:58] "GET /js/jquery.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:01] "[36mGET /static/layouts/nav_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:01] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:02] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:02] "[36mGET /static/img/time.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:02] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:06] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:06] "[36mGET /static/layouts/nav_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:08] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:08] "[36mGET /static/layouts/nav_styles.css HTTP/1.1[0m" 304 -
+ERROR:app:User already exists.
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:16] "[32mPOST /register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:16] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:17] "[36mGET /static/layouts/nav_styles.css HTTP/1.1[0m" 304 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:24] "[36mGET /static/layouts/nav_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:31] "[36mGET /static/layouts/nav_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:31] "GET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:31] "GET /static/img/AlertRed.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:32] "GET /static/img/bell.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:38] "[36mGET /static/layouts/nav_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:38] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:38] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2025 23:41:38] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
