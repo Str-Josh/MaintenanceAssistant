@@ -1,0 +1,64 @@
+{% extends "layouts/nav.html" %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/static/pages/stylesheet.css"> -->
+    <!-- <link rel="stylesheet" href="/static/pages/test/managerhomestyle.css"> -->
+    <link rel="stylesheet" href="/static/pages/Manager/ManagerHome_styles.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+<body>
+    <div class="alerts">
+        <img class="icon" src="/static/img/AlertRed.png">
+        <div class="slider">
+
+            <div class="slides">
+                {% for asset in assets %}
+                    <div id="slide-1">
+                        <p>Replace<br>asset.repair_by</p>
+                        <!--<img src="/static/img/mri.png">-->
+                        <p>Location: {{ asset.department_location }}</p>
+                        <p style="font-size: smaller;"><a href="{{ url_for('schedule-repair', asset.repair_by) }}">Schedule Maintenance</a></p>
+                    </div>
+                {% endfor %}
+                <!-- The below is just an example til I get stuff to actually show up for mock db -->
+                <div id="slide-1">
+                    <p>Repair Needed by<br>April 25</p>
+                    <!-- <img src="/static/img/mri.png"> -->
+                    <p>Location: OB/GYN</p>
+                    <p style="font-size: smaller;"><a href="">Schedule Maintenance</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="messages">
+        <img src="/static/img/bell.png" class="icon">
+        {% for notification in notifications %}
+            <div class="messageSection">
+                <div class="messageSlider">
+                    <i class="fa fa-angle-left fa-5x" aria-hidden="true"></i>
+                    <div class="requestRecieve">
+                        <div class="from">{{ notification.sender }}</div>
+                        <div class="subject">{{ notification.notification_head }}</div>
+                        <div class="content">{{ notification.notification_body }}</div>
+                    </div>
+                    <i class="fa fa-angle-right fa-5x" aria-hidden="true"></i>
+                </div>
+                <div class="responseButtons">
+                    
+                    <button>Reply</button>
+                    <button href="{{ url_for('view_assets') }}">See Details</button>
+                    <button>Assign to me</button>
+                    <!-- <button href="{{ url_for('', ManagerHome) }}">Assign to me</button> -->
+                    <button>Elevate to admin</button>
+                    <button>Send to</button>
+                    <button>Delete</button>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+
+{% endblock %}

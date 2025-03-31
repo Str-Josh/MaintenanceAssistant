@@ -1,0 +1,30 @@
+{% extends "layouts/nav.html" %}
+{% block content %}
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/pages/Director/DirectorHome_styles.css">
+</head>
+<body>
+    <div class="buttons">
+        <button type="button" onclick="window.location.href='/send-request'" class="request homePageButton" >
+            <h2>Send Maintenance Request</h2><br>
+            <img src="/static/img/mail.png">
+        </button>
+        <button type="button" onclick="window.location.href='/update-asset-usage'" class="usage homePageButton">
+            <h2>Update Machine Usage</h2><br>
+            <img src="/static/img/time.png">
+        </button>
+        <!-- <button type="button" onclick="window.location.href='/report-equipment-failure'" class="break homePageButton">
+            <H2>Report Urgent Maintenance</H2><br>
+            <img src="/static/img/alert.png">
+        </button> -->
+        <button type="button" onclick="window.location.href='/asset-manager'" class="device homePageButton">
+            <!-- <H2>View Devices</H2><br> -->
+            <h2>Manage Assets</h2><br>
+            <img src="/static/img/search.png">
+        </button>
+    </div>
+</body>
+
+{% endblock %}

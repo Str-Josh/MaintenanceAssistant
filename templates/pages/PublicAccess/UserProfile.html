@@ -1,0 +1,27 @@
+{% extends "layouts/nav.html" %}
+{% block content %}
+
+<head>
+    <title>{{ user.username|e }}'s Profile</title>
+</head>
+
+<div>
+    <br/><br/><br/><br/><br/><br/>
+    {% if user.first_name|e and user.last_name|e %}
+        <p>{{ user.first_name|e }} {{ user.last_name|e }}</p>
+    {% else %}
+        <p>{{ user.username|e }}</p>
+    {% endif %}
+    <!-- <p>{{ user.email|e }}</p> -->
+    <p>{{ user.role|e }}</p>
+    
+</div>
+
+<!-- 
+<div>
+    <p>{{ user.first_name }}</p>
+    <p>{{ user.last_name }}</p>
+    <p>{{ user.role }}</p>
+</div> -->
+
+{% endblock %}

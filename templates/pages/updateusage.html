@@ -1,17 +1,16 @@
 {% extends "layouts/nav.html" %}
 {% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Usage</title>
-    <link rel="stylesheet" href="/static/pages/stylesheet.css">
 </head>
 <body>
-    
+    <form action="/update-usage" method="post">
+        <div>
+            <label for="something">Example Label</label>
+            <button name="something">Example Button</button>
+        </div>
+    </form>
 </body>
-</html>
 
 {% endblock %}

@@ -1,19 +1,29 @@
+"""
+Team:  3
+Members: Joshua, Christian, Nick, Elizabeth
+Class: CS 483
+Proj. Name: Maintenance Assistant
+"""
+
+
 from flask import Flask, render_template, request, url_for, redirect, session, json
-# from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user, current_user, AnonymousUserMixin
-#user_unauthorized, user_logged_in, user_logged_out
-#from flask_login import FlaskLoginClient as LoginClient
-# from flask_user import current_user, login_required, roles_required
 
-#from utils import roles_required
-# from models import db, Users
-# from db import db
-#from init_db import db
-#import flask_migrate as migration
-#from .models.user_models import Users
-
+import datetime as dt # import date
 import logging
 import os
+
+from mymodels import db, User, Notification, Asset
+#from failure_model import PredictionModel
+import failure_model as f_model
+
+# PORT = 8000  # Uncomment for Christian.
+# PORT = 6000  # Uncomment for Elizabeth.
+# PORT = 7000  # Uncomment for Nick.
+PORT = 5000  # Uncomment for Josh.
+RESET_DB = False  # Do not change unless you want to recreate the entire database.
+USE_MOCK_DB = True
+
 
 app = Flask(__name__)
 app.config.from_object("config")
@@ -22,11 +32,62 @@ logging.basicConfig(filename='errors.log', level=logging.DEBUG)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-from mymodels import db, User
 db.init_app(app)
 
+def create_mock_db():
+    from mock_hospital import mock_users, mock_notifications, mock_assets
+
+    for _mock_user in mock_users:
+        _user = User(
+            username = _mock_user["username"],
+            password = _mock_user["password"],
+            first_name = _mock_user["first_name"],
+            last_name = _mock_user["last_name"],
+            role = _mock_user["role"],
+        )
+        db.session.add(_user)
+        db.session.commit()
+    for _mock_notification in mock_notifications:
+        _notification = Notification(
+            sender = _mock_notification["sender"],
+            recipient = _mock_notification["recipient"],
+            notification_send_date = _mock_notification["notification_send_date"],
+            notification_head = _mock_notification["notification_head"],
+            notification_body = _mock_notification["notification_body"],
+        )
+        db.session.add(_notification)
+        db.session.commit()
+    for _mock_asset in mock_assets:
+        _asset = Asset(
+            serial_number = _mock_asset["serial_number"],
+            device_name = _mock_asset["device_name"],
+            brand = _mock_asset["brand"],
+            generic_name = _mock_asset["generic_name"],
+            manufacturer = _mock_asset["manufacturer"],
+            department_location = _mock_asset["department_location"],
+            average_use_per_year = _mock_asset["average_use_per_year"],
+            total_units_in_service = _mock_asset["total_units_in_service"],
+            failure_incidents_in_past_year = _mock_asset["failure_incidents_in_past_year"],
+            total_failures_in_history = _mock_asset["total_failures_in_history"],
+            last_maintenance_date = _mock_asset["last_maintenance_date"],
+            total_maintenance_activities_in_past_year = _mock_asset["total_maintenance_activities_in_past_year"],
+            maintenance_type = _mock_asset["maintenance_type"],
+            cost_per_maintenance_activity = _mock_asset["cost_per_maintenance_activity"],
+            total_maintenance_costs_in_past_year = _mock_asset["total_maintenance_costs_in_past_year"],
+        )
+        db.session.add(_asset)
+        db.session.commit()
+
 with app.app_context():
-    db.create_all()
+    if RESET_DB and not USE_MOCK_DB:
+        db.drop_all()
+        db.create_all()
+    elif RESET_DB and USE_MOCK_DB:
+        db.drop_all()
+        db.create_all()
+        create_mock_db()
+    else:
+        db.create_all()
 
 class Anonymous(AnonymousUserMixin):
     def __init__(self):
@@ -62,12 +123,16 @@ def user_loader(username):
 @app.route('/register', methods=["GET", "POST"])
 def register():
     if request.method == "POST":
+        role = request.form.get("user_role").lower()
+        if " " in role:
+            role = role.split(" ")[1]
+        
         user = User(
             username = request.form.get("username"),
             password = request.form.get("password"),
             first_name = request.form.get("firstname"),
             last_name = request.form.get("lastname"),
-            role = request.form.get("user_role"),
+            role = role,
         )
 
         db.session.add(user)
@@ -92,16 +157,17 @@ def login():
             remember = None
             if request.form.get("rememberMe") == "on":
                 remember = True
+                app.config['REMEMBER_COOKIE_DURATION'] = dt.timedelta(days=1)
             if login_user(luser, remember=remember):
                 return redirect(url_for("home"))
             else:
                 return "Bad"
         else:
             app.logger.info("The user gave a bad password")
-            return render_template("index.html", pswd_fail=str(True))
+            return render_template("forms/Login.html", pswd_fail=str(True))
 
     app.logger.info("The request method for login function was GET")
-    return render_template("index.html")
+    return render_template("forms/Login.html")
 
 
 @app.route("/logout")
@@ -110,26 +176,46 @@ def logout():
     app.logger.info("A user was logged out.")
     return redirect(url_for("home"))
 
-
 @app.route("/")
 def home():
     if current_user.is_authenticated:
         if current_user.username != "Guest":
             role = current_user.role
             if role == 'admin':
-                return render_template("pages/DepartmentHome.html")
+                return render_template("pages/Director/DirectorHome.html")
             elif role == 'director':
-                return None
+                return render_template("pages/Director/DirectorHome.html")
             elif role == 'manager':
-                return None
+                # Backend stuff for viewing devices needing upcoming repairs.
+                company_assets = Asset.query.all()
+                maintenance_required = []
+                date_span_interval = 5  # number of days to span the interval
+                upcoming_maintenance_actions_datespan = dt.date.today() + dt.timedelta(days=date_span_interval)
+
+                for _asset in company_assets:
+                    if _asset.upcoming_maintenance_action_date:
+                        if _asset.upcoming_maintenance_action_date <= upcoming_maintenance_actions_datespan:
+                            instance = {
+                                "serial_number": _asset.asset_id,  # TODO: need to change to actual serial number from DB (I don't feel like updating mock DB rn sorry)
+                                "repair_by": _asset.upcoming_maintenance_action_date,
+                                "department_location": _asset.department_location
+                            }  # dictionary of the important values 
+                            maintenance_required.append(instance)
+
+                # Backend stuff for notifications bar.
+                notifications = Notification.query.filter_by(recipient=current_user.username).all()
+
+                return render_template("pages/Manager/ManagerHome.html", assets=maintenance_required, notifications=notifications)
             elif role == 'staff':
                 return None
             else:
                 # This is actually an error.
                 return render_template("tests/main.html", role=role)
     else:
-        app.logger.info("No user is authenticated. Using 'Guest' as username.")
-        return render_template("index.html")
+        # app.logger.info("No user is authenticated. Using 'Guest' as username.")
+        app.logger.info("An unauthorized user directed to '/'. Requesting login credentials.")
+        return render_template("forms/Login.html")
+        # return render_template("pages/test_new_index.html")
 
 @app.route("/team-manager")
 @login_required
@@ -141,9 +227,11 @@ def team_manager():
 def asset_information():
     return None
 
-@app.route("/schedule-manager")
+@app.route("/schedule-repair", methods=["GET", "POST"])
 @login_required
-def schedule_manager():
+def schedule_repair(repair_by_date):
+    if request.method == "POST":
+        return None
     return None
 
 
@@ -160,44 +248,98 @@ def unauthorized():
 def page_not_found(e):
     return render_template("errors/404.html")
 
-# @app.errorhandler(500)
-# def internal_server_error(e):
-#     response = e.get_response()
-#     response.data = json.dumps({
-#         "code": e.code,
-#         "name": e.name,
-#         "description": e.description,
-#     })
-#     response.content_type = "application/json"
-#     return response
-
 
 #----------------------------------------------------------------------------#
 # Controllers.
 #----------------------------------------------------------------------------#
 
 
-@app.route("/admin_dashboard")
+@app.route("/director-dashboard")
 @login_required
-def admin_dashboard():
-    return render_template("pages/DepartmentHome.html")
+def director_dashboard():
+    return render_template("pages/Director/DirectorHome.html")
 
-@app.route("/send-request")
+@app.route("/send-request", methods=["POST", "GET"])
 @login_required
 def send_request():
-    app.logger.info("*******We hit the function buddy!!!")
-    # return redirect(url_for('main_page'))
-    return render_template("pages/sendrequest.html")
+    ## return render_template("pages/sendrequest.html")
+    if request.method == "POST":
+        maintenance_managers = User.query.filter_by(role="manager")
 
-@app.route("/update-asset-usage")
+        urgencyLevel = request.form.get("urgencyCheck")  # TODO: Implement this in DB.
+        machineNeedingMaint = request.form.get("subject")
+        subject = "Maintenance Request: " + machineNeedingMaint
+        body=request.form.get("message")
+        today=dt.date.today()
+        for _ in maintenance_managers:
+            notification = Notification(
+                sender = current_user.username,
+                recipient = _.username,
+                notification_send_date = today,
+                notification_head = subject,
+                notification_body = body,
+                # status = "initial-notice"
+            )
+
+            db.session.add(notification)
+            db.session.commit()
+            # try:
+            #     db.session.commit()
+            # except:
+            #     app.logger.error("User already exists.")
+            #     return redirect(url_for('send_request', success_message="Notification already exists."))
+            app.logger.info(f"We have added Notification to db for {_.username}.")
+        # return redirect(url_for("send_request", successful=True))
+        return render_template("pages/PublicAccess/SendMaintenanceRequest.html", success_message="Notice Submitted!")
+    return render_template("pages/PublicAccess/SendMaintenanceRequest.html")
+
+@app.route("/update-asset-usage", methods=["POST", "GET"])
 @login_required
 def update_usage():
-    return render_template("pages/updateusage.html")
+    if request.method == "POST":
+        ## Do our updating the usage bs
+        return render_template("pages/Director/UpdateDeviceUsage.html", success_message="Usage has been updated!")
+    return render_template("pages/Director/UpdateDeviceUsage.html")
 
-@app.route("/view-assets")
+@app.route("/asset-manager", methods=["POST", "GET"])
+@login_required
+def asset_manager():
+    if request.method == "POST":
+        return None
+    return render_template("pages/Director/AssetManager.html")
+
+@app.route("/view-assets", methods=["GET"])
 @login_required
 def view_assets():
     return render_template("pages/viewdevices.html")
+
+@app.route("/assign_device")
+def assign_device(original_page):
+    return redirect(original_page + ".html")
+
+@app.route("/add-asset", methods=["POST", "GET"])
+@login_required
+def add_asset():
+    if request.method == "POST":
+        if request.is_json:
+            # first half of page.
+            device_name = request.form.get("deviceName")
+            brand_name = request.form.get("brandName")
+            generic_name = request.form.get("genName")
+            manufacturer_name = request.form.get("manName")
+            stored_department = request.form.get("homeDepLoc")
+            installation_date = request.form.get("instDate")
+            average_uses_py = request.form.get("avgUseYear")
+
+            # second half
+            data = request.get_json()  # this should be the handsontable data.
+
+            # Calculate expectaction for next repair
+            # f_model.kaplan_meier_estimator_function()
+
+            app.logger.info(data)
+            return redirect(url_for("add_asset"))
+    return render_template("pages/Director/AssetManagement/AddNewDevice.html")
 
 @app.route("/report-equipment-failure")
 @login_required
@@ -208,6 +350,10 @@ def equipment_failure_report():
 @login_required
 def asset_details():
     return render_template("pages/devicedetail.html")
+
+@app.route("/test")
+def test():
+    return render_template("pages/adminhome.html")
 
 @app.route("/user/<username>", methods=["GET"])
 def user_profile(username):
@@ -221,6 +367,44 @@ def user_profile(username):
     # else:
     #     return f"User {username} could not be found.", 404
 
+@app.route("/security-tests")
+def security_testing():
+    user = User.query.filter_by(username=current_user.username).first()
+    if user:
+        return render_template("user_profile.html", user=user)
+    else:
+        return f"User {current_user.username} could not be found"
+
+#----------------------------------------------------------------------------#
+# Additions for new version.
+#----------------------------------------------------------------------------#
+
+
+# @app.route("/submit_request", methods=["POST", "GET"])
+# @login_required
+# def submit_maintenance_request():
+#     if request.method == "POST":
+#         maintenance_managers = User.query.filter_by(role="Maintenance Manager")
+#         for _ in maintenance_managers:
+#             notification = Notification(
+#                 sender = current_user.username,
+#                 recipient = _.username,
+#                 notification_send_date = date.today(),
+#                 notification_head = request.form.get("messageHeader"),
+#                 notification_body = request.form.get("messageBody"),
+#                 status = "initial-notice"
+#             )
+#             app.logger.info("We have added Notification to db.")
+#         # return redirect(url_for("send_request", successful=True))
+#         return render_template("pages/sendrequest.html", success_message="Notice Submitted!")
+#     return render_template("pages/sendrequest.html")
+
+@app.route("/test-assets")
+@login_required
+def test_assets():
+    #test_datum = PredictionModel(1221)
+    return None
+
 
 #----------------------------------------------------------------------------#
 # Launch Application.
@@ -228,5 +412,5 @@ def user_profile(username):
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", PORT))
     app.run(host="0.0.0.0", port=port)

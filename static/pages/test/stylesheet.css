@@ -1,0 +1,155 @@
+/* overall Style sheet */
+/* VARIABLES */
+:root{
+    --grey: #DDDDDE;
+    --main-blue: #285162;
+    --usage: #bc7241;
+    --devices: #41bca6;
+    --message: #4198bc;
+    --break: #bc4f41;
+    --secondary-blue: #3B5C6A;
+    --light-blue: #8AA4AF;
+    --text-box: #F5F2F2;
+    --pale-blue: #B8CDD6;
+    --grid-info: #E6E9EA;
+}
+
+/* OVERALL STYLE */
+header{
+    background: var(--main-blue);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    margin: 0%;
+}
+
+body{
+    background: var(--grey);
+    margin: 0%;
+}
+
+.request{
+    background: var(--message);
+}
+.usage{
+    background: var(--usage);
+}
+.break{
+    background: var(--break)
+}
+.device{
+    background: var(--devices);
+}
+
+.subheader{
+    width: 100%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    padding: 20px;
+    color: white;
+    margin: 0%;
+}
+.title{
+    text-align: center;
+}
+
+.returnHome{
+    background-color: var(--main-blue);
+    width: 189px;
+    height: 80px;
+    color: white;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none
+}
+
+.submitbutton{
+    border-radius: 20px;
+    background: var(--secondary-blue);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    width: 50%;
+    font-size: larger;
+    padding: 5%;
+    margin: 0 45%;
+}
+
+  /* Admin Maintence Style */
+
+  /*sidebar navigation*/
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--secondary-blue);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    text-align: right;
+  }
+
+  .sidenav a, .dropdown-btn {
+    padding: 5% 0;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--grey);
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: white;
+  }
+
+  .active {
+    background-color: var(--main-blue);
+    color: white;
+  }
+
+  .dropdown-container {
+    display: none;
+    background-color: var(--secondary-blue);
+    padding-left: 8px;
+
+  }
+
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+
+  .hamburgerbutton{
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .home{
+    background-color: var(--light-blue);
+    margin-top: 10px;
+  }
+  .home a{
+    color: black;
+  }
+  
