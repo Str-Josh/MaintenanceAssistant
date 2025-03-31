@@ -315,7 +315,7 @@ def asset_manager():
 @app.route("/view-assets", methods=["GET"])
 @login_required
 def view_assets():
-    return render_template("pages/viewdevices.html")
+    return render_template("pages/Director/AssetManagement/ViewAssets.html")
 
 
 @app.route("/assign_device")
