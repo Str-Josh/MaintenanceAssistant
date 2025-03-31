@@ -303,6 +303,7 @@ def update_usage():
         return render_template("pages/Director/UpdateDeviceUsage.html", success_message="Usage has been updated!")
     return render_template("pages/Director/UpdateDeviceUsage.html")
 
+
 @app.route("/asset-manager", methods=["POST", "GET"])
 @login_required
 def asset_manager():
