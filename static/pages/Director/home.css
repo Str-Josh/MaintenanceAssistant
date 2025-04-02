@@ -1,0 +1,21 @@
+.buttons{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    justify-content: space-evenly;
+    margin: 1%
+}
+
+.buttons button:hover {
+    background-color: #285162;
+    cursor: pointer;
+}
+
+.homePageButton{
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 487px;
+    height: min-content;
+    margin: 5%;
+}

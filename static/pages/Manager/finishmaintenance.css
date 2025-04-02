@@ -1,0 +1,55 @@
+/* Finish maintenance */
+.fin-main-form {
+    display: grid;
+    grid-template-areas:
+      "date time"
+      "desc desc"
+      "gap button";
+      grid-template-columns: 50% 50%;
+      gap: 5px;
+      padding: 10px;
+      margin: 10px;
+  }
+  .fin-main-form > div.depClass {
+    display: grid;
+    grid-area: dep;
+    grid-template-columns: 10% 90%;
+    padding: 20px;
+  }
+  .fin-main-form > div.roomClass {
+    display: grid;
+    grid-area: room;
+    grid-template-columns: 10% 90%;
+    padding: 20px;
+  }
+  .fin-main-form > div.dateClass {
+    display: grid;
+    grid-area: date;
+    grid-template-columns: 10% 90%;
+    padding: 20px;
+  }
+  .fin-main-form > div.timeClass {
+    display: grid;
+    grid-area: time;
+    grid-template-columns: 10% 90%;
+    padding: 20px;
+  }
+  .fin-main-form > div.descClass {
+    display: grid;
+    grid-area: desc;
+    grid-template-columns: 5% 95%;
+    padding: 20px;
+  }
+
+  
+  .fin-main-form > div.gapClass {
+    display: grid;
+    grid-area: gap;
+  }
+  .fin-main-form > div.buttonClass {
+    display: grid;
+    grid-area: button;
+    padding: 20px;
+    justify-content: end;
+
+  }

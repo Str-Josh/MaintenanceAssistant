@@ -1,0 +1,66 @@
+/* slider on home page */
+  
+.slider {
+    width: 80%;
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px;
+    
+  }
+  .slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    
+  }
+  .slides::-webkit-scrollbar-thumb {
+    background: #285162;
+    border-radius: 10px;
+  }
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .slides > a {
+    min-width: 130px;
+    height: max-content;
+    padding: 50px;
+    margin-right: 50px;
+    border-radius: 50%;
+    background: var(--light-blue);
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  .slider img {
+    object-fit: scale-down;
+    
+  }
+  
+ 
+
+  /* admin home */
+  .alerts, .messages{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    justify-content: center;
+  }
+  .icon{
+    max-width: 20%;
+    padding: 20px;
+  }
+  .messageSection{
+    width: 80%;
+  }

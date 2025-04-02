@@ -1,0 +1,68 @@
+/* Maintenance Work Page */
+.main-work-form {
+    display: grid;
+    grid-template-areas:
+      "date time"
+      "status status"
+      "desc desc"
+      "gap button";
+      grid-template-columns: 50% 50%;
+      gap: 5px;
+      padding: 10px;
+      margin: 10px;
+  }
+
+  .main-work-form > div.statusClass {
+    display: grid;
+    grid-area: status;
+    grid-template-columns: 10% 90%;
+    padding: 20px;
+  }
+  .main-work-form > div.depClass {
+    display: grid;
+    grid-area: dep;
+    grid-template-columns: 10% 90%;
+    padding: 20px;
+  }
+  .main-work-form > div.roomClass {
+    display: grid;
+    grid-area: room;
+    grid-template-columns: 20% 80%;
+    padding: 20px;
+  }
+  .main-work-form > div.dateClass {
+    display: grid;
+    grid-area: date;
+    grid-template-columns: 20% 80%;
+    padding: 20px;
+  }
+  .main-work-form > div.timeClass {
+    display: grid;
+    grid-area: time;
+    grid-template-columns: 10% 90%;
+    padding: 20px;
+  }
+  .main-work-form > div.descClass {
+    display: grid;
+    grid-area: desc;
+    grid-template-columns: 10% 90%;
+    padding: 20px;
+  }
+
+  
+  .main-work-form > div.gapClass {
+    display: grid;
+    grid-area: gap;
+  }
+  .main-work-form > div.buttonClass {
+    display: grid;
+    grid-area: button;
+    padding: 20px;
+    justify-content: end;
+
+  }
+
+  .radioButtons {
+    margin: 0 0 0 2%;
+    
+}

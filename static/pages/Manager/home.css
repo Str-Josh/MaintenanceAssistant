@@ -1,0 +1,121 @@
+/* slider on home page */
+  
+.slider {
+    width: 80%;
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px;
+    
+  }
+  .slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    
+  }
+  .slides::-webkit-scrollbar-thumb {
+    background: #285162;
+    border-radius: 10px;
+  }
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .slides > a {
+    min-width: 130px;
+    height: max-content;
+    padding: 50px;
+    margin-right: 50px;
+    border-radius: 50%;
+    background: var(--light-blue);
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  .slider img {
+    object-fit: scale-down;
+    
+  }
+  
+ 
+
+  /* admin home */
+  .alerts, .messages{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    justify-content: center;
+  }
+  .icon{
+    max-width: 20%;
+    padding: 20px;
+  }
+  .messageSection{
+    width: 80%;
+  }
+
+  /* message slider */
+  .messageSlider{
+    display: flex;
+    align-items: center;
+  }
+  .requestRecieve{
+    display: grid;
+    grid-template-areas:
+        "from subject"
+        "content content";
+  grid-template-columns: 1fr 3fr;
+  padding: 20px;
+  }
+
+  .requestRecieve > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+  }
+  .requestRecieve > div.from {
+    grid-area: from;
+    border: 2px solid var(--main-blue);
+    background-color: var(--light-blue);
+    border-radius: 20px 0px 0px 0px;
+    color: white;
+    text-align: center;
+  }
+  .requestRecieve > div.subject {
+    grid-area: subject;
+    border: 2px solid var(--main-blue);
+    background-color: var(--light-blue);
+    border-radius: 0px 20px 0px 0px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+  .requestRecieve > div.content {
+    grid-area: content;
+    border-radius: 0px 0px 20px 20px;
+    background-color: var(--pale-blue);
+    color: black;
+  }
+  .responseButtons{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .responseButtons button{
+    background-color: var(--light-blue);
+    border-radius: 20px;
+    color: black;
+    padding: 10px;
+    width: 10%;
+    font-weight: bold;
+    border: none;
+  }

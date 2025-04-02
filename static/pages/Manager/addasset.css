@@ -1,0 +1,63 @@
+.add-asset-form {
+    display: grid;
+    grid-template-areas:
+      "name name"
+      "dep room"
+      "date time"
+      "desc desc"
+      "gap button";
+      grid-template-columns: 50% 50%;
+      gap: 5px;
+      padding: 10px;
+      margin: 10px;
+  }
+
+  .add-asset-form > div.nameClass {
+    display: grid;
+    grid-area: name;
+    grid-template-columns: 10% 90%;
+    padding: 20px;
+  }
+  .add-asset-form > div.depClass {
+    display: grid;
+    grid-area: dep;
+    grid-template-columns: 10% 90%;
+    padding: 20px;
+  }
+  .add-asset-form > div.roomClass {
+    display: grid;
+    grid-area: room;
+    grid-template-columns: 10% 90%;
+    padding: 20px;
+  }
+  .add-asset-form > div.dateClass {
+    display: grid;
+    grid-area: date;
+    grid-template-columns: 10% 90%;
+    padding: 20px;
+  }
+  .add-asset-form > div.timeClass {
+    display: grid;
+    grid-area: time;
+    grid-template-columns: 10% 90%;
+    padding: 20px;
+  }
+  .add-asset-form > div.descClass {
+    display: grid;
+    grid-area: desc;
+    grid-template-columns: 5% 95%;
+    padding: 20px;
+  }
+
+  
+  .add-asset-form > div.gapClass {
+    display: grid;
+    grid-area: gap;
+  }
+  .add-asset-form > div.buttonClass {
+    display: grid;
+    grid-area: button;
+    padding: 20px;
+    justify-content: end;
+
+  }
