@@ -180,84 +180,84 @@ def page_not_found(e):
 @app.route("/admin_dashboard")
 @login_required
 def admin_dashboard():
-    return render_template("pages/DepartmentHome.html")
+    return render_template("pages/Department/DepartmentHome.html")
 
 @app.route("/send-request")
 @login_required
 def send_request():
     app.logger.info("*******We hit the function buddy!!!")
     # return redirect(url_for('main_page'))
-    return render_template("pages/sendrequest.html")
+    return render_template("pages/Department/sendrequest.html")
 
 @app.route("/update-asset-usage")
 @login_required
 def update_usage():
-    return render_template("pages/updateusage.html")
+    return render_template("pages/UniversalPages/updateusage.html")
 
 @app.route("/view-assets")
 @login_required
 def view_assets():
-    return render_template("pages/viewdevices.html")
+    return render_template("pages/UniversalPages/viewdevices.html")
 
 @app.route("/view-assets-dep")
 @login_required
 def view_assets_dep():
-    return render_template("pages/viewassetsdep.html")
+    return render_template("pages/Department/viewassetsdep.html")
 
 @app.route("/report-equipment-failure")
 @login_required
 def equipment_failure_report():
-    return render_template("pages/reportbreak.html")
+    return render_template("pages/Department/reportbreak.html")
 
 @app.route("/asset-details")
 @login_required
 def asset_details():
-    return render_template("pages/devicedetail.html")
+    return render_template("pages/MaintenanceManager/devicedetail.html")
 
 @app.route("/view-usage")
 @login_required
 def viewusage():
-    return render_template("pages/usagelog.html")
+    return render_template("pages/UniversalPages/usagelog.html")
 
 @app.route("/manager_dashboard")
 @login_required
 def manager_dashboard():
-    return render_template("pages/ManagerHome.html")
+    return render_template("pages/MaintenanceManager/ManagerHome.html")
 
 @app.route("/staff_dashboard")
 @login_required
 def staff_dashboard():
-    return render_template("pages/StaffHome.html")
+    return render_template("pages/Staff/StaffHome.html")
 
 @app.route("/add_asset")
 @login_required
 def add_asset():
-    return render_template("pages/addasset.html")
+    return render_template("pages/MaintenanceManager/addasset.html")
 
 @app.route("/finish_maintenance")
 @login_required
 def finish_maintenance():
-    return render_template("pages/finishmaintenance.html")
+    return render_template("pages/MaintenanceManager/finishmaintenance.html")
 
 @app.route("/info")
 @login_required
 def information():
-    return render_template("pages/assetinfo.html")
+    return render_template("pages/UniversalPages/assetinfo.html")
 
 @app.route("/staff-asset-details")
 @login_required
 def staff_asset_details():
-    return render_template("pages/staffassetdetails.html")
+    return render_template("pages/Staff/staffassetdetails.html")
 
 @app.route("/work_maintenance")
 @login_required
 def work_maintenance():
-    return render_template("pages/workmaintenance.html")
+    return render_template("pages/Staff/workmaintenance.html")
 
 @app.route("/staff_find_asset")
 @login_required
 def staff_find_asset():
-    return render_template("pages/viewassetsstaff.html")
+    return render_template("pages/Staff/viewassetsstaff.html")
 
 @app.route("/user/<username>", methods=["GET"])
 def user_profile(username):
