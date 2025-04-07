@@ -23,6 +23,7 @@ from mock_hospital import mock_users, mock_notifications, mock_assets
 PORT = 5000  # Uncomment for Josh.
 RESET_DB = False  # Do not change unless you want to recreate the entire database.
 USE_MOCK_DB = True
+DEMONSTRATION = False  # Will enable using 2FA and CAPTCHA when True
 
 
 app = Flask(__name__)
@@ -78,6 +79,7 @@ def create_mock_db():
             maintenance_type = _mock_asset["maintenance_type"],
             cost_per_maintenance_activity = _mock_asset["cost_per_maintenance_activity"],
             total_maintenance_costs_in_past_year = _mock_asset["total_maintenance_costs_in_past_year"],
+            upcoming_maintenance_action_date = _mock_asset["upcoming_maintenance_action_date"],
         )
         db.session.add(_asset)
         db.session.commit()
@@ -148,7 +150,7 @@ def home():
                 # Backend stuff for viewing devices needing upcoming repairs.
                 company_assets = Asset.query.all()
                 maintenance_required = []
-                date_span_interval = 5  # number of days to span the interval
+                date_span_interval = 19  # number of days to span the interval
                 upcoming_maintenance_actions_datespan = dt.date.today() + dt.timedelta(days=date_span_interval)
 
                 for _asset in company_assets:
@@ -202,7 +204,8 @@ def register():
         
         app.logger.info("A new user was registered!")
         return redirect(url_for('login'))
-    return render_template('forms/sign_up.html')
+    # return render_template('forms/sign_up.html')
+    return redirect(url_for("home"))
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -276,8 +279,13 @@ def send_request():
         urgencyLevel = request.form.get("urgencyCheck")  # TODO: Implement this in DB.
         machineNeedingMaint = request.form.get("subject")
         subject = "Maintenance Request: " + machineNeedingMaint
-        body=request.form.get("message")
-        today=dt.date.today()
+        body = request.form.get("message")
+        today = dt.date.today()
+        # If urgent, elevate immediately
+        if urgencyLevel == "urgent":
+            # Elevate to managers immediately
+            pass
+
         for _ in maintenance_managers:
             notification = Notification(
                 sender = current_user.username,
@@ -348,10 +356,10 @@ def add_asset():
     return render_template("pages/Director/AssetManagement/AddNewDevice.html")
 
 
-@app.route("/asset-details")
-@login_required
-def asset_details():
-    return render_template("pages/devicedetail.html")
+# @app.route("/asset-details")
+# @login_required
+# def asset_details():
+#     return render_template("pages/devicedetail.html")
 
 
 @app.route("/schedule-repair", methods=["GET", "POST"])
@@ -360,6 +368,46 @@ def schedule_repair(repair_by_date):
     if request.method == "POST":
         return None
     return render_template("")
+
+@app.route("/asset-details/<serial_number>", methods=["GET", "POST"])
+@login_required
+def asset_details(serial_number):
+    if current_user.role != "director" or current_user.role != "manager" or not current_user.is_authenticated:
+        redirect(url_for("unauthorized"))
+    if request.method == "POST":
+        return None
+    return render_template("pages/PublicAcess/AssetDetails.html", asset_id=serial_number)
+
+#----------------------------------------------------------------------------#
+# Manager Home Routes.
+#----------------------------------------------------------------------------#
+
+@app.route("/notif-rud")
+@login_required
+def notification_crud_without_c(id, operation):
+    if operation == "remove":
+        return None
+    elif operation == "elevate":
+        return None
+    elif operation == "assignSelf":
+        return None
+    return None
+
+@app.route("/delete-notification")
+@login_required
+def delete_notification(id):
+    notification_to_delete = Notification.query.get(id)
+    if notification_to_delete:
+        db.session.delete(notification_to_delete)
+        db.session.commit()
+        return f"Notification has successfully been removed.", 200
+    else:
+        return f"Notification was not found.", 404
+    
+@app.route("/elevate")
+@login_required
+def elevate(id):
+    return None
 
 
 #----------------------------------------------------------------------------#

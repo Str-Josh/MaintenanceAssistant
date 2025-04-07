@@ -1,0 +1,782 @@
+/* VARIABLES */
+:root{
+    --grey: #DDDDDE;
+    --main-blue: #285162;
+    --usage: #bc7241;
+    --devices: #41bca6;
+    --message: #4198bc;
+    --break: #bc4f41;
+    --secondary-blue: #3B5C6A;
+    --light-blue: #8AA4AF;
+    --text-box: #F5F2F2;
+    --pale-blue: #B8CDD6;
+    --grid-info: #E6E9EA;
+    --good-news: #6EBC41;
+  }
+  
+  /* OVERALL STYLE */
+  header{
+      background: var(--main-blue);
+      box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+      color: white;
+      margin: 0%;
+  }
+  
+  body{
+      background: var(--grey);
+      margin: 0%;
+  }
+  
+  img{ 
+      max-height: 70px;
+  }
+  
+  /* DEPARTMENT */
+  .request{
+      background: var(--message);
+  }
+  .usage{
+      background: var(--usage);
+  }
+  .break{
+      background: var(--break)
+  }
+  .device{
+      background: var(--devices);
+  }
+  
+  .good-news{
+    background: var(--good-news);
+  }
+  
+  .subheader{
+    width: 100%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    padding: 20px;
+    color: white;
+    margin: 0%;
+  }
+  .title{
+      text-align: center;
+  }
+  
+  .returnHome{
+      background-color: var(--main-blue);
+      width: 189px;
+      height: 80px;
+      color: #FFF;
+      text-align: center;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+  }
+  
+  .submitbutton{
+      border-radius: 20px;
+      background: var(--secondary-blue);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      color: white;
+      width: 50%;
+      font-size: larger;
+      padding: 5%;
+      margin: 0 45%;
+  }
+  
+  /* department home */
+  .buttons{
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-items: center;
+      justify-content: space-evenly;
+      margin: 1%
+  }
+  
+  .buttons button:hover {
+      background-color: #285162;
+      cursor: pointer;
+  }
+  
+  .homePageButton{
+      color: white;
+      padding: 20px;
+      border-radius: 20px;
+      width: 487px;
+      height: min-content;
+      margin: 5%;
+  }
+  
+  /* send request */
+  .labeltext {
+      text-align: right;
+      padding: 0 5px;
+      color: var(--main-blue);
+  }
+  
+  .bigText {
+      text-align: right;
+      padding: 0 5px;
+      padding: 10px;
+      color: var(--main-blue);
+  }
+  
+  
+  .inputBox {
+      fill: var(--text-box);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+      border-radius: 20px;
+      border: none;
+      padding: 5px;
+      margin: 0 0 0 2%;
+  }
+  
+  .bigBox {
+      fill: var(--text-box);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+      border-radius: 20px;
+      padding: 5px;
+      border: none;
+      height: 325px;
+      margin: 0 0 0 2%;
+  }
+  
+  .form {
+      display: grid;
+      grid-template-areas:
+        "subject date"
+        "message message"
+        "gap button";
+        grid-template-columns: 50% 50%;
+        gap: 5px;
+        padding: 10px;
+        margin: 10px;
+    }
+  
+    .form > div.subjectClass {
+      display: grid;
+      grid-area: subject;
+      grid-template-columns: 10% 90%;
+      padding: 20px;
+    }
+    .form > div.dateClass {
+      display: grid;
+      grid-area: date;
+      grid-template-columns: 10% 90%;
+      padding: 20px;
+    }
+    .form > div.messageClass {
+      display: grid;
+      grid-area: message;
+      grid-template-columns: 5% 95%;
+      padding: 20px;
+    }
+    .form > div.gapClass {
+      display: grid;
+      grid-area: gap;
+    }
+    .form > div.buttonClass {
+      display: grid;
+      grid-area: button;
+      padding: 20px;
+      justify-content: end;
+  
+    }
+  
+    /* Admin Maintence Style */
+  
+    /*sidebar navigation*/
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: var(--secondary-blue);
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      text-align: right;
+    }
+  
+    .sidenav a, .dropdown-btn {
+      padding: 10% 0;
+      text-decoration: none;
+      font-size: 20px;
+      color: var(--grey);
+      display: block;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+    }
+  
+    .sidenav a:hover, .dropdown-btn:hover {
+      color: white;
+    }
+  
+    .active {
+      background-color: var(--main-blue);
+      color: white;
+    }
+  
+    .dropdown-container {
+      display: none;
+      background-color: var(--secondary-blue);
+      padding-left: 8px;
+  
+    }
+  
+    .fa-caret-down {
+      float: right;
+      padding-right: 8px;
+    }
+  
+    .hamburgerbutton{
+      font-size: 30px;
+      cursor: pointer;
+    }
+    .home{
+      background-color: var(--light-blue);
+      margin-top: 10px;
+    }
+    .home a{
+      color: black;
+    }
+  
+    /* slider on home page */
+    
+    .slider {
+      width: 80%;
+      text-align: center;
+      overflow: hidden;
+      padding: 20px;
+    }
+    
+    .slides {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      padding: 20px;
+      
+    }
+    .slides::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+      
+    }
+    .slides::-webkit-scrollbar-thumb {
+      background: #285162;
+      border-radius: 10px;
+    }
+    .slides::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .slides > a {
+      min-width: 130px;
+      height: max-content;
+      padding: 50px;
+      margin-right: 50px;
+      border-radius: 50%;
+      background: var(--light-blue);
+      display: flex;
+      flex-direction: column;
+      font-size: large;
+      font-weight: bolder;
+      color: white;
+      text-decoration: none;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    .slider img {
+      object-fit: scale-down;
+      
+    }
+    
+   
+  
+    /* admin home */
+    .alerts, .messages{
+      display: flex;
+      align-items: center;
+      margin: 20px;
+      justify-content: center;
+    }
+    .icon{
+      max-width: 20%;
+      padding: 20px;
+    }
+    .messageSection{
+      width: 80%;
+    }
+  
+    /* message slider */
+    .messageSlider{
+      display: flex;
+      align-items: center;
+    }
+    .requestRecieve{
+      display: grid;
+      grid-template-areas:
+          "from subject"
+          "content content";
+    grid-template-columns: 1fr 3fr;
+    padding: 20px;
+    }
+  
+    .requestRecieve > div {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+    }
+    .requestRecieve > div.from {
+      grid-area: from;
+      border: 2px solid var(--main-blue);
+      background-color: var(--light-blue);
+      border-radius: 20px 0px 0px 0px;
+      color: white;
+      text-align: center;
+    }
+    .requestRecieve > div.subject {
+      grid-area: subject;
+      border: 2px solid var(--main-blue);
+      background-color: var(--light-blue);
+      border-radius: 0px 20px 0px 0px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+    .requestRecieve > div.content {
+      grid-area: content;
+      border-radius: 0px 0px 20px 20px;
+      background-color: var(--pale-blue);
+      color: black;
+    }
+    .responseButtons{
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .responseButtons button{
+      background-color: var(--light-blue);
+      border-radius: 20px;
+      color: black;
+      padding: 10px;
+      width: 10%;
+      font-weight: bold;
+      border: none;
+    }
+  
+    /* login page */
+    .loginPage{
+      background-color: var(--main-blue);
+      color: var(--grey);
+    }
+  
+    .loginForm{
+      text-align: center;
+      border-top: var(--grey) solid 3pt;
+      border-bottom: var(--grey) solid 3pt;;
+      padding: 20px;
+    }
+  
+    .loginTextBox{
+      fill: var(--text-box);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+      border-radius: 20px;
+      border: none;
+      padding: 5px;
+  
+    }
+  
+    .loginButton{
+      border-radius: 20px;
+      background: var(--light-blue);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      color: white;
+      width: 147px;
+      font-size: medium;
+      padding: 10px;
+      margin: 0px 10px;
+    }
+  
+    .buttonRow button:hover{
+      background: var(--secondary-blue);
+      cursor: pointer;
+    }
+    
+    .buttonRow{
+      display: flex;
+      justify-content: center;
+    }
+    
+    .loginButton a{
+      color: white;
+      text-decoration: none;
+    }
+  
+    .loginInput{
+      padding: 10px;
+    }
+  
+    /* Find asset */
+  
+    .searchbar{
+      display: flex;
+      justify-content: center;
+    }
+  
+    .searchbar .labeltext{
+      display: flex;
+      align-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .searchbar .textbox{
+      padding: 5px 10px;
+    }
+  
+    .labeltext{
+      text-align: right;
+      padding: 0 5px;
+      color: var(--main-blue);
+    }
+    .textbox{
+      fill: var(--text-box);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+      border-radius: 20px;
+      border: none;
+      margin: 20px;
+    }
+  
+    .searchbar .labeltext{
+      width: 10%;
+      
+    }
+    .searchbar .textbox{
+      width: 70%;
+    }
+  
+    .results{
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      margin: 0 2%;
+      width: 96%;
+      border: none;
+      background: unset;
+    }
+    .gridLeft{
+      background-color: var(--light-blue);
+      border: #B8CDD6 solid 1px;
+      display: grid;
+      justify-content: center;
+      padding: 10px;
+    }
+    .gridRight{
+      align-content: center;
+      background-color: var(--grid-info);
+      border: #B8CDD6 solid 1px;
+    }
+    .upperLeft{
+      border-radius: 20px 0 0 0;
+    }
+    .bottomLeft{
+      border-radius: 0 0 0 20px;
+    }
+    .upperRight{
+      border-radius: 0 20px 0 0;
+    }
+    .bottomRight{
+      border-radius: 0 0 20px 0;
+    }
+    .assetDescrip{
+      padding: 10px;
+      font-weight: bold;
+      font-size: xx-large;
+      text-align: center;
+    }
+    .scheduled{
+      padding: 10px;
+      font-weight: lighter;
+      font-size: large;
+      text-align: center;
+    }
+  
+    /* view usage */
+    .usagedate{
+      display: flex;
+      flex-direction: column;
+    }
+    .dateHead{
+      font-size: x-large;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+    }
+  
+    .timeSubHead{
+      font-size: medium;
+      font-weight: lighter;
+      text-align: center;
+      color: white;
+    }
+    .notes{
+      padding: 10px;
+      inset: 20px;
+      padding: 10px;
+      text-indent: 20px;
+    }
+  
+    .assetDisplay{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+    .assetCircle{
+      height: 150px;
+      width: 150px;
+      background: var(--light-blue);
+      border-radius: 50%;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+    }
+  
+    .assetInfo{
+      text-align: center;
+    }
+  
+    .assetHead{
+      font-size: xx-large;
+      font-weight: bolder;
+      padding: 10px;
+    }
+  
+    .assetSubHead{
+      font-size: large;
+    }
+  
+    /* New asset page */
+  
+    .add-asset-form {
+      display: grid;
+      grid-template-areas:
+        "name name"
+        "dep room"
+        "date time"
+        "desc desc"
+        "gap button";
+        grid-template-columns: 50% 50%;
+        gap: 5px;
+        padding: 10px;
+        margin: 10px;
+    }
+  
+    .add-asset-form > div.nameClass {
+      display: grid;
+      grid-area: name;
+      grid-template-columns: 10% 90%;
+      padding: 20px;
+    }
+    .add-asset-form > div.depClass {
+      display: grid;
+      grid-area: dep;
+      grid-template-columns: 10% 90%;
+      padding: 20px;
+    }
+    .add-asset-form > div.roomClass {
+      display: grid;
+      grid-area: room;
+      grid-template-columns: 10% 90%;
+      padding: 20px;
+    }
+    .add-asset-form > div.dateClass {
+      display: grid;
+      grid-area: date;
+      grid-template-columns: 10% 90%;
+      padding: 20px;
+    }
+    .add-asset-form > div.timeClass {
+      display: grid;
+      grid-area: time;
+      grid-template-columns: 10% 90%;
+      padding: 20px;
+    }
+    .add-asset-form > div.descClass {
+      display: grid;
+      grid-area: desc;
+      grid-template-columns: 5% 95%;
+      padding: 20px;
+    }
+  
+    
+    .add-asset-form > div.gapClass {
+      display: grid;
+      grid-area: gap;
+    }
+    .add-asset-form > div.buttonClass {
+      display: grid;
+      grid-area: button;
+      padding: 20px;
+      justify-content: end;
+  
+    }
+    .fixover{
+      margin: 0 0 0 7%;
+    }
+  
+    /* Finish maintenance */
+    .fin-main-form {
+      display: grid;
+      grid-template-areas:
+        "date time"
+        "desc desc"
+        "gap button";
+        grid-template-columns: 50% 50%;
+        gap: 5px;
+        padding: 10px;
+        margin: 10px;
+    }
+    .fin-main-form > div.depClass {
+      display: grid;
+      grid-area: dep;
+      grid-template-columns: 10% 90%;
+      padding: 20px;
+    }
+    .fin-main-form > div.roomClass {
+      display: grid;
+      grid-area: room;
+      grid-template-columns: 10% 90%;
+      padding: 20px;
+    }
+    .fin-main-form > div.dateClass {
+      display: grid;
+      grid-area: date;
+      grid-template-columns: 10% 90%;
+      padding: 20px;
+    }
+    .fin-main-form > div.timeClass {
+      display: grid;
+      grid-area: time;
+      grid-template-columns: 10% 90%;
+      padding: 20px;
+    }
+    .fin-main-form > div.descClass {
+      display: grid;
+      grid-area: desc;
+      grid-template-columns: 5% 95%;
+      padding: 20px;
+    }
+  
+    
+    .fin-main-form > div.gapClass {
+      display: grid;
+      grid-area: gap;
+    }
+    .fin-main-form > div.buttonClass {
+      display: grid;
+      grid-area: button;
+      padding: 20px;
+      justify-content: end;
+  
+    }
+  
+    /* Asset Info Page */
+    .info{
+      display: flex;
+      padding: 30px;
+    }
+  
+    /* Maintenance Work Page */
+    .main-work-form {
+      display: grid;
+      grid-template-areas:
+        "date time"
+        "status status"
+        "desc desc"
+        "gap button";
+        grid-template-columns: 50% 50%;
+        gap: 5px;
+        padding: 10px;
+        margin: 10px;
+    }
+  
+    .main-work-form > div.statusClass {
+      display: grid;
+      grid-area: status;
+      grid-template-columns: 10% 90%;
+      padding: 20px;
+    }
+    .main-work-form > div.depClass {
+      display: grid;
+      grid-area: dep;
+      grid-template-columns: 10% 90%;
+      padding: 20px;
+    }
+    .main-work-form > div.roomClass {
+      display: grid;
+      grid-area: room;
+      grid-template-columns: 20% 80%;
+      padding: 20px;
+    }
+    .main-work-form > div.dateClass {
+      display: grid;
+      grid-area: date;
+      grid-template-columns: 20% 80%;
+      padding: 20px;
+    }
+    .main-work-form > div.timeClass {
+      display: grid;
+      grid-area: time;
+      grid-template-columns: 10% 90%;
+      padding: 20px;
+    }
+    .main-work-form > div.descClass {
+      display: grid;
+      grid-area: desc;
+      grid-template-columns: 10% 90%;
+      padding: 20px;
+    }
+  
+    
+    .main-work-form > div.gapClass {
+      display: grid;
+      grid-area: gap;
+    }
+    .main-work-form > div.buttonClass {
+      display: grid;
+      grid-area: button;
+      padding: 20px;
+      justify-content: end;
+  
+    }
+  
+    .radioButtons {
+      margin: 0 0 0 2%;
+      
+  }
+  
+    /* Temp home bar styling NEEDS TO DELETE */
+    .logout{
+      color: var(--grey);
+      text-decoration: none;
+    }
+  
+  

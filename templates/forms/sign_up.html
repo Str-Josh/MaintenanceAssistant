@@ -2,12 +2,12 @@
 {% block content %}
 
 <head>
-<title>Maintenance Assistant - Register</title>
-<!-- <link rel="stylesheet" href="/static/pages/Director/DirectorHome_styles.css"> -->
+    <title>Create new user</title>
+    <!-- <link rel="stylesheet" href="/static/pages/Director/DirectorHome_styles.css"> -->
 </head>
 <body>
 <div class="container" style="text-align: center;">
-    <h1>Maintenance Assistant - Register</h1>
+    <h1>Register new user account</h1>
     <form action="/register" method="post">
         <div>
             <label for="username">Username:</label>
@@ -25,10 +25,20 @@
         </div>
 
         <div>
+            <label for="email">Email:</label>
+            <input type="text" name="email" />
+        </div>
+
+        <div>
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="number" name="phoneNumber" />
+        </div>
+
+        <div>
             <label for="user_role">User role:</label>
             <select class="dropdown-content" name="user_role" multiple>
                 <!-- <option value="" disabled selected>Select a role</option> -->
-                <option value="Admin">Admin</option>
+                <!-- <option value="Admin">Admin</option> -->
                 <option value="Director">Director</option>
                 <option value="Manager">Maintenance Manager</option>
                 <option value="Staff">Maintenance Staff</option>

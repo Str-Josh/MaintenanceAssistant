@@ -1,3 +1,15 @@
+.sendRequestForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-top: 1rem; */
+  /* width: 100px;
+  margin-left: auto;
+  margin-right: auto; */
+}
+
+/* END NEW STUFF */
+
 .labeltext {
   text-align: right;
   padding: 0 5px;
@@ -75,6 +87,10 @@
   justify-content: end;
 
 }
+
+
+/* END OF CURRENT CONTENT */
+
 
 
 /* .messageText {
