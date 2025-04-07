@@ -34,7 +34,7 @@ body.navbar {
     min-height: 100vh;
     min-height: 100dvh;
     background-color: var(--base-clr);
-    color: var(--bar-text);
+    color: var(--text-clr);
     display: grid;
     grid-template-columns: auto 1fr;
 }
