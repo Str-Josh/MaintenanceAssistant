@@ -5,7 +5,7 @@
     --line-clr: #42434a;
     --hover-clr: #222533;
     --bar-text: #ddddde;
-    --text-clr: ;
+    --text-clr: black;
     --accent-clr: #8AA4AF;
     --secondary-text-clr: #b0b3c1;
     --light-blue: #8AA4AF;
@@ -45,7 +45,7 @@ body.navbar #sidebar{
     padding: 5px 1em;
     background-color: var(--sidebar-clr);
     border-right: 1px solid var(--line-clr);
-    color: var(--text-clr);
+    color: var(--bar-text);
     position: sticky;
     top: 0;
     align-self: start;
@@ -86,7 +86,7 @@ body.navbar #sidebar a, body.navbar #sidebar .dropdown-btn, body.navbar #sidebar
     border-radius: .5em;
     padding: .85em;
     text-decoration: none;
-    color: var(--text-clr);
+    color: var(-);
     display: flex;
     align-items: center;
     gap: 1em;
@@ -101,7 +101,7 @@ body.navbar #sidebar a, body.navbar #sidebar .dropdown-btn, body.navbar #sidebar
 }
 body.navbar #sidebar svg{
     flex-shrink: 0;
-    fill: var(--text-clr);
+    fill: var(--bar-text);
 }
 body.navbar #sidebar a span, body.navbar #sidebar .dropdown-btn span{
     flex-grow: 1;
