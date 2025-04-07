@@ -181,6 +181,7 @@ def home():
 #----------------------------------------------------------------------------#
 
 @app.route('/register', methods=["GET", "POST"])
+@login_required
 def register():
     if request.method == "POST":
         role = request.form.get("user_role").lower()
@@ -204,8 +205,10 @@ def register():
         
         app.logger.info("A new user was registered!")
         return redirect(url_for('login'))
-    # return render_template('forms/sign_up.html')
-    return redirect(url_for("home"))
+    if current_user.role != "director":
+        # if they're unauthorized to create a new user, redirect them back to their home page.
+        return redirect(url_for("home"))
+    return render_template('forms/sign_up.html')
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
