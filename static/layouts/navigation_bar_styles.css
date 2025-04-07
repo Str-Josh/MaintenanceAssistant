@@ -4,9 +4,11 @@
 
     --line-clr: #42434a;
     --hover-clr: #222533;
-    --text-clr: #ddddde;
+    --bar-text: #ddddde;
+    --text-clr: ;
     --accent-clr: #8AA4AF;
     --secondary-text-clr: #b0b3c1;
+    --light-blue: #8AA4AF;
 
     --sidebar-clr: #3B5C6A;  /* Sidebar navigator background color */
     --sidebar-text-clr: #ffffff;
@@ -32,7 +34,7 @@ body.navbar {
     min-height: 100vh;
     min-height: 100dvh;
     background-color: var(--base-clr);
-    color: var(--text-clr);
+    color: var(--bar-text);
     display: grid;
     grid-template-columns: auto 1fr;
 }
@@ -66,6 +68,11 @@ body.navbar #sidebar > ul > li:first-child{
         font-weight: 600;
     }
 }
+
+.active{
+    background-color: var(--light-blue);
+}
+
 body.navbar #sidebar ul li.active a{
     color: black;
     background-color: (var(--accent-clr));
