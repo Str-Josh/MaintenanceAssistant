@@ -86,7 +86,7 @@ body.navbar #sidebar a, body.navbar #sidebar .dropdown-btn, body.navbar #sidebar
     border-radius: .5em;
     padding: .85em;
     text-decoration: none;
-    color: var(-);
+    color: var(--bar-text);
     display: flex;
     align-items: center;
     gap: 1em;
