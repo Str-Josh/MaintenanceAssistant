@@ -4,13 +4,11 @@
 
     --line-clr: #42434a;
     --hover-clr: #222533;
-    --bar-text: #ddddde;
-    --text-clr: black;
-    --accent-clr: #8AA4AF;
+    --text-clr: ;
+    --accent-clr: #5e63ff;
     --secondary-text-clr: #b0b3c1;
-    --light-blue: #8AA4AF;
 
-    --sidebar-clr: #3B5C6A;  /* Sidebar navigator background color */
+    --sidebar-clr: #491d9c;  /* Sidebar navigator background color */
     --sidebar-text-clr: #ffffff;
     --sidebar-hover-clr: #285162;
 
@@ -34,7 +32,7 @@ body.navbar {
     min-height: 100vh;
     min-height: 100dvh;
     background-color: var(--base-clr);
-    color: var(--bar-text);
+    color: var(--text-clr);
     display: grid;
     grid-template-columns: auto 1fr;
 }
@@ -45,7 +43,7 @@ body.navbar #sidebar{
     padding: 5px 1em;
     background-color: var(--sidebar-clr);
     border-right: 1px solid var(--line-clr);
-    color: var(--bar-text);
+
     position: sticky;
     top: 0;
     align-self: start;
@@ -68,17 +66,11 @@ body.navbar #sidebar > ul > li:first-child{
         font-weight: 600;
     }
 }
-
-.active{
-    background-color: var(--light-blue);
-}
-
 body.navbar #sidebar ul li.active a{
-    color: black;
-    background-color: (var(--accent-clr));
+    color: var(--accent-clr);
 
     svg{
-        fill: black;
+        fill: var(--accent-clr);
     }
 }
 
@@ -86,7 +78,7 @@ body.navbar #sidebar a, body.navbar #sidebar .dropdown-btn, body.navbar #sidebar
     border-radius: .5em;
     padding: .85em;
     text-decoration: none;
-    color: var(-);
+    color: var(--text-clr);
     display: flex;
     align-items: center;
     gap: 1em;
@@ -101,7 +93,7 @@ body.navbar #sidebar a, body.navbar #sidebar .dropdown-btn, body.navbar #sidebar
 }
 body.navbar #sidebar svg{
     flex-shrink: 0;
-    fill: var(--bar-text);
+    fill: var(--text-clr);
 }
 body.navbar #sidebar a span, body.navbar #sidebar .dropdown-btn span{
     flex-grow: 1;
