@@ -29,6 +29,9 @@ DEMONSTRATION = False  # Will enable using 2FA and CAPTCHA when True
 app = Flask(__name__)
 app.config.from_object("config")
 
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
 logging.basicConfig(filename="errors.log", level=logging.DEBUG)
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -380,6 +383,11 @@ def asset_details(serial_number):
     if request.method == "POST":
         return None
     return render_template("pages/PublicAcess/AssetDetails.html", asset_id=serial_number)
+
+@app.route("/search-assets")
+@login_required
+def search_assets():
+    return render_template("pages/Director/AssetManagement/SearchAssets.html")
 
 #----------------------------------------------------------------------------#
 # Manager Home Routes.
