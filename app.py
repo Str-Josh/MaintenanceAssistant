@@ -29,8 +29,8 @@ DEMONSTRATION = False  # Will enable using 2FA and CAPTCHA when True
 app = Flask(__name__)
 app.config.from_object("config")
 
-app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 logging.basicConfig(filename="errors.log", level=logging.DEBUG)
 login_manager = LoginManager()
