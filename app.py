@@ -13,7 +13,7 @@ import datetime as dt
 import logging
 import os
 
-from mymodels import db, User, Messages, Asset
+from mymodels import db, User, Notification, Asset
 import failure_model as f_model
 from mock_hospital import mock_users, mock_notifications, mock_assets
 
@@ -22,15 +22,12 @@ from mock_hospital import mock_users, mock_notifications, mock_assets
 # PORT = 7000  # Uncomment for Nick.
 PORT = 5000  # Uncomment for Josh.
 RESET_DB = False  # Do not change unless you want to recreate the entire database.
-USE_MOCK_DB = False
+USE_MOCK_DB = True
 DEMONSTRATION = False  # Will enable using 2FA and CAPTCHA when True
 
 
 app = Flask(__name__)
 app.config.from_object("config")
-
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 logging.basicConfig(filename="errors.log", level=logging.DEBUG)
 login_manager = LoginManager()
@@ -56,7 +53,7 @@ def create_mock_db():
         db.session.add(_user)
         db.session.commit()
     for _mock_notification in mock_notifications:
-        _notification = Messages(
+        _notification = Notification(
             sender = _mock_notification["sender"],
             recipient = _mock_notification["recipient"],
             notification_send_date = _mock_notification["notification_send_date"],
@@ -87,16 +84,16 @@ def create_mock_db():
         db.session.add(_asset)
         db.session.commit()
 
-# with app.app_context():
-#     if RESET_DB and not USE_MOCK_DB:
-#         db.drop_all()
-#         db.create_all()
-#     elif RESET_DB and USE_MOCK_DB:
-#         db.drop_all()
-#         db.create_all()
-#         create_mock_db()
-#     else:
-#         db.create_all()
+with app.app_context():
+    if RESET_DB and not USE_MOCK_DB:
+        db.drop_all()
+        db.create_all()
+    elif RESET_DB and USE_MOCK_DB:
+        db.drop_all()
+        db.create_all()
+        create_mock_db()
+    else:
+        db.create_all()
 
 
 #----------------------------------------------------------------------------#
@@ -167,7 +164,7 @@ def home():
                             maintenance_required.append(instance)
 
                 # Backend stuff for notifications bar.
-                notifications = Messages.query.filter_by(recipient=current_user.username).all()
+                notifications = Notification.query.filter_by(recipient=current_user.username).all()
 
                 return render_template("pages/Manager/ManagerHome.html", assets=maintenance_required, notifications=notifications)
             elif role == 'staff':
@@ -184,7 +181,6 @@ def home():
 #----------------------------------------------------------------------------#
 
 @app.route('/register', methods=["GET", "POST"])
-@login_required
 def register():
     if request.method == "POST":
         role = request.form.get("user_role").lower()
@@ -208,10 +204,8 @@ def register():
         
         app.logger.info("A new user was registered!")
         return redirect(url_for('login'))
-    if current_user.role != "director":
-        # if they're unauthorized to create a new user, redirect them back to their home page.
-        return redirect(url_for("home"))
-    return render_template('forms/sign_up.html')
+    # return render_template('forms/sign_up.html')
+    return redirect(url_for("home"))
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -293,7 +287,7 @@ def send_request():
             pass
 
         for _ in maintenance_managers:
-            notification = Messages(
+            notification = Notification(
                 sender = current_user.username,
                 recipient = _.username,
                 notification_send_date = today,
@@ -304,7 +298,7 @@ def send_request():
 
             db.session.add(notification)
             db.session.commit()
-            app.logger.info(f"We have added Messages to db for {_.username}.")
+            app.logger.info(f"We have added Notification to db for {_.username}.")
         return render_template("pages/PublicAccess/SendMaintenanceRequest.html", success_message="Notice Submitted!")
     return render_template("pages/PublicAccess/SendMaintenanceRequest.html")
 
@@ -354,6 +348,13 @@ def add_asset():
             # second half
             data = request.get_json()  # this should be the handsontable data.
 
+            asset = Asset(
+                device_name = device_name,
+            )
+            try:
+                db.commit(asset)
+            except:
+
             # Calculate expectaction for next repair
             # f_model.kaplan_meier_estimator_function()
 
@@ -384,11 +385,6 @@ def asset_details(serial_number):
         return None
     return render_template("pages/PublicAcess/AssetDetails.html", asset_id=serial_number)
 
-@app.route("/search-assets")
-@login_required
-def search_assets():
-    return render_template("pages/Director/AssetManagement/SearchAssets.html")
-
 #----------------------------------------------------------------------------#
 # Manager Home Routes.
 #----------------------------------------------------------------------------#
@@ -407,13 +403,13 @@ def notification_crud_without_c(id, operation):
 @app.route("/delete-notification")
 @login_required
 def delete_notification(id):
-    notification_to_delete = Messages.query.get(id)
+    notification_to_delete = Notification.query.get(id)
     if notification_to_delete:
         db.session.delete(notification_to_delete)
         db.session.commit()
-        return f"Messages has successfully been removed.", 200
+        return f"Notification has successfully been removed.", 200
     else:
-        return f"Messages was not found.", 404
+        return f"Notification was not found.", 404
     
 @app.route("/elevate")
 @login_required
