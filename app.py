@@ -87,16 +87,16 @@ def create_mock_db():
         db.session.add(_asset)
         db.session.commit()
 
-with app.app_context():
-    if RESET_DB and not USE_MOCK_DB:
-        db.drop_all()
-        db.create_all()
-    elif RESET_DB and USE_MOCK_DB:
-        db.drop_all()
-        db.create_all()
-        create_mock_db()
-    else:
-        db.create_all()
+# with app.app_context():
+#     if RESET_DB and not USE_MOCK_DB:
+#         db.drop_all()
+#         db.create_all()
+#     elif RESET_DB and USE_MOCK_DB:
+#         db.drop_all()
+#         db.create_all()
+#         create_mock_db()
+#     else:
+#         db.create_all()
 
 
 #----------------------------------------------------------------------------#
