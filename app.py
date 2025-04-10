@@ -54,7 +54,7 @@ def create_mock_db():
         db.session.add(_user)
         db.session.commit()
     for _mock_notification in mock_notifications:
-        _notification = Notification(
+        _notification = Messages(
             sender = _mock_notification["sender"],
             recipient = _mock_notification["recipient"],
             notification_send_date = _mock_notification["notification_send_date"],
@@ -165,7 +165,7 @@ def home():
                             maintenance_required.append(instance)
 
                 # Backend stuff for notifications bar.
-                notifications = Notification.query.filter_by(recipient=current_user.username).all()
+                notifications = Messages.query.filter_by(recipient=current_user.username).all()
 
                 return render_template("pages/Manager/ManagerHome.html", assets=maintenance_required, notifications=notifications)
             elif role == 'staff':
@@ -288,7 +288,7 @@ def send_request():
             pass
 
         for _ in maintenance_managers:
-            notification = Notification(
+            notification = Messages(
                 sender = current_user.username,
                 recipient = _.username,
                 notification_send_date = today,
@@ -299,7 +299,7 @@ def send_request():
 
             db.session.add(notification)
             db.session.commit()
-            app.logger.info(f"We have added Notification to db for {_.username}.")
+            app.logger.info(f"We have added Messages to db for {_.username}.")
         return render_template("pages/PublicAccess/SendMaintenanceRequest.html", success_message="Notice Submitted!")
     return render_template("pages/PublicAccess/SendMaintenanceRequest.html")
 
@@ -404,13 +404,13 @@ def notification_crud_without_c(id, operation):
 @app.route("/delete-notification")
 @login_required
 def delete_notification(id):
-    notification_to_delete = Notification.query.get(id)
+    notification_to_delete = Messages.query.get(id)
     if notification_to_delete:
         db.session.delete(notification_to_delete)
         db.session.commit()
-        return f"Notification has successfully been removed.", 200
+        return f"Messages has successfully been removed.", 200
     else:
-        return f"Notification was not found.", 404
+        return f"Messages was not found.", 404
     
 @app.route("/elevate")
 @login_required
