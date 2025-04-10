@@ -9,16 +9,16 @@ db = SQLAlchemy()
 
 # Association Tables
 users_departments = db.Table(
-    'users_departments',
-    db.Column('user_id', db.Integer, db.ForeignKey('users.user_id'), primary_key=True),
-    db.Column('department_id', db.Integer, db.ForeignKey('departments.department_id'), primary_key=True)
+    'Users_Departments',
+    db.Column('user_id', db.Integer, db.ForeignKey('Users.user_id'), primary_key=True),
+    db.Column('department_id', db.Integer, db.ForeignKey('Departments.department_id'), primary_key=True)
 )
 
 user_messages = db.Table(
-    'user_messages',
-    db.Column('sender', db.Integer, db.ForeignKey('users.user_id')),
-    db.Column('message_id', db.Integer, db.ForeignKey('messages.message_id')),
-    db.Column('recipient', db.Integer, db.ForeignKey('users.user_id'))
+    'User_Messages',
+    db.Column('sender', db.Integer, db.ForeignKey('Users.user_id')),
+    db.Column('message_id', db.Integer, db.ForeignKey('Messages.message_id')),
+    db.Column('recipient', db.Integer, db.ForeignKey('Users.user_id'))
 )
 
 class Department(db.Model):
@@ -57,10 +57,10 @@ class Asset(db.Model):
     brand = db.Column(db.String(50))
     manufacturer = db.Column(db.String(50))
     description = db.Column(db.Text)
-    department = db.Column(db.Integer, db.ForeignKey('departments.department_id'))
+    department = db.Column(db.Integer, db.ForeignKey('Departments.department_id'))
     # image_path = db.Column(db.String(255))
 
-class Notification(db.Model):
+class Messages(db.Model):
     __tablename__ = 'Messages'
     message_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     subject = db.Column(db.String(255))
@@ -79,9 +79,9 @@ class Activity(db.Model):
 
 class ActivityAssetUser(db.Model):
     __tablename__ = 'Activities_Assets_Users'
-    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), primary_key=True)
-    activity_id = db.Column(db.Integer, db.ForeignKey('activities.activity_id'), primary_key=True)
-    asset_id = db.Column(db.String(30), db.ForeignKey('assets.asset_id'), primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('Users.user_id'), primary_key=True)
+    activity_id = db.Column(db.Integer, db.ForeignKey('Activities.activity_id'), primary_key=True)
+    asset_id = db.Column(db.String(30), db.ForeignKey('Assets.asset_id'), primary_key=True)
     date = db.Column(db.Date)
     time = db.Column(db.Time)
     notes = db.Column(db.Text)
