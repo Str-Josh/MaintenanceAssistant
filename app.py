@@ -195,10 +195,11 @@ def register():
         
         user = User(
             username = request.form.get("username"),
-            password = request.form.get("password"),
+            password_hash = request.form.get("password"),
             first_name = request.form.get("firstname"),
             last_name = request.form.get("lastname"),
             user_role = role,
+            email = request.form.get("email"),
         )
 
         db.session.add(user)
