@@ -196,11 +196,11 @@ def register():
         )
 
         db.session.add(user)
-        try:
-            db.session.commit()
-        except:
-            app.logger.error("User already exists.")
-            return redirect(url_for('register'))
+        # try:
+        db.session.commit()
+        # except:
+        #     app.logger.error("User already exists.")
+        #     return redirect(url_for('register'))
         
         app.logger.info("A new user was registered!")
         return redirect(url_for('login'))
