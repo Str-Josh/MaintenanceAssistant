@@ -211,7 +211,7 @@ def register():
         app.logger.info("A new user was registered!")
         return redirect(url_for('login'))
     # return render_template('forms/sign_up.html')
-    return redirect(url_for("home"))
+    return redirect(url_for("register"))
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
