@@ -13,7 +13,7 @@ import datetime as dt
 import logging
 import os
 
-from mymodels import db, User, Notification, Asset
+from mymodels import db, User, Messages, Asset
 import failure_model as f_model
 from mock_hospital import mock_users, mock_notifications, mock_assets
 
@@ -28,7 +28,8 @@ DEMONSTRATION = False  # Will enable using 2FA and CAPTCHA when True
 
 app = Flask(__name__)
 app.config.from_object("config")
-
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 logging.basicConfig(filename="errors.log", level=logging.DEBUG)
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -84,16 +85,16 @@ def create_mock_db():
         db.session.add(_asset)
         db.session.commit()
 
-with app.app_context():
-    if RESET_DB and not USE_MOCK_DB:
-        db.drop_all()
-        db.create_all()
-    elif RESET_DB and USE_MOCK_DB:
-        db.drop_all()
-        db.create_all()
-        create_mock_db()
-    else:
-        db.create_all()
+# with app.app_context():
+#     if RESET_DB and not USE_MOCK_DB:
+#         db.drop_all()
+#         db.create_all()
+#     elif RESET_DB and USE_MOCK_DB:
+#         db.drop_all()
+#         db.create_all()
+#         create_mock_db()
+#     else:
+#         db.create_all()
 
 
 #----------------------------------------------------------------------------#
