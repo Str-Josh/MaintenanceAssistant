@@ -10,3 +10,5 @@ Flask-User==1.0.2.2
 
 # pip install -r requirements.txt
 gunicorn==23.0.0
+
+pymysql
