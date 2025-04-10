@@ -351,9 +351,9 @@ def add_asset():
             asset = Asset(
                 device_name = device_name,
             )
-            try:
-                db.commit(asset)
-            except:
+            # try:
+            db.commit(asset)
+            # except:
 
             # Calculate expectaction for next repair
             # f_model.kaplan_meier_estimator_function()
