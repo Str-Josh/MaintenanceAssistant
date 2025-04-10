@@ -28,7 +28,12 @@ DEMONSTRATION = False  # Will enable using 2FA and CAPTCHA when True
 
 app = Flask(__name__)
 app.config.from_object("config")
+
+
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
+
+
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 logging.basicConfig(filename="errors.log", level=logging.DEBUG)
 login_manager = LoginManager()
@@ -49,7 +54,7 @@ def create_mock_db():
             password = _mock_user["password"],
             first_name = _mock_user["first_name"],
             last_name = _mock_user["last_name"],
-            role = _mock_user["role"],
+            user_role = _mock_user["role"],
         )
         db.session.add(_user)
         db.session.commit()
@@ -129,7 +134,7 @@ def user_loader(username):
         return None
     user = LoginUser()
     user.username = username
-    user.role = user_model.role
+    user.role = user_model.user_role
     return user
 
 
@@ -193,7 +198,7 @@ def register():
             password = request.form.get("password"),
             first_name = request.form.get("firstname"),
             last_name = request.form.get("lastname"),
-            role = role,
+            user_role = role,
         )
 
         db.session.add(user)
@@ -275,7 +280,7 @@ def asset_information():
 @login_required
 def send_request():
     if request.method == "POST":
-        maintenance_managers = User.query.filter_by(role="manager")
+        maintenance_managers = User.query.filter_by(user_role="manager")
 
         urgencyLevel = request.form.get("urgencyCheck")  # TODO: Implement this in DB.
         machineNeedingMaint = request.form.get("subject")
@@ -380,7 +385,7 @@ def schedule_repair(repair_by_date):
 @app.route("/asset-details/<serial_number>", methods=["GET", "POST"])
 @login_required
 def asset_details(serial_number):
-    if current_user.role != "director" or current_user.role != "manager" or not current_user.is_authenticated:
+    if current_user.user_role != "director" or current_user.user_role != "manager" or not current_user.is_authenticated:
         redirect(url_for("unauthorized"))
     if request.method == "POST":
         return None
