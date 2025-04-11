@@ -96,9 +96,8 @@
 
 
 .icon {
-  width: 60px;
-  height: 60px;
-  margin: 10px;
+  max-width: 20%;
+    padding: 20px;
 }
 
 .messageContainer {
