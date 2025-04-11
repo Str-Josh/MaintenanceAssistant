@@ -53,4 +53,11 @@
 .subGrid{
     display: grid;
     grid-template-columns: 50% 50%;
+    padding: 20px;
+}
+
+.assetInput {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 50% 50%;
 }

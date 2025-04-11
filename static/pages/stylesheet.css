@@ -251,46 +251,37 @@ body{
 }
 
 /* send request */
-.subjectText {
-    text-align: right;
-    padding: 0 5px;
-    color: var(--main-blue);
+.labeltext {
+  text-align: right;
+  padding: 0 5px;
+  color: var(--main-blue);
 }
 
-.dateText {
-    text-align: right;
-    padding: 0 5px;
-    color: var(--main-blue);
+.bigText {
+  text-align: right;
+  padding: 0 5px;
+  padding: 10px;
+  color: var(--main-blue);
 }
 
-.messageText {
-    text-align: right;
-    padding: 0 5px;
-    padding: 10px;
-    color: var(--main-blue);
-}
-.subjectBox {
-    fill: var(--text-box);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-    border-radius: 20px;
-    border: none;
-    padding: 10px;
+
+.inputBox {
+  fill: var(--text-box);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  border-radius: 20px;
+  border: none;
+  padding: 5px;
+  margin: 0 0 0 2%;
 }
 
-.dateBox {
-    fill: var(--text-box);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-    border-radius: 20px;
-    border: none;
-    padding: 10px;
-}
-
-.messageBox {
-    fill: var(--text-box);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-    border-radius: 20px;
-    border: none;
-    height: 325px;
+.bigBox {
+  fill: var(--text-box);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  border-radius: 20px;
+  padding: 5px;
+  border: none;
+  height: 325px;
+  margin: 0 0 0 2%;
 }
 
 .container {
