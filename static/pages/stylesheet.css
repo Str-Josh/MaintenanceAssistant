@@ -140,17 +140,19 @@ body{
 
 
  /* VARIABLES */
-:root{
-    --grey: #DDDDDE;
-    --main-blue: #285162;
-    --usage: #bc7241;
-    --devices: #41bca6;
-    --message: #4198bc;
-    --break: #bc4f41;
-    --secondary-blue: #3B5C6A;
-    --light-blue: #8AA4AF;
-    --text-box: #F5F2F2;
-    --pale-blue: #B8CDD6;
+ :root{
+  --grey: #DDDDDE;
+  --main-blue: #285162;
+  --usage: #bc7241;
+  --devices: #41bca6;
+  --message: #4198bc;
+  --break: #bc4f41;
+  --secondary-blue: #3B5C6A;
+  --light-blue: #8AA4AF;
+  --text-box: #F5F2F2;
+  --pale-blue: #B8CDD6;
+  --grid-info: #E6E9EA;
+  --good-news: #6EBC41;
 }
 
 /* OVERALL STYLE */
@@ -183,6 +185,11 @@ body{
 .device{
     background: var(--devices);
 }
+
+.good-news{
+  background: var(--good-news);
+}
+
 .general{
   background: var(--main-blue);
 }
