@@ -63,10 +63,15 @@ class Asset(db.Model):
 class Messages(db.Model):
     __tablename__ = 'Messages'
     message_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    subject = db.Column(db.String(255))
-    body = db.Column(db.Text)
-    date_sent = db.Column(db.Date)
-    time_sent = db.Column(db.Time)
+    # subject = db.Column(db.String(255))
+    # body = db.Column(db.Text)
+    # date_sent = db.Column(db.Date)
+    # time_sent = db.Column(db.Time)
+    sender = db.Column(db.String(25), nullable=False)
+    recipient = db.Column(db.String(25), nullable=False)
+    notification_send_date = db.Column(db.Date, nullable=False)
+    notification_head = db.Column(db.String(35), nullable=False)
+    notification_body = db.Column(db.String(160), nullable=True)
 
 class Activity(db.Model):
     __tablename__ = 'Activities'

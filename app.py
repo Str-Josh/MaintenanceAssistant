@@ -17,9 +17,6 @@ from mymodels import db, User, Messages, Asset
 import failure_model as f_model
 from mock_hospital import mock_users, mock_notifications, mock_assets
 
-# PORT = 8000  # Uncomment for Christian.
-# PORT = 6000  # Uncomment for Elizabeth.
-# PORT = 7000  # Uncomment for Nick.
 PORT = 5000  # Uncomment for Josh.
 RESET_DB = False  # Do not change unless you want to recreate the entire database.
 USE_MOCK_DB = True
@@ -31,8 +28,6 @@ app.config.from_object("config")
 
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
-
-
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 logging.basicConfig(filename="errors.log", level=logging.DEBUG)
@@ -188,6 +183,7 @@ def home():
 
 @app.route('/register', methods=["GET", "POST"])
 def register():
+#     form = RegistrationForm(request.form)
     if request.method == "POST":
         role = request.form.get("user_role").lower()
         if " " in role:
