@@ -62,7 +62,7 @@ class Asset(db.Model):
 
 class Messages(db.Model):
     __tablename__ = 'Messages'
-    notifcation_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    notification_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     # subject = db.Column(db.String(255))
     # body = db.Column(db.Text)
     # date_sent = db.Column(db.Date)
