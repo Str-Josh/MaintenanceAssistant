@@ -1,0 +1,16 @@
+.buttonGrid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    justify-content: space-evenly;
+    margin: 5%
+}
+
+.assetManagerButton{
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: max-content;
+    height: max-height;
+    margin: 5%;
+}
