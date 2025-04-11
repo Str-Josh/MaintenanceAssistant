@@ -26,8 +26,8 @@
 }
 
 .active-tab{
-    background-color: var(--main-blue);
-    color: var(--grey);
+    background-color: var(--main-blue) !important;
+    color: var(--grey) !important;
 }
 
 .tab-content{
@@ -48,4 +48,9 @@
 
 .tab-content p{
     color: var(--grey);
+}
+
+.subGrid{
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
