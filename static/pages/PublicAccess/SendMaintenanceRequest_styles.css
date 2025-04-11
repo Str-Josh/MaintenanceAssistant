@@ -244,11 +244,3 @@ align-items: center;
 
 }
 
-.test {
-  display: flex;
-}
-
-.truebody{
-  display: flex;
-  flex-direction: column;
-}

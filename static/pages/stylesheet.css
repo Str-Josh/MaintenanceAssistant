@@ -520,3 +520,15 @@ body{
     font-weight: bold;
     border: none;
   }
+
+
+  /* fixes with new navbar */
+  .wholepage {
+    display: flex;
+  }
+  
+  .truebody{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
