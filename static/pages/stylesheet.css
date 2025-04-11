@@ -246,7 +246,7 @@ body{
     padding: 20px;
     border-radius: 20px;
     width: 487px;
-    height: 283px;
+      height: min-content;
     margin: 5%;
 }
 
