@@ -246,5 +246,9 @@ align-items: center;
 
 .test {
   display: flex;
-  background-color: aqua;
+}
+
+.truebody{
+  display: flex;
+  flex-direction: column;
 }
