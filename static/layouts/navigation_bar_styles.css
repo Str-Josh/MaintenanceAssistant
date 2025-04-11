@@ -30,7 +30,7 @@ html{
     font-family: 'Segoe UI', Tahoma, Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5rem;
 }
-body.navbar {
+header.navbar {
     min-height: 100vh;
     min-height: 100dvh;
     background-color: var(--base-clr);
@@ -38,7 +38,7 @@ body.navbar {
     display: grid;
     grid-template-columns: auto 1fr;
 }
-body.navbar #sidebar{
+header.navbar #sidebar{
     box-sizing: border-box;
     height: 100vh;
     width: 250px;
@@ -53,14 +53,14 @@ body.navbar #sidebar{
     overflow: hidden;
     text-wrap: nowrap;
 }
-body.navbar #sidebar.close{
+header.navbar #sidebar.close{
     padding: 5px;
     width: 60px;
 }
-body.navbar #sidebar ul{
+header.navbar #sidebar ul{
     list-style: none;
 }
-body.navbar #sidebar > ul > li:first-child{
+header.navbar #sidebar > ul > li:first-child{
     display: flex;
     justify-content: flex-end;
     margin-bottom: 16px;
@@ -73,7 +73,7 @@ body.navbar #sidebar > ul > li:first-child{
     background-color: var(--light-blue);
 }
 
-body.navbar #sidebar ul li.active a{
+header.navbar #sidebar ul li.active a{
     color: black;
     background-color: (var(--accent-clr));
 
@@ -82,7 +82,7 @@ body.navbar #sidebar ul li.active a{
     }
 }
 
-body.navbar #sidebar a, body.navbar #sidebar .dropdown-btn, body.navbar #sidebar .logo{
+header.navbar #sidebar a, header.navbar #sidebar .dropdown-btn, header.navbar #sidebar .logo{
     border-radius: .5em;
     padding: .85em;
     text-decoration: none;
@@ -99,17 +99,17 @@ body.navbar #sidebar a, body.navbar #sidebar .dropdown-btn, body.navbar #sidebar
     font: inherit;
     cursor: pointer;
 }
-body.navbar #sidebar svg{
+header.navbar #sidebar svg{
     flex-shrink: 0;
     fill: var(--bar-text);
 }
-body.navbar #sidebar a span, body.navbar #sidebar .dropdown-btn span{
+header.navbar #sidebar a span, header.navbar #sidebar .dropdown-btn span{
     flex-grow: 1;
 }
-body.navbar #sidebar a:hover, body.navbar #sidebar .dropdown-btn:hover{
+header.navbar #sidebar a:hover, header.navbar #sidebar .dropdown-btn:hover{
     background-color: var(--hover-clr);
 }
-body.navbar #sidebar .sub-menu{
+header.navbar #sidebar .sub-menu{
     display: grid;
     grid-template-rows: 0fr;
     transition: 300ms ease-in-out;
@@ -118,7 +118,7 @@ body.navbar #sidebar .sub-menu{
         overflow: hidden;
     }
 }
-body.navbar #sidebar .sub-menu.show{
+header.navbar #sidebar .sub-menu.show{
     grid-template-rows: 1fr;
 }
 .dropdown-btn svg{
@@ -127,7 +127,7 @@ body.navbar #sidebar .sub-menu.show{
 .rotate svg:last-child{
     rotate: -180deg;
 }
-body.navbar #sidebar .sub-menu a{
+header.navbar #sidebar .sub-menu a{
     padding-left: 2em;
 }
 #toggle-btn{
