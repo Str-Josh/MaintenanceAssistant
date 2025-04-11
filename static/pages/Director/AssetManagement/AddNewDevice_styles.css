@@ -15,10 +15,7 @@
     display: flex;
 }
 
-.active-tab{
-    background-color: var(--main-blue);
-    color: var(--grey);
-}
+
 
 .tab{
     background: var(--accent-clr);
@@ -26,6 +23,11 @@
     padding: 10px;
     border-radius: 20px 20px 0 0;
     margin: 0 10px;
+}
+
+.active-tab{
+    background-color: var(--main-blue);
+    color: var(--grey);
 }
 
 .tab-content{
