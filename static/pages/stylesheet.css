@@ -194,6 +194,8 @@ body{
     padding: 20px;
     color: white;
     margin: 0%;
+    display: flex;
+    justify-content: center;
 }
 .title{
     text-align: center;
