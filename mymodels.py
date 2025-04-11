@@ -17,7 +17,7 @@ users_departments = db.Table(
 user_messages = db.Table(
     'User_Messages',
     db.Column('sender', db.Integer, db.ForeignKey('Users.user_id')),
-    db.Column('message_id', db.Integer, db.ForeignKey('Messages.message_id')),
+    db.Column('notification_id', db.Integer, db.ForeignKey('Messages.notification_id')),
     db.Column('recipient', db.Integer, db.ForeignKey('Users.user_id'))
 )
 
