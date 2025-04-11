@@ -183,6 +183,9 @@ body{
 .device{
     background: var(--devices);
 }
+.general{
+  background: var(--main-blue);
+}
 
 .subheader{
     width: 100%;
