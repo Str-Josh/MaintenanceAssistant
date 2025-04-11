@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/static/pages/viewdevices_page.css">
+    <link rel="stylesheet" href="/static/pages/Director/AssetManagement/AddNewDevice_styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.35.1/handsontable.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/pages/stylesheet.css">
 </head>
 
 <body class="wholepage">
     <div class="truebody">
-        <form action="/add-device" method="post" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 5px;">
+
+        <div class="good-news subheader">
+            <h1 class="title">
+                Add New Asset
+            </h1>
+        </div>
+
+        <form action="/add-device" method="post" class="AssetForm">
             
-            <div class="good-news subheader">
-                <h1 class="title">
-                    Add New Asset
-                </h1>
-            </div>
             
             <div>
                 <div class="tooltip">
