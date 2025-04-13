@@ -371,6 +371,18 @@ def add_asset():
 # def asset_details():
 #     return render_template("pages/devicedetail.html")
 
+@app.route("/asset-details/<serial_number>", methods=["GET", "POST"])
+@login_required
+def asset_details(serial_number):
+    if current_user.user_role not in ["director", "manager"]:
+        return redirect(url_for("unauthorized"))
+
+    asset = Asset.query.get(serial_number)
+    if not asset:
+        return "Asset not found", 404
+
+    return render_template("pages/PublicAccess/AssetDetails.html", asset=asset)
+
 
 @app.route("/schedule-repair", methods=["GET", "POST"])
 @login_required
@@ -379,14 +391,14 @@ def schedule_repair(repair_by_date):
         return None
     return render_template("")
 
-@app.route("/asset-details/<serial_number>", methods=["GET", "POST"])
-@login_required
-def asset_details(serial_number):
-    if current_user.user_role != "director" or current_user.user_role != "manager" or not current_user.is_authenticated:
-        redirect(url_for("unauthorized"))
-    if request.method == "POST":
+#@app.route("/asset-details/<serial_number>", methods=["GET", "POST"])
+##@login_required
+#def asset_details(serial_number):
+   # if current_user.user_role != "director" or current_user.user_role != "manager" or not current_user.is_authenticated:
+   #     redirect(url_for("unauthorized"))
+    #if request.method == "POST":
         return None
-    return render_template("pages/PublicAcess/AssetDetails.html", asset_id=serial_number)
+   # return render_template("pages/PublicAcess/AssetDetails.html", asset_id=serial_number)
 
 #----------------------------------------------------------------------------#
 # Manager Home Routes.
