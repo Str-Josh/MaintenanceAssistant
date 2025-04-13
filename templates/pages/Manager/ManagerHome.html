@@ -41,7 +41,7 @@
                                 <span>Location: {{ asset.department_location }}</span>
                                 <span><a href="{{ url_for('schedule_repair', repair_by_date=asset.repair_by) }}">Schedule Maintenance</a></span>
                                 <!-- <span><a href="{{ url_for('asset_details', serial_number=asset.asset_id) }}">See asset info</a></span> -->
-                                <span><button type="submit">See asset details</button></span>
+                                <span><button class="assetDetails" type="submit">See asset details</button></span>
                             </form>
                             <!-- </div> -->
                         {% endfor %}
