@@ -158,7 +158,7 @@ def home():
                     if _asset.upcoming_maintenance_action_date:
                         if _asset.upcoming_maintenance_action_date <= upcoming_maintenance_actions_datespan:
                             instance = {
-                                "serial_number": _asset.asset_id,  # TODO: need to change to actual serial number from DB (I don't feel like updating mock DB rn sorry)
+                                "asset_id": _asset.asset_id,  # TODO: need to change to actual serial number from DB (I don't feel like updating mock DB rn sorry)
                                 "repair_by": _asset.upcoming_maintenance_action_date,
                                 "department_location": _asset.location
                             }  # dictionary of the important values 
