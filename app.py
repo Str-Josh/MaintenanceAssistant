@@ -374,7 +374,7 @@ def add_asset():
 @app.route("/asset-details/<serial_number>", methods=["GET", "POST"])
 @login_required
 def asset_details(serial_number):
-    if current_user.user_role not in ["director", "manager"]:
+    if current_user.role not in ["director", "manager"]:
         return redirect(url_for("unauthorized"))
 
     asset = Asset.query.get(serial_number)
