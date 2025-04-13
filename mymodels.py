@@ -49,16 +49,35 @@ class User(UserMixin, db.Model):
         self.user_role = user_role
         self.password_hash = sha256_crypt.encrypt(password)
 
+
 class Asset(db.Model):
     __tablename__ = 'Assets'
+    
     asset_id = db.Column(db.String(30), primary_key=True)
-    asset_name = db.Column(db.String(100), nullable=False)
-    location = db.Column(db.String(100))
-    brand = db.Column(db.String(50))
-    manufacturer = db.Column(db.String(50))
-    description = db.Column(db.Text)
-    department = db.Column(db.Integer, db.ForeignKey('Departments.department_id'))
-    # image_path = db.Column(db.String(255))
+    asset_name = db.Column(db.String(100), nullable=True)
+    location = db.Column(db.String(100), nullable=True)
+    brand = db.Column(db.String(50), nullable=True)
+    manufacturer = db.Column(db.String(50), nullable=True)
+    description = db.Column(db.Text, nullable=True)
+    department = db.Column(db.Integer, db.ForeignKey('Departments.department_id'), nullable=True)
+    image_path = db.Column(db.String(255), nullable=True)
+
+    serial_number = db.Column(db.Integer, nullable=False)
+    generic_name = db.Column(db.String(50), nullable=False)
+    average_use_per_year = db.Column(db.String(40), nullable=False)
+    total_units_in_service = db.Column(db.Integer, nullable=False)
+
+    failure_incidents_in_past_year = db.Column(db.Integer, nullable=False)
+    total_failures_in_history = db.Column(db.Integer, nullable=False)
+
+    last_maintenance_date = db.Column(db.Date, nullable=False)
+    total_maintenance_activities_in_past_year = db.Column(db.Integer, nullable=False)
+    maintenance_type = db.Column(db.String(60), nullable=True)
+    cost_per_maintenance_activity = db.Column(db.Numeric(10, 2), nullable=True)
+    total_maintenance_costs_in_past_year = db.Column(db.Numeric(10, 2), nullable=True)
+
+    upcoming_maintenance_action_date = db.Column(db.Date, nullable=True)
+
 
 class Messages(db.Model):
     __tablename__ = 'Messages'
