@@ -14,30 +14,6 @@
                 Register new user account
             </h1>
         </div>
-
-        <!-- <form method="post">
-            {{ form.hidden_tag() }}
-
-            <label for="username">Username</label>
-            {{ form.username }}
-            {% for error in form.username.errors %}
-                <div class="error">{{ error }}</div>
-            {% endfor %}
-
-            <label for="email">Email</label>
-            {{ form.email }}
-            {% for error in form.email.errors %}
-                <div class="error">{{ error }}</div>
-            {% endfor %}
-
-            <label for="password">Password</label>
-            {{ form.password }}
-            {% for error in form.password.errors %}
-                <div class="error">{{ error }}</div>
-            {% endfor %}
-
-            {{ form.submit }}
-        </form> -->
         
         <form action="/register" method="post" class="subGrid">
             <div class="inputUser">
