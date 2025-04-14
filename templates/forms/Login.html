@@ -30,25 +30,15 @@
                 <input type="checkbox" name="rememberMe" />
             </div>
 
-
             {% if pswd_fail == 'True' %}
                 <p>Wrong password. Try again.</p>
             {% else %}
             {% endif %}
-
-            <!-- <br /><br />
-            <div>
-                <label>Don't have an account?</label>
-                <a href="/register">Create an account</href>
-            </div> -->
-            
-
         </form>
-        <!-- { if current_user.is_authenticated }
-            -- <h1>You are logged in</h1> --
-            <a href="/logout">Logout</a>
-        { else }
-            -- <h1>You are not logged in</h1> --
-        { endif } -->
+
+        <form action="/reset-password" method="post" class="loginForm">
+            <div class="buttonRow loginInput">
+                <button type="submit" class="loginButton">Reset Password</button>
+            </div>
     </div>
 </body>
