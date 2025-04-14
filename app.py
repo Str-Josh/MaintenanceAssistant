@@ -16,10 +16,11 @@ import os
 from mymodels import db, User, Messages, Asset
 import failure_model as f_model
 from mock_hospital import mock_users, mock_notifications, mock_assets
+from utils import RegistrationForm, RegisterAssetForm
 
 PORT = 5000  # Uncomment for Josh.
 RESET_DB = False  # Do not change unless you want to recreate the entire database.
-USE_MOCK_DB = True
+USE_MOCK_DB = False  # Just in case...
 DEMONSTRATION = False  # Will enable using 2FA and CAPTCHA when True
 
 
@@ -28,8 +29,8 @@ app.config.from_object("config")
 
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
-
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 logging.basicConfig(filename="errors.log", level=logging.DEBUG)
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -41,49 +42,49 @@ db.init_app(app)
 # Database Setup.
 #----------------------------------------------------------------------------#
 
-
-def create_mock_db():
-    for _mock_user in mock_users:
-        _user = User(
-            username = _mock_user["username"],
-            password = _mock_user["password"],
-            first_name = _mock_user["first_name"],
-            last_name = _mock_user["last_name"],
-            user_role = _mock_user["role"],
-        )
-        db.session.add(_user)
-        db.session.commit()
-    for _mock_notification in mock_notifications:
-        _notification = Messages(
-            sender = _mock_notification["sender"],
-            recipient = _mock_notification["recipient"],
-            notification_send_date = _mock_notification["notification_send_date"],
-            notification_head = _mock_notification["notification_head"],
-            notification_body = _mock_notification["notification_body"],
-        )
-        db.session.add(_notification)
-        db.session.commit()
-    for _mock_asset in mock_assets:
-        _asset = Asset(
-            serial_number = _mock_asset["serial_number"],
-            device_name = _mock_asset["device_name"],
-            brand = _mock_asset["brand"],
-            generic_name = _mock_asset["generic_name"],
-            manufacturer = _mock_asset["manufacturer"],
-            department_location = _mock_asset["department_location"],
-            average_use_per_year = _mock_asset["average_use_per_year"],
-            total_units_in_service = _mock_asset["total_units_in_service"],
-            failure_incidents_in_past_year = _mock_asset["failure_incidents_in_past_year"],
-            total_failures_in_history = _mock_asset["total_failures_in_history"],
-            last_maintenance_date = _mock_asset["last_maintenance_date"],
-            total_maintenance_activities_in_past_year = _mock_asset["total_maintenance_activities_in_past_year"],
-            maintenance_type = _mock_asset["maintenance_type"],
-            cost_per_maintenance_activity = _mock_asset["cost_per_maintenance_activity"],
-            total_maintenance_costs_in_past_year = _mock_asset["total_maintenance_costs_in_past_year"],
-            upcoming_maintenance_action_date = _mock_asset["upcoming_maintenance_action_date"],
-        )
-        db.session.add(_asset)
-        db.session.commit()
+# Don't want it to error out... I know it will :'(
+# def create_mock_db():
+#     for _mock_user in mock_users:
+#         _user = User(
+#             username = _mock_user["username"],
+#             password = _mock_user["password"],
+#             first_name = _mock_user["first_name"],
+#             last_name = _mock_user["last_name"],
+#             user_role = _mock_user["role"],
+#         )
+#         db.session.add(_user)
+#         db.session.commit()
+#     for _mock_notification in mock_notifications:
+#         _notification = Messages(
+#             sender = _mock_notification["sender"],
+#             recipient = _mock_notification["recipient"],
+#             notification_send_date = _mock_notification["notification_send_date"],
+#             notification_head = _mock_notification["notification_head"],
+#             notification_body = _mock_notification["notification_body"],
+#         )
+#         db.session.add(_notification)
+#         db.session.commit()
+#     for _mock_asset in mock_assets:
+#         _asset = Asset(
+#             serial_number = _mock_asset["serial_number"],
+#             device_name = _mock_asset["device_name"],
+#             brand = _mock_asset["brand"],
+#             generic_name = _mock_asset["generic_name"],
+#             manufacturer = _mock_asset["manufacturer"],
+#             department_location = _mock_asset["department_location"],
+#             average_use_per_year = _mock_asset["average_use_per_year"],
+#             total_units_in_service = _mock_asset["total_units_in_service"],
+#             failure_incidents_in_past_year = _mock_asset["failure_incidents_in_past_year"],
+#             total_failures_in_history = _mock_asset["total_failures_in_history"],
+#             last_maintenance_date = _mock_asset["last_maintenance_date"],
+#             total_maintenance_activities_in_past_year = _mock_asset["total_maintenance_activities_in_past_year"],
+#             maintenance_type = _mock_asset["maintenance_type"],
+#             cost_per_maintenance_activity = _mock_asset["cost_per_maintenance_activity"],
+#             total_maintenance_costs_in_past_year = _mock_asset["total_maintenance_costs_in_past_year"],
+#             upcoming_maintenance_action_date = _mock_asset["upcoming_maintenance_action_date"],
+#         )
+#         db.session.add(_asset)
+#         db.session.commit()
 
 # with app.app_context():
 #     if RESET_DB and not USE_MOCK_DB:
@@ -169,7 +170,12 @@ def home():
 
                 return render_template("pages/Manager/ManagerHome.html", assets=maintenance_required, notifications=notifications)
             elif role == 'staff':
-                return None
+                this_user = User.query.filter_by(username = current_user.username)
+                assets = Asset.query.all()
+                for _asset in assets:
+                    # if _asset.scheduled_date
+                    pass
+                return render_template("pages/Staff/StaffHome.html")
             else:
                 return redirect(url_for("unauthorized"))
     else:
@@ -183,32 +189,48 @@ def home():
 
 @app.route('/register', methods=["GET", "POST"])
 def register():
-#     form = RegistrationForm(request.form)
-    if request.method == "POST":
+    # form = RegistrationForm(request.form)
+    form = RegistrationForm(request.form)
+    if request.method == "POST" and form.validate():
         role = request.form.get("user_role").lower()
         if " " in role:
             role = role.split(" ")[1]
         
         user = User(
-            username = request.form.get("username"),
-            password = request.form.get("password"),
-            first_name = request.form.get("firstname"),
-            last_name = request.form.get("lastname"),
+            username = form.username.data,
+            password = form.password.data,
+            first_name = form.first_name.data,
+            last_name = form.last_name.data,
             user_role = role,
-            email = request.form.get("email"),
+            email = form.email.data,
         )
+
+        # Below is old version for safe keeping.
+        # user = User(
+        #     username = request.form.get("username"),
+        #     password = request.form.get("password"),
+        #     first_name = request.form.get("firstname"),
+        #     last_name = request.form.get("lastname"),
+        #     user_role = role,
+        #     email = request.form.get("email"),
+        # )
 
         db.session.add(user)
         try:
             db.session.commit()
+            app.logger.info("A new user has been added to the database.")
         except:
             app.logger.error("User already exists.")
             return redirect(url_for('register'))
         
         app.logger.info("A new user was registered!")
         return redirect(url_for('login'))
-    return render_template('forms/sign_up.html')
-    # return redirect(url_for("register"))
+    elif request.method != "POST":
+        return render_template("forms/sign_up.html")
+    else:
+        # app.logger.error(form.errors)
+        return render_template("forms/sign_up.html", validators_response=form.errors)
+        # return render_template("forms/sign_up.html", form=form)
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -220,12 +242,16 @@ def login():
             luser.id = user.username
             remember = None
             if request.form.get("rememberMe") == "on":
+                # set the remember me cookie to a single day
                 remember = True
                 app.config['REMEMBER_COOKIE_DURATION'] = dt.timedelta(days=1)
             if login_user(luser, remember=remember):
                 return redirect(url_for("home"))
             else:
+                # if user login is not accepted, following occurs
                 return "Bad"
+        elif user:
+            app.logger.warning("The user doesn't exist")
         else:
             app.logger.info("The user gave a bad password")
             return render_template("forms/Login.html", pswd_fail=str(True))
@@ -253,22 +279,6 @@ def director_dashboard():
 
 
 #----------------------------------------------------------------------------#
-# Maybe Make Use.
-#----------------------------------------------------------------------------#
-
-
-@app.route("/team-manager")
-@login_required
-def team_manager():
-    return None
-
-@app.route("/asset-information")
-@login_required
-def asset_information():
-    return None
-
-
-#----------------------------------------------------------------------------#
 # Controllers.
 #----------------------------------------------------------------------------#
 
@@ -280,13 +290,16 @@ def send_request():
         maintenance_managers = User.query.filter_by(user_role="manager")
 
         urgencyLevel = request.form.get("urgencyCheck")  # TODO: Implement this in DB.
+        
         machineNeedingMaint = request.form.get("subject")
         subject = "Maintenance Request: " + machineNeedingMaint
         body = request.form.get("message")
         today = dt.date.today()
         # If urgent, elevate immediately
-        if urgencyLevel == "urgent":
+        if urgencyLevel.lower() == "urgent":
             # Elevate to managers immediately
+            # client = Client(account_sid, auth_token)
+            # message = client.messages.create(to="")
             pass
 
         for _ in maintenance_managers:
@@ -301,7 +314,7 @@ def send_request():
 
             db.session.add(notification)
             db.session.commit()
-            app.logger.info(f"We have added Messages to db for {_.username}.")
+            app.logger.info(f"Added Messages to db for {_.username}.")
         return render_template("pages/PublicAccess/SendMaintenanceRequest.html", success_message="Notice Submitted!")
     return render_template("pages/PublicAccess/SendMaintenanceRequest.html")
 
@@ -315,6 +328,7 @@ def update_usage():
     return render_template("pages/Director/UpdateDeviceUsage.html")
 
 
+# Do we still need this??
 @app.route("/asset-manager", methods=["POST", "GET"])
 @login_required
 def asset_manager():
@@ -351,12 +365,41 @@ def add_asset():
             # second half
             data = request.get_json()  # this should be the handsontable data.
 
+            # installation_date & generic_name workaround :)
+            description = generic_name + ";" + installation_date
+            # this will always be okay since brand_name max length = 
+
+            # 0 means it's nullable, 1 means it's not
             asset = Asset(
                 device_name = device_name,
+                brand = brand_name,  # brand_name = brand_name,
+                # generic_name = generic_name,
+                manufacturer_name = manufacturer_name,  # manufacturer_name = manufacturer_name,
+                stored_department = stored_department,
+                # installation_date = installation_date,
+                description = description,  # :)
+                image_path = 0,
+
+                serial_number = 1,
+                generic_name = 1,
+                average_uses_py = average_uses_py,
+                total_units_in_service = 1,
+
+                failure_incidents_in_past_year = 1,
+                total_failures_in_history = 1,
+
+                last_maintenance_date = 1,
+                total_maintenance_activities_in_past_year = 1,
+                maintenance_type = 0,
+                cost_per_maintenance_activity = 0,
+                total_maintenance_costs_in_past_year = 0,
+                upcoming_maintenance_action_date = 0
             )
-            # try:
-            db.commit(asset)
-            # except:
+            db.session.add(asset)
+            try:
+                db.commit(asset)
+            except:
+                app.logger.info("Asset already exists")
 
             # Calculate expectaction for next repair
             # f_model.kaplan_meier_estimator_function()
@@ -365,11 +408,6 @@ def add_asset():
             return redirect(url_for("add_asset"))
     return render_template("pages/Director/AssetManagement/AddNewDevice.html")
 
-
-# @app.route("/asset-details")
-# @login_required
-# def asset_details():
-#     return render_template("pages/devicedetail.html")
 
 @app.route("/asset-details/<serial_number>", methods=["GET", "POST"])
 @login_required
@@ -391,18 +429,11 @@ def schedule_repair(repair_by_date):
         return None
     return render_template("")
 
-#@app.route("/asset-details/<serial_number>", methods=["GET", "POST"])
-##@login_required
-#def asset_details(serial_number):
-   # if current_user.user_role != "director" or current_user.user_role != "manager" or not current_user.is_authenticated:
-   #     redirect(url_for("unauthorized"))
-    #if request.method == "POST":
-        # return None
-   # return render_template("pages/PublicAcess/AssetDetails.html", asset_id=serial_number)
 
 #----------------------------------------------------------------------------#
 # Manager Home Routes.
 #----------------------------------------------------------------------------#
+
 
 @app.route("/notif-rud")
 @login_required
@@ -415,6 +446,7 @@ def notification_crud_without_c(id, operation):
         return None
     return None
 
+
 @app.route("/delete-notification")
 @login_required
 def delete_notification(id):
@@ -425,7 +457,8 @@ def delete_notification(id):
         return f"Messages has successfully been removed.", 200
     else:
         return f"Messages was not found.", 404
-    
+
+
 @app.route("/elevate")
 @login_required
 def elevate(id):
@@ -466,7 +499,7 @@ def page_not_found(e):
 
 
 if __name__ == "__main__":
-    #port = int(os.environ.get("PORT", 10000))
-    #app.run(host="0.0.0.0", port=port)
+    # port = int(os.environ.get("PORT", 10000))
+    # app.run(host="0.0.0.0", port=port)
     from waitress import serve
     serve(app, host="0.0.0.0", port=8080)
