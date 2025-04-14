@@ -189,7 +189,6 @@ def home():
 
 @app.route('/register', methods=["GET", "POST"])
 def register():
-    # form = RegistrationForm(request.form)
     form = RegistrationForm(request.form)
     if request.method == "POST" and form.validate():
         role = request.form.get("user_role").lower()
@@ -265,6 +264,41 @@ def logout():
     logout_user()
     app.logger.info("A user was logged out.")
     return redirect(url_for("home"))
+
+
+@app.route("/reset-password")
+def reset_password(source):
+    form = RegistrationForm(request.form)
+    if request.method == "POST" and form.validate():
+        # Send a request to admin but it must require that you already have content in the form
+        # for _ in maintenance_managers:
+        #     notification = Messages(
+        #         sender = current_user.username,
+        #         recipient = _.username,
+        #         notification_send_date = today,
+        #         notification_head = subject,
+        #         notification_body = body,
+        #         # status = "initial-notice"
+        #     )
+
+        #     db.session.add(notification)
+        #     db.session.commit()
+        #     app.logger.info(f"Added Messages to db for {_.username}.")
+
+        # managers = Users.query.
+        # for _ in 
+        # reset_password_request = Messages(
+        #     sender = form.first_name + " " + form.last_name,
+        #     # recipient = _.user_name,
+        #     notification_send_date = 9,
+        #     notification_head = 0,
+        #     notification_bdoy = 0,
+        # )
+        return None
+    elif request.method != "POST":
+        return None
+    else:
+        return render_template(source, validators_response=form.errors)
 
 
 #----------------------------------------------------------------------------#
