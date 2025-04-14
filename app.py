@@ -397,7 +397,7 @@ def schedule_repair(repair_by_date):
    # if current_user.user_role != "director" or current_user.user_role != "manager" or not current_user.is_authenticated:
    #     redirect(url_for("unauthorized"))
     #if request.method == "POST":
-        return None
+        # return None
    # return render_template("pages/PublicAcess/AssetDetails.html", asset_id=serial_number)
 
 #----------------------------------------------------------------------------#
