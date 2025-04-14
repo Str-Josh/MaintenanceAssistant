@@ -13,3 +13,5 @@ gunicorn==23.0.0
 
 pymysql
 Flask-WTF==1.2.2
+twilio==9.5.2
+email_validator==2.2.0
