@@ -21,11 +21,14 @@
             </div>
             
             <div class="buttonRow loginInput">
-                <button type="submit" class="loginButton">Reset Password</button>
+                <form action="/reset-password" method="post" class="loginForm">
+                    <button type="submit" class="loginButton">Reset Password</button>
+                </form>
                 <button type="submit" class="loginButton">Login</button>
             </div>
 
             <div>
+                Remember Me
                 <input type="checkbox" name="rememberMe" />
             </div>
 
@@ -35,9 +38,6 @@
             {% endif %}
         </form>
 
-        <form action="/reset-password" method="post" class="loginForm">
-            <div class="buttonRow loginInput">
-                <button type="submit" class="loginButton">Reset Password</button>
-            </div>
+        
     </div>
 </body>
