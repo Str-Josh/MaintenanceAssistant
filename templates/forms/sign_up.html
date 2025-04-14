@@ -15,6 +15,29 @@
             </h1>
         </div>
 
+        <!-- <form method="post">
+            {{ form.hidden_tag() }}
+
+            <label for="username">Username</label>
+            {{ form.username }}
+            {% for error in form.username.errors %}
+                <div class="error">{{ error }}</div>
+            {% endfor %}
+
+            <label for="email">Email</label>
+            {{ form.email }}
+            {% for error in form.email.errors %}
+                <div class="error">{{ error }}</div>
+            {% endfor %}
+
+            <label for="password">Password</label>
+            {{ form.password }}
+            {% for error in form.password.errors %}
+                <div class="error">{{ error }}</div>
+            {% endfor %}
+
+            {{ form.submit }}
+        </form> -->
         
         <form action="/register" method="post" class="subGrid">
             <div class="inputUser">
@@ -58,12 +81,22 @@
                 </select>
             </div>
 
-            
-
             <div>
                 <button type="submit" class="submitbutton">Submit</button>
             </div>
         </form>
+        <div>
+        {% if validators_response %}
+            {% for field_error, validator_errors in validators_response.items() %}
+                <span>{{ field_error }}:</span>
+                {% for validator_error in validator_errors %}
+                    <span>{{ validator_error }}</span>
+                    <br />
+                {% endfor %}
+                <br />
+            {% endfor %}
+        {% endif %}
+        </div>
         
 </div>
 </body>
