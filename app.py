@@ -538,9 +538,13 @@ def message_team_members(role):
             notification_head = _subject,
             notification_body = _body,
         )
-        return redirect(url_for("message_team_members", role=role))
+        return redirect(url_for("message_team_members", member_role=role))
 
-    return render_template("pages/PublicAccess/MessageTeamMembers.html", form=form, role=role)
+    return render_template(
+        "pages/PublicAccess/MessageTeamMembers.html", 
+        form=form, 
+        member_role=role
+    )
 
 
 @app.route("/upload-upcoming")

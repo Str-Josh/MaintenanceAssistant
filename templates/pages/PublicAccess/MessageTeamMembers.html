@@ -16,16 +16,16 @@
         {% endfor %}
     </div>
 
-    <div>
-        <label for="message_subject" class="labeltext">Send to:</label>
+    <div class="idek">
+        <label for="message_subject" class="labeltext">Subject:</label>
         {{ form.message_subject(class="inputBox") }}
         {% for validation_error in form.message_subject.errors %}
             <span class="validation-error">{{ validation_error }}</span>
         {% endfor %}
     </div>
 
-    <div>
-        <label for="message_body" class="labeltext">Send to:</label>
+    <div class="idek">
+        <label for="message_body" class="labeltext">Details:</label>
         {{ form.message_body(class="inputBox") }}
         {% for validation_error in form.message_body.errors %}
             <span class="validation-error">{{ validation_error }}</span>
