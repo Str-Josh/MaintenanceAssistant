@@ -1,6 +1,12 @@
-from wtforms import Form, BooleanField, DateField, StringField, IntegerField, PasswordField, validators, ValidationError
+# Form Validation
+
+from wtforms import Form, SelectField, DateField, StringField, IntegerField, PasswordField, validators, ValidationError
+from flask_wtf import FlaskForm
+
 import email_validator
 import re
+
+DEMO = True  # Determines if we use every validation or not.
 
 
 def validate_non_numeric_data(form, field):
@@ -25,7 +31,7 @@ def validate_password_strength_conditions(form, field):
         raise ValidationError("Password must contain at least one special character.")
 
 
-class RegistrationForm(Form):
+class RegistrationForm(FlaskForm):
     username = StringField('Username', [
         validators.Length(min=4, max=25),
         validators.DataRequired(),
@@ -50,34 +56,40 @@ class RegistrationForm(Form):
         validators.DataRequired()  # ensures there exists context
     ])
 
-    phone_number = IntegerField("Phone Number", [
-        validators.Length(min = 7, max=10),
+    phone_number = StringField("Phone Number", [
+        validators.Length(min = 7, max=11),
         validators.DataRequired(),
-        
     ])
 
-    user_role = BooleanField("Role", [
+    user_role = SelectField("Role", choices=[
+        ("Director", "Director"),
+        ("Manager", "Maintenance Manager"),
+        ("Staff", "Maintenance Staff"),
+    ], 
+    validators=[
         validators.DataRequired(),
-        validators.AnyOf([
-            "Director", 
-            "Maintenance Manager", 
-            "Maintenance Staff",
+    ])
+
+    if DEMO:
+        password = PasswordField('Password', [
+            validators.Length(min=8, max=15),
+            # validate_password_strength_conditions,
+            validators.DataRequired(),
         ])
-    ])
+    else:  # SET DEMO = FALSE TO VALIDATE PASSWORD STRENGTH
+        password = PasswordField('Password', [
+            validators.Length(min=8, max=15),
+            validate_password_strength_conditions,
+            validators.DataRequired(),
+        ])
 
-    password = PasswordField('Password', [
-        validators.Length(min=8, max=15),
-        validate_password_strength_conditions,
-        validators.DataRequired(),
-    ])
 
-
-class RegisterAssetForm(Form):
+class RegisterAssetForm(FlaskForm):
     device_name = StringField("Device Name", [
         validators.DataRequired(),
     ])
 
-    brand = StringField("Brand Name", [
+    brand_name = StringField("Brand Name", [
         validators.DataRequired(),
         validate_non_numeric_data
     ])
@@ -87,16 +99,75 @@ class RegisterAssetForm(Form):
         validate_non_numeric_data
     ])
 
-    manufacturer = StringField("Manufacturer", [
+    manufacturer_name = StringField("Manufacturer", [
         validators.DataRequired(),
         validate_non_numeric_data
     ])
 
-    stored_department = StringField("Stored Department", [
+    home_dept_location = StringField("Stored Department", [
         validators.DataRequired(),
         validate_non_numeric_data
     ])
 
     installation_date = DateField("Installation Date", [
         validators.DataRequired(),
+    ])
+
+    average_uses_per_year = StringField("Average Uses Per Year", [
+        validators.DataRequired(),
+        validate_only_numeric_data
+    ])
+
+    maintenance_activities_year = StringField("Total Maintenance Activities Last Year", [
+        validators.DataRequired(),
+    ])
+
+    common_maintenance_activity = StringField("Common Maintenance Activity", [
+        validators.DataRequired(),
+    ])
+
+
+
+class TeamMemberSendMessage(FlaskForm):
+    recipient_member = SelectField(
+        "Receiving Team Member", 
+        choices=[], 
+        validators=[
+            validators.DataRequired(),
+        ]
+    )
+
+    message_subject = StringField("Message Subject", [
+        validators.DataRequired(),
+        validators.Length(max=35),
+    ])
+
+    message_body = StringField("Message Body", [
+        # We're gonna require this even though it's nullable in DB since why would they just send subject, it'll be fine. It's not that deep
+        validators.DataRequired(),
+        validators.Length(max=160)
+    ])
+
+
+
+class SearchAssetForm(FlaskForm):
+    search_by = SelectField(
+        "Search By",
+        choices=[
+            ("serial_number", "Serial Number"),
+            ("generic_name", "Generic Name"),
+            ("manufacturer", "Manufacturer"),
+            ("brand", "Brand Name"),
+            ("department", "Department Location"),
+            # ("Upcoming Maintenance Date", "Upcoming Maintenance Date"),
+            ("last_maintenance_date", "Last Maintenance Date"),
+        ],
+        validators=[
+            validators.DataRequired()
+        ]
+    )
+
+    search_phrase = StringField("Search Phrase", [
+        validators.DataRequired(),
+        validators.Length(max=75)  # assuming you wouldn't need more than 75 characters.. Right???
     ])

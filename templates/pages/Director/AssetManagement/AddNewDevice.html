@@ -20,55 +20,75 @@
         </div>
 
         <form action="/add-device" method="post" class="AssetForm">
+            {{ form.hidden_tag() }}
             
             <div class="subGrid">
-            <div class="assetInput">
-                <div class="tooltip labeltext">
-                    <label for="deviceName">Device Name:</label>
-                    <span class="tooltiptext">e.g., NeoPulse ECG Monitor</span>
+                <div class="assetInput">
+                    <div class="tooltip labeltext">
+                        <label for="device_name">Device Name:</label>
+                        <span class="tooltiptext">e.g., NeoPulse ECG Monitor</span>
+                    </div>
+                    {{ form.device_name(class="inputBox") }}
+                    {% for validation_error in form.device_name.errors %}
+                        <span class="validation-error">{{ validation_error }}</span>
+                    {% endfor %}
                 </div>
-                <input type="text" name="deviceName" class="inputBox"/>
-            </div>
 
-            <div class="assetInput">
-                <div class="tooltip labeltext">
-                    <label for="brandName">Brand Name:</label>
-                    <span class="tooltiptext">e.g., PulseMed</span>
-                </div>
-                <input type="text" name="brandName" class="inputBox"/>
-            </div>
-            
-            <div class="assetInput">
-                <div class="tooltip labeltext">
-                    <label for="genName">Generic Name:</label>
-                    <span class="tooltiptext">e.g., Electrocardiogram</span>
-                </div>
-                <input type="text" name="genName" class="inputBox"/>
-            </div>
+                <div class="assetInput">
+                    <div class="tooltip labeltext">
+                        <label for="brand_name">Brand Name:</label>
+                        <span class="tooltiptext">e.g., PulseMed</span>
+                    </div>
+                    {{ form.brand_name(class="inputBox") }}
+                    {% for validation_error in form.brand_name.errors %}
+                        <span class="validation-error">{{ validation_error }}</span>
+                    {% endfor %}
 
-            <div class="assetInput">
-                <div class="tooltip labeltext">
-                    <label for="manName">Manufacturer:</label>
-                    <span class="tooltiptext">e.g., CardioCare Solutions</span>
                 </div>
-                <input type="text" name="manName" class="inputBox"/>
-            </div>
-            
-            <div class="assetInput">
-                <div class="tooltip labeltext">
-                    <label for="homeDepLoc">Stored Department:</label>
-                    <span class="tooltiptext">e.g., ICU</span>
+                
+                <div class="assetInput">
+                    <div class="tooltip labeltext">
+                        <label for="generic_name">Generic Name:</label>
+                        <span class="tooltiptext">e.g., Electrocardiogram</span>
+                    </div>
+                    {{ form.generic_name(class="inputBox") }}
+                    {% for validation_error in form.generic_name.errors %}
+                        <span class="validation-error">{{ validation_error }}</span>
+                    {% endfor %}
                 </div>
-                <input type="text" name="homeDepLoc" class="inputBox"/>
-            </div>
-            
-            <div class="assetInput">
-                <div class="tooltip labeltext">
-                    <label for="instDate">Installation Date:</label>
-                    <span class="tooltiptext">e.g., 06/24/2025</span>
+
+                <div class="assetInput">
+                    <div class="tooltip labeltext">
+                        <label for="manufacturer_name">Manufacturer:</label>
+                        <span class="tooltiptext">e.g., CardioCare Solutions</span>
+                    </div>
+                    {{ form.manufacturer_name(class="inputBox") }}
+                    {% for validation_error in form.manufacturer_name.errors %}
+                        <span class="validation-error">{{ validation_error }}</span>
+                    {% endfor %}
                 </div>
-                <input type="date" name="instDate" class="inputBox"/>
-            </div>
+                
+                <div class="assetInput">
+                    <div class="tooltip labeltext">
+                        <label for="home_dept_location">Stored Department:</label>
+                        <span class="tooltiptext">e.g., ICU</span>
+                    </div>
+                    {{ form.home_dept_location(class="inputBox") }}
+                    {% for validation_error in form.home_dept_location.errors %}
+                        <span class="validation-error">{{ validation_error }}</span>
+                    {% endfor %}
+                </div>
+                
+                <div class="assetInput">
+                    <div class="tooltip labeltext">
+                        <label for="installation_date">Installation Date:</label>
+                        <span class="tooltiptext">e.g., 06/24/2025</span>
+                    </div>
+                    {{ form.installation_date(class="inputBox") }}
+                    {% for validation_error in form.installation_date.errors %}
+                        <span class="validation-error">{{ validation_error }}</span>
+                    {% endfor %}
+                </div>
             </div>
 
             <div class="tabs">
@@ -96,10 +116,13 @@
                             <div id="usage"></div>
                             <div class="assetInput">
                                 <div class="tooltip">
-                                    <label for="avgUseYear">Average Uses per year:</label>
+                                    <label for="average_uses_per_year">Average Uses per year:</label>
                                     <span class="tooltiptext">e.g., 1400</span>
                                 </div>
-                                <input type="text" name="avgUseYear" class="inputBox"/>
+                                {{ form.average_uses_per_year(class="inputBox") }}
+                                {% for validation_error in form.average_uses_per_year.errors %}
+                                    <span class="validation-error">{{ validation_error }}</span>
+                                {% endfor %}
                             </div>
                         </div>
                     </main>
@@ -112,12 +135,20 @@
                             <div id="maintenance"></div>
                             <div>
                                 <div class="assetInput">
-                                    <label for="maintLastYear">Number of Maint. activities in last year</label>
-                                    <input type="number" name="maintLastYear" class="inputBox"/>
+                                    <label for="maintenance_activities_year">Number of Maint. activities in last year</label>
+                                    <input type="number" name="maintenance_activities_year" class="inputBox"/>
+                                    {{ form.maintenance_activities_year(class="inputBox") }}
+                                    {% for validation_error in form.maintenance_activities_year.errors %}
+                                        <span class="validation-error">{{ validation_error }}</span>
+                                    {% endfor %}
                                 </div>
                                 <div class="assetInput">
-                                    <label for="commMaintAct">Common maint. activities</label>
-                                    <input type="text" name="commMaintAct" class="inputBox"/>
+                                    <label for="common_maintenance_activity">Common maint. activities</label>
+                                    <input type="text" name="common_maintenance_activity" class="inputBox"/>
+                                    {{ form.common_maintenance_activity(class="inputBox") }}
+                                    {% for validation_error in form.common_maintenance_activity.errors %}
+                                        <span class="validation-error">{{ validation_error }}</span>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>

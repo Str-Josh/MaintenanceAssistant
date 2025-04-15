@@ -16,45 +16,67 @@
         </div>
         
         <form action="/register" method="post" class="subGrid">
+            {{ form.hidden_tag() }}
+
             <div class="inputUser">
                 <label for="username" class="labeltext">Username:</label>
-                <input type="text" name="username" class="inputBox"/>
+                {{ form.username(class="inputBox") }}
+                {% for validation_error in form.username.errors %}
+                    <span class="validation-error">{{ validation_error }}</span>
+                {% endfor %}
             </div>
 
             <div class="inputUser">
                 <label for="password" class="labeltext">Password:</label>
-                <input type="password" name="password" class="inputBox"/>
+                {{ form.password(class="inputBox") }}
+                {% for validation_error in form.password.errors %}
+                    <span class="validation-error">{{ validation_error }}</span>
+                {% endfor %}
             </div>
 
             <div class="inputUser">
-                <label for="firstname" class="labeltext">First name:</label>
-                <input type="text" name="firstname" class="inputBox"/>
+                <label for="first_name" class="labeltext">First name:</label>
+                {{ form.first_name(class="inputBox") }}
+                {% for validation_error in form.first_name.errors %}
+                    <span class="validation-error">{{ validation_error }}</span>
+                {% endfor %}
             </div>
 
             <div class="inputUser">
-                <label for="lastname" class="labeltext">Last name:</label>
-                <input type="text" name="lastname" class="inputBox"/>
+                <label for="last_name" class="labeltext">Last name:</label>
+                {{ form.last_name(class="inputBox") }}
+                {% for validation_error in form.last_name.errors %}
+                    <span class="validation-error">{{ validation_error }}</span>
+                {% endfor %}
             </div>
 
             <div class="inputUser">
                 <label for="email" class="labeltext">Email:</label>
-                <input type="text" name="email" class="inputBox"/>
+                {{ form.email(class="inputBox") }}
+                {% for validation_error in form.email.errors %}
+                    <span class="validation-error">{{ validation_error }}</span>
+                {% endfor %}
             </div>
 
             <div class="inputUser">
-                <label for="phoneNumber" class="labeltext">Phone Number:</label>
-                <input type="number" name="phoneNumber" class="inputBox"/>
+                <label for="phone_number" class="labeltext">Phone Number:</label>
+                {{ form.phone_number(class="inputBox") }}
+                {% for validation_error in form.phone_number.errors %}
+                    <span class="validation-error">{{ validation_error }}</span>
+                {% endfor %}
             </div>
 
             <div class="inputUser">
                 <label for="user_role" class="labeltext">User role:</label>
-                <select class="dropdown-content inputBox" name="user_role" multiple>
-                    <!-- <option value="" disabled selected>Select a role</option> -->
-                    <!-- <option value="Admin">Admin</option> -->
+                {{ form.user_role(class="dropdown-content inputBox") }}
+                {% for error in form.user_role.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+                <!-- <select class="dropdown-content inputBox" name="user_role" multiple>
                     <option value="Director">Director</option>
                     <option value="Manager">Maintenance Manager</option>
                     <option value="Staff">Maintenance Staff</option>
-                </select>
+                </select> -->
             </div>
 
             <div>
@@ -71,6 +93,7 @@
                 {% endfor %}
                 <br />
             {% endfor %}
+        {% else %}
         {% endif %}
         </div>
         

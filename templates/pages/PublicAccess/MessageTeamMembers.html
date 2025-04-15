@@ -1,0 +1,30 @@
+{% extends "layouts/nav.html" %}
+{% block content %}
+
+<head>
+    <title>Message - {{ member_role }}</title>
+</head>
+
+<form action="/message-team-members/manager" method="post">
+    {{ form.hidden_tag() }}
+
+    <div class="idek">
+        <label for="recipient_member" class="labeltext">Send to:</label>
+        {{ form.recipient_member(class="inputBox") }}
+        {% for validation_error in form.recipient_member.errors %}
+            <span class="validation-error">{{ validation_error }}</span>
+        {% endfor %}
+    </div>
+
+    <div>
+        <label for="recipient_member" class="labeltext">Send to:</label>
+        {{ form.recipient_member(class="inputBox") }}
+        {% for validation_error in form.recipient_member.errors %}
+            <span class="validation-error">{{ validation_error }}</span>
+        {% endfor %}
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock %}

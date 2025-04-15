@@ -8,6 +8,7 @@ Proj. Name: Maintenance Assistant
 
 from flask import Flask, render_template, request, url_for, redirect, session, json
 from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user, current_user, AnonymousUserMixin
+from werkzeug.exceptions import NotFound
 
 import datetime as dt
 import logging
@@ -16,7 +17,7 @@ import os
 from mymodels import db, User, Messages, Asset
 import failure_model as f_model
 from mock_hospital import mock_users, mock_notifications, mock_assets
-from utils import RegistrationForm, RegisterAssetForm
+from utils import RegistrationForm, RegisterAssetForm, TeamMemberSendMessage, SearchAssetForm
 
 PORT = 5000  # Uncomment for Josh.
 RESET_DB = False  # Do not change unless you want to recreate the entire database.
@@ -190,7 +191,11 @@ def home():
 @app.route('/register', methods=["GET", "POST"])
 def register():
     form = RegistrationForm(request.form)
+    app.logger.info(form.data)
+    app.logger.info(form.errors)
+    app.logger.info(form.form_errors)
     if request.method == "POST" and form.validate():
+        app.logger.info(form.data)
         role = request.form.get("user_role").lower()
         if " " in role:
             role = role.split(" ")[1]
@@ -220,16 +225,20 @@ def register():
             app.logger.info("A new user has been added to the database.")
         except:
             app.logger.error("User already exists.")
+            return render_template("forms/sign_up.html", form=form)
+            # return render_template("forms/sign_up.html", validators_response=form.errors)
             return redirect(url_for('register'))
         
         app.logger.info("A new user was registered!")
-        return redirect(url_for('login'))
+        return redirect(url_for('home'))
     elif request.method != "POST":
-        return render_template("forms/sign_up.html")
+        return render_template("forms/sign_up.html", form=form)
     else:
         # app.logger.error(form.errors)
-        return render_template("forms/sign_up.html", validators_response=form.errors)
+        return render_template("forms/sign_up.html", form=form)
+        # return render_template("forms/sign_up.html", validators_response=form.errors)
         # return render_template("forms/sign_up.html", form=form)
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -377,15 +386,50 @@ def view_assets():
     return render_template("pages/Director/AssetManagement/ViewAssets.html")
 
 
+# I don't remember what this was for ngl...
 @app.route("/assign_device")
 def assign_device(original_page):
     return redirect(original_page + ".html")
 
 
+@app.route("/search-asset", methods=["GET", "POST"])
+@login_required
+def search_asset():  # maybe change to generic_name? idek
+    form = SearchAssetForm(request.form)
+
+    if request.method == "POST" and form.validate():        
+        search_by = form.search_by.data
+        search_phrase = form.search_phrase.data
+
+        found_assets = Asset.query.filter(
+            getattr(Asset, search_by).ilike(f"%{search_phrase}%")
+        ).all()
+
+        if not found_assets:
+            return render_template(
+                "pages/Director/AssetManagement/SearchAssets.html",
+                form=form,
+                no_assets_found="True"
+            )
+
+        app.logger.info(f"We found some assets:\n{found_assets}")
+
+        return render_template(
+            "pages/Director/AssetManagement/SearchAssets.html",
+            form=form,
+            found_assets=found_assets,
+        )
+    elif request.method != "POST":
+        return render_template("pages/Director/AssetManagement/SearchAssets.html", form=form)
+    else:
+        return render_template("pages/Director/AssetManagement/SearchAssets.html", form=form)
+
+
 @app.route("/add-asset", methods=["POST", "GET"])
 @login_required
 def add_asset():
-    if request.method == "POST":
+    form = RegisterAssetForm(request.form)
+    if request.method == "POST" and form.validate():
         if request.is_json:
             # first half of page.
             device_name = request.form.get("deviceName")
@@ -398,6 +442,7 @@ def add_asset():
 
             # second half
             data = request.get_json()  # this should be the handsontable data.
+            app.logger.info(data)  # wtf is even in here...?
 
             # installation_date & generic_name workaround :)
             description = generic_name + ";" + installation_date
@@ -439,8 +484,13 @@ def add_asset():
             # f_model.kaplan_meier_estimator_function()
 
             app.logger.info(data)
-            return redirect(url_for("add_asset"))
-    return render_template("pages/Director/AssetManagement/AddNewDevice.html")
+            # return redirect(url_for("add_asset"))
+            return render_template(url_for("home"))
+    elif request.method != "POST":
+        return render_template("pages/Director/AssetManagement/AddNewDevice.html", form=form)
+    else:
+        # occurs when form validation errors arise
+        return render_template("pages/Director/AssetManagement/AddNewDevice.html", form=form)
 
 
 @app.route("/asset-details/<serial_number>", methods=["GET", "POST"])
@@ -462,6 +512,40 @@ def schedule_repair(repair_by_date):
     if request.method == "POST":
         return None
     return render_template("")
+
+
+@app.route("/message-team-members/<role>", methods=["GET", "POST"])
+@login_required
+def message_team_members(role):
+    form = TeamMemberSendMessage(request.form)
+    acceptable_roles = ["director", "manager", "staff"]
+    if role not in acceptable_roles:
+        raise NotFound("The requested team member role was unrecognized.")
+
+    role_specific_members = User.query.filter_by(user_role=role)
+    form.recipient_member.choices = [ (user.first_name, user.first_name) for user in role_specific_members.all() ]
+
+    if form.validate_on_submit():
+        _member = form.recipient_member.data
+        _subject = form.message_subject.data
+        _body = form.message_body.data
+
+        new_message = Messages(
+            sender = current_user.username,
+            recipient = _member,
+            notification_send_date = dt.date.today(),
+            notification_head = _subject,
+            notification_body = _body,
+        )
+        return redirect(url_for("message_team_members", role=role))
+
+    return render_template("pages/PublicAccess/MessageTeamMembers.html", form=form, role=role)
+
+
+@app.route("/upload-upcoming")
+@login_required
+def upload_upcoming():
+    return None
 
 
 #----------------------------------------------------------------------------#
@@ -524,7 +608,7 @@ def unauthorized():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template("errors/404.html")
+    return render_template("errors/404.html", error_message=e.description), 404
 
 
 #----------------------------------------------------------------------------#
