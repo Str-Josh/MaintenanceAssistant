@@ -17,9 +17,17 @@
     </div>
 
     <div>
-        <label for="recipient_member" class="labeltext">Send to:</label>
-        {{ form.recipient_member(class="inputBox") }}
-        {% for validation_error in form.recipient_member.errors %}
+        <label for="message_subject" class="labeltext">Send to:</label>
+        {{ form.message_subject(class="inputBox") }}
+        {% for validation_error in form.message_subject.errors %}
+            <span class="validation-error">{{ validation_error }}</span>
+        {% endfor %}
+    </div>
+
+    <div>
+        <label for="message_body" class="labeltext">Send to:</label>
+        {{ form.message_body(class="inputBox") }}
+        {% for validation_error in form.message_body.errors %}
             <span class="validation-error">{{ validation_error }}</span>
         {% endfor %}
     </div>
