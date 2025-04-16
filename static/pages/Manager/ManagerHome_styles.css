@@ -111,7 +111,7 @@
     border: solid var(--main-blue) 3px;
     flex-direction: column;
     justify-content: center;
-    margin: 0 0 10px;
+    margin: 10px;
     background-color: lightslategray;
 }
 
