@@ -465,3 +465,7 @@ body{
   .loginInput{
     padding: 10px;
   }
+
+  .Special{
+    align-items: unset !important;
+}
