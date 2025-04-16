@@ -16498,3 +16498,81 @@ INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:app:[]
 INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:30:40] "GET /view-upcoming-events HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:53:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:53:58] "GET /static/layouts/navigation_bar_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:53:58] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:03] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:03] "GET /static/pages/stylesheet.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:09] "[32mPOST /login HTTP/1.1[0m" 302 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes\Elizabeth-StylingBugFix\MaintenanceAssistant\app.py", line 179, in home
+    return render_template("pages/Manager/ManagerHome.html", assets=maintenance_required, notifications=notifications)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes\Elizabeth-StylingBugFix\MaintenanceAssistant\templates\pages\Manager\ManagerHome.html", line 1, in top-level template code
+    {% extends "layouts/nav.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes\Elizabeth-StylingBugFix\MaintenanceAssistant\templates\layouts\nav.html", line 65, in top-level template code
+    <a href="{{ url_for('view-upcoming-events') }}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'view-upcoming-events'. Did you mean 'view_upcoming_events' instead?
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:09] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:36] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:36] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:36] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:36] "GET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:36] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:36] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:47] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:47] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:54] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:54] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:54] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:54] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:54] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 14:54:54] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
