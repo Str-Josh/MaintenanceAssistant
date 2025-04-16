@@ -38,6 +38,7 @@ header.navbar {
     color: var(--text-clr);
     display: grid;
     grid-template-columns: auto 1fr;
+    position: fixed;
 }
 header.navbar #sidebar{
     box-sizing: border-box;
