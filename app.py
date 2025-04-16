@@ -6,8 +6,9 @@ Proj. Name: Maintenance Assistant
 """
 
 
-from flask import Flask, render_template, request, url_for, redirect, session, json
+from flask import Flask, render_template, make_response, request, url_for, redirect, session, json
 from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user, current_user, AnonymousUserMixin
+from flask_caching import Cache, CachedResponse
 from werkzeug.exceptions import NotFound
 
 import datetime as dt
@@ -17,6 +18,7 @@ import os
 from mymodels import db, User, Messages, Asset
 import failure_model as f_model
 from mock_hospital import mock_users, mock_notifications, mock_assets
+from env_settings_admin import EnvironmentSettings
 from utils import RegistrationForm, RegisterAssetForm, TeamMemberSendMessage, SearchAssetForm
 
 PORT = 5000  # Uncomment for Josh.
@@ -27,7 +29,9 @@ DEMONSTRATION = False  # Will enable using 2FA and CAPTCHA when True
 
 app = Flask(__name__)
 app.config.from_object("config")
+cache = Cache(app)
 
+ENV_SETTINGS = EnvironmentSettings.settings
 
 # Server-hosted
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
@@ -35,6 +39,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 logging.basicConfig(filename="errors.log", level=logging.DEBUG)
 login_manager = LoginManager()
+login_manager.session_protection = "strong"
 login_manager.init_app(app)
 
 db.init_app(app)
@@ -154,7 +159,7 @@ def home():
                 # Backend stuff for viewing devices needing upcoming repairs.
                 company_assets = Asset.query.all()
                 maintenance_required = []
-                date_span_interval = 19  # number of days to span the interval
+                date_span_interval = ENV_SETTINGS["Upcoming-Maintenance-Date-Span"]  # number of days to span the interval
                 upcoming_maintenance_actions_datespan = dt.date.today() + dt.timedelta(days=date_span_interval)
 
                 for _asset in company_assets:
@@ -171,6 +176,15 @@ def home():
                 notifications = Messages.query.filter_by(recipient=current_user.username).all()
 
                 return render_template("pages/Manager/ManagerHome.html", assets=maintenance_required, notifications=notifications)
+                # return CachedResponse(
+                #     response=make_response(
+                #         render_template(
+                #             "pages/Manager/ManagerHome.html", 
+                #             assets=maintenance_required, notifications=notifications
+                #         )
+                #     ),
+                #     timeout=10
+                # )
             elif role == 'staff':
                 this_user = User.query.filter_by(username = current_user.username)
                 assets = Asset.query.all()
@@ -178,11 +192,24 @@ def home():
                     # if _asset.scheduled_date
                     pass
                 return render_template("pages/Staff/StaffHome.html")
+                # return CachedResponse(
+                #     response=make_response(render_template("pages/Staff/StaffHome.html")),
+                #     timeout=10
+                # )
             else:
                 return redirect(url_for("unauthorized"))
+                # return CachedResponse(
+                #     response=make_response(redirect(url_for("unauthorized"))),
+                #     timeout=10
+                # )
     else:
         app.logger.info("An unauthorized user directed to '/'. Requesting login credentials.")
         return render_template("forms/Login.html")
+        # return CachedResponse(
+        #     response=make_response(render_template("forms/Login.html")),
+        #     timeout=10
+        # )
+    pass
 
 
 #----------------------------------------------------------------------------#
@@ -329,6 +356,7 @@ def director_dashboard():
 
 @app.route("/send-request", methods=["POST", "GET"])
 @login_required
+
 def send_request():
     if request.method == "POST":
         maintenance_managers = User.query.filter_by(user_role="manager")
@@ -569,6 +597,36 @@ def notification_crud_without_c(id, operation):
         return None
     return None
 
+
+# TODO: Finish this after setting assets as scheduled.
+@app.route("/view-upcoming-events")
+@login_required
+def view_upcoming_events():
+    # @cache.cached(timeout=10)
+    span = ENV_SETTINGS["Upcoming-Maintenance-Date-Span"]  # set it at 14 days for now.
+    upcoming_assets = Asset.query.filter_by(upcoming_maintenance_action_date=span).all()
+    app.logger.info(upcoming_assets)
+
+    # return render_template("", upcoming_assets=upcoming_assets)
+    return render_template("pages/Staff/UpcomingMaintenanceView.html", upcoming_assets=upcoming_assets)
+
+
+@app.route("/assign_schedule/<asset_serial_number>/<crud_action>", methods=["GET", "POST"])
+@login_required
+def assign_schedule(asset_serial_number, crud_action):
+
+    if request.method == "POST":
+        
+        if crud_action == "create":
+            pass
+        elif crud_action == "edit":
+            pass
+        else:
+            pass
+        return None
+
+    else:
+        return None
 
 @app.route("/delete-notification")
 @login_required

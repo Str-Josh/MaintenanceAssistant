@@ -6,5 +6,9 @@ DEBUG = True
 
 SECRET_KEY = "TESTSECRETKEY"
 
+CACHE_TYPE = "SimpleCache"
+
+CACHE_DEFAULT_TIMEOUT = 10
+
 # SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(base_directory, "database.db")
 

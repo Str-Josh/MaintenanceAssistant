@@ -1,0 +1,53 @@
+{% extends "layouts/nav.html" %}
+{% block content %}
+
+<head>
+    <title>Upcoming Maintenance Activities</title>
+</head>
+
+
+<!-- Do the scrolling thing -->
+<!-- {% for upcoming in upcoming_assets %}
+    <div>
+        <div>{{ upcoming. }}</div>
+    </div>
+{% endfor %} -->
+
+
+<div class="content">
+    <div class="alerts">
+        <img class="icon" src="/static/img/AlertRed.png" alt="Alert Icon">
+        <div class="slider">
+            <!-- <div class="slides"> -->
+            <div class="slideElementsContainer">
+                {% for asset in upcoming_assets %}
+                    <!-- <a href="/asset-details" class="slide-1"> -->
+                    <!-- <a href="/asset-details" class="slideElementContent">
+                        <p>Repair needed by<br>{{ asset.repair_by }}</p>
+                        <p>Location: {{ asset.department_location }}</p>
+                        <p><a href="{{ url_for('schedule_repair', repair_by_date=asset.repair_by) }}">Schedule Maintenance</a></p>
+                    </a> -->
+                    <!-- <a href="/asset-details" class="slideElementContent">
+                        <span>Repair needed by</span>
+                        <span>{{ asset.repair_by }}</span>
+                        <span>Location: {{ asset.department_location }}</span>
+                        <span><a href="{{ url_for('schedule_repair', repair_by_date=asset.repair_by) }}">Schedule Maintenance</a></span>
+                    </a> -->
+                    <form action="/asset-details/{{ asset.asset_id }}" method="post" class="slideElementContent">
+                        <!-- <div class="slideElementContent"> -->
+                        <!-- <form action="/asset-detiails/{{ asset.asset_id }}" method="post" class="slideElementContent"> -->
+                        <span>Repair needed by</span>
+                        <span>{{ asset.repair_by }}</span>
+                        <span>Location: {{ asset.department_location }}</span>
+                        <span><a href="{{ url_for('schedule_repair', repair_by_date=asset.repair_by) }}">Schedule Maintenance</a></span>
+                        <!-- <span><a href="{{ url_for('asset_details', serial_number=asset.asset_id) }}">See asset info</a></span> -->
+                        <span><button class="assetDetails" type="submit">See asset details</button></span>
+                    </form>
+                    <!-- </div> -->
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

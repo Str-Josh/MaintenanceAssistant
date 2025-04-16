@@ -16055,3 +16055,446 @@ INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 00:40:18] "POST /search-asset HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 00:40:18] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 00:40:18] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:20] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:21] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:21] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:21] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:21] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:21] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:36] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:36] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:36] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:36] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:36] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:36] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:36] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:38] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:38] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:38] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:38] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:38] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:38] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:38] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:39] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:39] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:40] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:40] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:40] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:40] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:40] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:42] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:42] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:42] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:42] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:42] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:42] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:42] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:44] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:44] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:44] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:44] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:44] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:44] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:44] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:59] "[32mGET /add-asset HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:59] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:59] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:59] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:12:59] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:00] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:00] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:00] "[32mGET /add-asset HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:01] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:01] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:01] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:01] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:01] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:01] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:02] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:03] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:03] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:03] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:03] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:03] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:03] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:03] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:04] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:04] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:04] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:04] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:04] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:04] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:04] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:05] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:05] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:05] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:05] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:05] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:05] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:06] "[32mGET /message-team-members/manager HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:07] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:07] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:07] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:07] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:07] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:13:07] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:14:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:14:01] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:18:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:18:18] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:18:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:18:19] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:18:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:18:20] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:18:25] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:18:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:18:26] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:18:33] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:18:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:18:33] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:10] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:10] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:10] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:10] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:10] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:10] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:10] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:12] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:13] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:13] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:13] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:13] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:13] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:13] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:15] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:16] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:16] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:16] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:16] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:16] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:16] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:18] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:18] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:18] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:18] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:18] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:18] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:19] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:19] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:20] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:20] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:20] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:20] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:20] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:19:20] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:16] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:16] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:16] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:16] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:16] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:16] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:16] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:18] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:19] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:19] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:19] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:19] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:19] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:20:19] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:11] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:12] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:18] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:18] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:18] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:18] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:18] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:18] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:18] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:app:{'username': None, 'first_name': None, 'last_name': None, 'email': None, 'phone_number': None, 'user_role': None, 'password': None, 'csrf_token': None}
+INFO:app:{}
+INFO:app:[]
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:20] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:20] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:20] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:20] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:20] "[36mGET /static/forms/signup.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:23] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:23] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:23] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:33] "[33mGET /message-team-members/message-team-members/staff HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:33] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:33] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:24:33] "[33mGET /message-team-members/message-team-members/static/img/logo.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:25:07] "[33mGET /message-team-members/message-team-members/message-team-members/staff HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:25:07] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:25:07] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 18:25:07] "[33mGET /message-team-members/message-team-members/message-team-members/static/img/logo.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:10:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:10:56] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:10:56] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:10:56] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:10:56] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:10:57] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:10:57] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:16] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:16] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:16] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:16] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:16] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:16] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:17] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:36] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:36] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:37] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:37] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:37] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:37] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:37] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:44] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:44] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:49] "[32mPOST /login HTTP/1.1[0m" 302 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes\Elizabeth-StylingBugFix\MaintenanceAssistant\app.py", line 163, in home
+    date_span_interval = ENV_SETTINGS["Upcoming-Maintenance-Date-Span"]  # number of days to span the interval
+                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:11:49] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:12:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:12:34] "GET /static/img/AlertRed.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:12:34] "GET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:12:34] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:12:34] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:12:34] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:12:34] "GET /static/img/bell.png HTTP/1.1" 200 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:14:58] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:14:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:14:58] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:15:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:15:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes\Elizabeth-StylingBugFix\MaintenanceAssistant\app.py", line 195, in home
+    return render_template("pages/Staff/StaffHome.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes\Elizabeth-StylingBugFix\MaintenanceAssistant\templates\pages\Staff\StaffHome.html", line 1, in top-level template code
+    {% extends "layouts/nav.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes\Elizabeth-StylingBugFix\MaintenanceAssistant\templates\layouts\nav.html", line 86, in top-level template code
+    <a href="{{ url_for('view-upcoming-events') }}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'view-upcoming-events'. Did you mean 'view_upcoming_events' instead?
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:19:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:20:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:20:44] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:20:44] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:app:[]
+ERROR:app:Exception on /view-upcoming-events [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 939, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1212, in make_response
+    raise TypeError(
+TypeError: The view function for 'view_upcoming_events' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:20:57] "[35m[1mGET /view-upcoming-events HTTP/1.1[0m" 500 -
+INFO:app:[]
+ERROR:app:Exception on /view-upcoming-events [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 939, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1212, in make_response
+    raise TypeError(
+TypeError: The view function for 'view_upcoming_events' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:21:08] "[35m[1mGET /view-upcoming-events HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:app:[]
+ERROR:app:Exception on /view-upcoming-events [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 939, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1212, in make_response
+    raise TypeError(
+TypeError: The view function for 'view_upcoming_events' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:22:17] "[35m[1mGET /view-upcoming-events HTTP/1.1[0m" 500 -
+INFO:app:[]
+ERROR:app:Exception on /view-upcoming-events [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 939, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1212, in make_response
+    raise TypeError(
+TypeError: The view function for 'view_upcoming_events' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:22:19] "[35m[1mGET /view-upcoming-events HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:app:[]
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:28:05] "GET /view-upcoming-events HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /view-upcoming-events [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes\Elizabeth-StylingBugFix\MaintenanceAssistant\app.py", line 607, in view_upcoming_events
+    span = ENV_SETTINGS["Upcoming-Maintenance-Date-Span"]  # set it at 14 days for now.
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:29:17] "[35m[1mGET /view-upcoming-events HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:app:[]
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 13:30:40] "GET /view-upcoming-events HTTP/1.1" 200 -
