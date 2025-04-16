@@ -13,54 +13,54 @@
                 Find Asset
             </h1>
         </div>
-        
-        {% if found_assets %}
+        <div class="searchassetForm">
+            {% if found_assets %}
 
-            {% for _asset in found_assets %}
-            <div>
-                <span>{{ _asset.asset_name }}</span>
-            </div>
-            {% endfor %}
-
-        {% else %}
-
-            {% if no_assets_found %}
-
+                {% for _asset in found_assets %}
                 <div>
-                    <h1>
-                        Unfortunately, your search had 0 results. Please try again :]
-                    </h1>
+                    <span>{{ _asset.asset_name }}</span>
                 </div>
+                {% endfor %}
 
             {% else %}
 
-                <!-- Should prolly search everything to string so serverside can convert if necessary -->
-                <form action="/search-asset" method="post" class="searchassetForm">
-                    {{ form.hidden_tag() }}
+                {% if no_assets_found %}
 
-                    <div class="idek">
-                        <label for="search_by" class="labeltext">Search by:</label>
-                        {{ form.search_by(class="inputBox") }}
-                        {% for validation_error in form.search_by.errors %}
-                            <span class="validation-error">{{ validation_error }}</span>
-                        {% endfor %}
+                    <div>
+                        <h1>
+                            Unfortunately, your search had 0 results. Please try again :]
+                        </h1>
                     </div>
 
-                    <div class="idek">
-                        <label for="search_phrase" class="labeltext">Search Phrase:</label>
-                        {{ form.search_phrase(class="inputBox") }}
-                        {% for validation_error in form.search_phrase.errors %}
-                            <span class="validation-error">{{ validation_error }}</span>
-                        {% endfor %}
-                    </div>
+                {% else %}
 
-                    <button type="submit">Search</button>
-                </form>
+                    <!-- Should prolly search everything to string so serverside can convert if necessary -->
+                    <form action="/search-asset" method="post">
+                        {{ form.hidden_tag() }}
+
+                        <div class="idek">
+                            <label for="search_by" class="labeltext">Search by:</label>
+                            {{ form.search_by(class="inputBox") }}
+                            {% for validation_error in form.search_by.errors %}
+                                <span class="validation-error">{{ validation_error }}</span>
+                            {% endfor %}
+                        </div>
+
+                        <div class="idek">
+                            <label for="search_phrase" class="labeltext">Search Phrase:</label>
+                            {{ form.search_phrase(class="inputBox") }}
+                            {% for validation_error in form.search_phrase.errors %}
+                                <span class="validation-error">{{ validation_error }}</span>
+                            {% endfor %}
+                        </div>
+
+                        <button type="submit">Search</button>
+                    </form>
+
+                {% endif %}
 
             {% endif %}
-
-        {% endif %}
-        
+        </div>
     </div>
 </body>
 {% endblock %}
