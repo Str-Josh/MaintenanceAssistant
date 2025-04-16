@@ -1,4 +1,4 @@
-.searchassetForm{
+.searchassetForm, .results{
     width: 100%;
     display: grid;
     padding: 20px;
@@ -11,3 +11,4 @@
     width: 80%;
     padding-bottom: 10px;
 }
+
