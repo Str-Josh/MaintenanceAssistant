@@ -12,7 +12,16 @@
     padding-bottom: 10px;
 }
 
-.assetresult{
+.asssetresult{
+    width: 80%;
+    margin: 0 10%;
+    display: grid;
+    padding: 20px;
+    justify-items: center;
+    background-color: var(--accent-clr);
+}
+
+.resultText{
     padding: 10px;
     font-size: x-large;
     font-weight: bold;
