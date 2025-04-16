@@ -1,4 +1,4 @@
-.searchassetForm{
+.searchassetForm, .noasset{
     width: 100%;
     display: grid;
     padding: 20px;
