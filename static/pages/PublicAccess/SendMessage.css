@@ -1,0 +1,14 @@
+.sendmessageForm{
+    width: 100%;
+    display: grid;
+    padding: 20px;
+    justify-items: center;
+}
+
+.idek{
+    display: grid;
+    grid-template-columns: 20% 60%;
+    width: 80%;
+    padding-bottom: 10px;
+}
+
