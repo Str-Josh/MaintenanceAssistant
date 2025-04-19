@@ -17,17 +17,17 @@
                 <div class="slider">
                     <div class="slideElementsContainer">
                         {% for entry in assignments %}
-                            <a href="/asset-details/{{ entry.serial_number }}" class="slide-1">
-                                <div class="alertbox">
-                                    <h2>{{ entry.asset_name }}</h2>
-                                    <p>Location: {{ entry.location }}</p>
-                                    <p>Maintenance Type: {{ entry.activity_type }}</p>
-                                    <p>Date: {{ entry.date }}</p>
-                                    <p>Time: {{ entry.time }}</p>
-                                    <p>Notes: {{ entry.notes }}</p>
-                                </div>
-                            </a>
+                            <form action="/asset-details/{{ entry.serial_number }}" method="post" class="slideElementContent">
+                                <span>{{ entry.asset_name }}</span>
+                                <span>Location: {{ entry.location }}</span>
+                                <span>Maintenance Type: {{ entry.activity_type }}</span>
+                                <span>Date: {{ entry.date }}</span>
+                                <span>Time: {{ entry.time }}</span>
+                                <span>Notes: {{ entry.notes }}</span>
+                                <span><button class="assetDetails" type="submit">See asset details</button></span>
+                            </form>
                         {% endfor %}
+
                     </div>
                 </div>
             </div>
