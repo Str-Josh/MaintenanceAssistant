@@ -203,14 +203,15 @@ def home():
     assignments = []
     for link, activity, asset in user_activities:
         assignments.append({
-            "asset_name": asset.name,
+            "asset_name": asset.asset_name,
             "serial_number": asset.serial_number,
             "location": asset.location,
-            "activity_type": activity.activity_type,
+            "activity_type": activity.type,
             "date": link.date,
             "time": link.time,
             "notes": link.notes
         })
+
 
     return render_template("pages/Staff/StaffHome.html", assignments=assignments)
 
