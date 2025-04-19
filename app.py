@@ -186,12 +186,34 @@ def home():
                 #     timeout=10
                 # )
             elif role == 'staff':
-                this_user = User.query.filter_by(username = current_user.username)
-                assets = Asset.query.all()
-                for _asset in assets:
-                    # if _asset.scheduled_date
-                    pass
-                return render_template("pages/Staff/StaffHome.html")
+    this_user = User.query.filter_by(username=current_user.username).first()
+    if not this_user:
+        return redirect(url_for("unauthorized"))
+
+    from mymodels import ActivityAssetUser, Activity, Asset
+
+    user_activities = (
+        db.session.query(ActivityAssetUser, Activity, Asset)
+        .join(Activity, Activity.activity_id == ActivityAssetUser.activity_id)
+        .join(Asset, Asset.asset_id == ActivityAssetUser.asset_id)
+        .filter(ActivityAssetUser.user_id == this_user.user_id)
+        .all()
+    )
+
+    assignments = []
+    for link, activity, asset in user_activities:
+        assignments.append({
+            "asset_name": asset.name,
+            "serial_number": asset.serial_number,
+            "location": asset.location,
+            "activity_type": activity.activity_type,
+            "date": link.date,
+            "time": link.time,
+            "notes": link.notes
+        })
+
+    return render_template("pages/Staff/StaffHome.html", assignments=assignments)
+
                 # return CachedResponse(
                 #     response=make_response(render_template("pages/Staff/StaffHome.html")),
                 #     timeout=10
