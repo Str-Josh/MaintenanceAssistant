@@ -2,9 +2,34 @@
 {% block content %}
 
 <head>
+    <link rel="stylesheet" href="/static/pages/Manager/ManagerHome_styles.css">
+    <link rel="stylesheet" href="/static/pages/stylesheet.css">
     <title>Home</title>
 </head>
-
-<div></div>
+<body class="wholepage">
+    <div class="truebody">
+        <div class="general subheader">
+            <h1 class="title">Home</h1>
+        </div>
+        <div class="content">
+            <div class="alerts">
+                <img class="icon" src="/static/img/AlertRed.png" alt="Alert Icon">
+                <div class="slider">
+                    <div class="slideElementsContainer">
+                        {% for asset in assets %}
+                            <a href="/asset-details/{{ asset.serial_number }}" class="slide-1">
+                                <div class="alertbox">
+                                    <h2>{{ asset.name }}</h2>
+                                    <p>Location: {{ asset.location }}</p>
+                                    <p>Status: {{ asset.status }}</p>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 
 {% endblock %}
