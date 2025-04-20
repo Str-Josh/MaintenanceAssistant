@@ -207,13 +207,14 @@ assignments = (
         Activity.type.label("activity_type"),
         ActivityAssetUser.date,
         ActivityAssetUser.time,
-        Asset.serial_number
+        ActivityAssetUser.asset_id  # safer if this is what you're joining with
     )
     .join(ActivityAssetUser, Asset.asset_id == ActivityAssetUser.asset_id)
     .join(Activity, Activity.activity_id == ActivityAssetUser.activity_id)
     .filter(ActivityAssetUser.user_id == current_user.user_id)
     .all()
 )
+
 
 return render_template("pages/Staff/StaffHome.html", assignments=assignments)
 

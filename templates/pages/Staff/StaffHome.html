@@ -18,7 +18,7 @@
 <div class="slider">
     <div class="slideElementsContainer">
         {% for entry in assignments %}
-            <form action="/asset-details/{{ entry.serial_number }}" method="post" class="slideElementContent">
+         <form action="/asset-details/{{ entry.asset_id }}" method="post" class="slideElementContent">
                 <span>{{ entry.asset_name }}</span>
                 <span>Location: {{ entry.location }}</span>
                 <span>Maintenance Type: {{ entry.activity_type }}</span>
