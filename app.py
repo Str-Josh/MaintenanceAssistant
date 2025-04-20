@@ -15,7 +15,7 @@ import datetime as dt
 import logging
 import os
 
-from mymodels import db, User, Messages, Asset
+from mymodels import db, User, Messages, Asset, Activity, ActivityAssetUser
 import failure_model as f_model
 from mock_hospital import mock_users, mock_notifications, mock_assets
 from env_settings_admin import EnvironmentSettings
@@ -199,9 +199,6 @@ def home():
         .filter(ActivityAssetUser.user_id == this_user.user_id)
         .all()
     )
-
-from flask_login import current_user
-from mymodels import db, Asset, Activity, ActivityAssetUser
 
 assignments = (
     db.session.query(
