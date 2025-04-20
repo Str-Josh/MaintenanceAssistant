@@ -200,7 +200,26 @@ def home():
         .all()
     )
 
-    assignments = []
+from flask_login import current_user
+from mymodels import db, Asset, Activity, ActivityAssetUser
+
+assignments = (
+    db.session.query(
+        Asset.asset_name,
+        Asset.location,
+        Activity.type.label("activity_type"),
+        ActivityAssetUser.date,
+        ActivityAssetUser.time,
+        Asset.serial_number
+    )
+    .join(ActivityAssetUser, Asset.asset_id == ActivityAssetUser.asset_id)
+    .join(Activity, Activity.activity_id == ActivityAssetUser.activity_id)
+    .filter(ActivityAssetUser.user_id == current_user.user_id)
+    .all()
+)
+
+return render_template("pages/Staff/StaffHome.html", assignments=assignments)
+
     for link, activity, asset in user_activities:
         assignments.append({
             "asset_name": asset.asset_name,
