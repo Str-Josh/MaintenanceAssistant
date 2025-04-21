@@ -5,6 +5,12 @@
     height: max-content;
     justify-items: center;
     background: var(--grid-info);
+    font-size: large;
+    color: var(--main-blue);
+    font-weight: bold;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    border-radius: 20px;
   }
   
   .assetList .active{
