@@ -43,3 +43,8 @@
       border-radius: 20px;
       border: solid 3px var(--main-blue);
   }
+
+  .assetList h3{
+    color: var(--main-blue);
+    padding-bottom: 10px;
+  }

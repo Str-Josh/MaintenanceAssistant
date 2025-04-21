@@ -5,6 +5,10 @@
     justify-items: center;
 }
 
+.noasset{
+    color: red;
+}
+
 .idek{
     display: grid;
     grid-template-columns: 20% 60%;
