@@ -2,7 +2,7 @@
 {% block content %}
 
 <head>
-    <link rel="stylesheet" href="/static/pages/Manager/ManagerHome_styles.css">
+    <link rel="stylesheet" href="/static/pages/Staff/staffhome.css">
     <link rel="stylesheet" href="/static/pages/stylesheet.css">
     <title>Home</title>
 </head>
@@ -11,7 +11,9 @@
         <div class="general subheader">
             <h1 class="title">Home</h1>
         </div>
-        <div class="content">
+
+        <div class="assetList">
+            <h3>Asset List</h3>
             {% for _asgn in assignments %}
                 <!--  KEEP THIS COMMENT HERE!
                     [0] gives User
@@ -19,20 +21,40 @@
                     [2] gives Activity
                     [3] gives ActivityAssetUser 
                 -->
-                <div class="dropdownHeader">
+                <button type="button" class="collapsible">
                     <span id="thisShouldGoOnLeftSide">
                         {{ _asgn[1].asset_name }}
                     </span>
                     <span id="thisShouldGoOnRightSide">
                         {{ _asgn[2].date }}{{ _asgn[2].time }}
                     </span>
-                </div>
-                <div class="dropdownBody">
+                </button>
+                <div class="content">
+                    <!-- put more information in this section between divs-->
                     <span>
-                        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </span>
                 </div>
+
+
             {% endfor %}
+
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+                
+                for (i = 0; i < coll.length; i++) {
+                  coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                      content.style.display = "none";
+                    } else {
+                      content.style.display = "block";
+                    }
+                  });
+                }
+                </script>
         </div>
     </div>
 </body>
