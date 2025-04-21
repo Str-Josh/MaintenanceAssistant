@@ -1,28 +1,31 @@
 .collapsible {
-    width: 80%;
+    width: 100%;
     display: grid;
     padding: 20px;
     height: max-content;
     justify-items: center;
-    border-bottom: dashed 3px var(--main-blue);
+    background: var(--grid-info);
   }
   
-  .active, .collapsible:hover {
-    background-color: #555;
+  .assetList .active{
+    background-color: var(--pale-blue);
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 0;
+  }
+  .collapsible:hover {
+    background-color: var(--pale-blue);
   }
   
   .content {
-    width: 80%;
-    display: grid;
     padding: 20px;
     height: max-content;
     justify-items: center;
     border: solid 3px var(--main-blue);
+    border-radius: 0 0 20px 20px;
     display: none;
     overflow: hidden;
     background: var(--grey);
-    
-    
+    margin-bottom: 10px;
   }
   .assetList{
       display: grid;
