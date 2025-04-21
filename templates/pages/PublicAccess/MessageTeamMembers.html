@@ -13,35 +13,35 @@
                 Send Message to Team Member
             </h1>
         </div>
-    <form action="/message-team-members/manager" method="post" class="sendmessageForm">
-        {{ form.hidden_tag() }}
+        <form action="{{ url_for('message_team_members', role='manager') }}" method="post" class="sendmessageForm">
+            {{ form.hidden_tag() }}
 
-        <div class="idek">
-            <label for="recipient_member" class="labeltext">Send to:</label>
-            {{ form.recipient_member(class="inputBox") }}
-            {% for validation_error in form.recipient_member.errors %}
-                <span class="validation-error">{{ validation_error }}</span>
-            {% endfor %}
-        </div>
+            <div class="idek">
+                <label for="recipient_member" class="labeltext">Send to:</label>
+                {{ form.recipient_member(class="inputBox") }}
+                {% for validation_error in form.recipient_member.errors %}
+                    <span class="validation-error">{{ validation_error }}</span>
+                {% endfor %}
+            </div>
 
-        <div class="idek">
-            <label for="message_subject" class="labeltext">Subject:</label>
-            {{ form.message_subject(class="inputBox") }}
-            {% for validation_error in form.message_subject.errors %}
-                <span class="validation-error">{{ validation_error }}</span>
-            {% endfor %}
-        </div>
+            <div class="idek">
+                <label for="message_subject" class="labeltext">Subject:</label>
+                {{ form.message_subject(class="inputBox") }}
+                {% for validation_error in form.message_subject.errors %}
+                    <span class="validation-error">{{ validation_error }}</span>
+                {% endfor %}
+            </div>
 
-        <div class="idek">
-            <label for="message_body" class="labeltext">Details:</label>
-            {{ form.message_body(class="inputBox") }}
-            {% for validation_error in form.message_body.errors %}
-                <span class="validation-error">{{ validation_error }}</span>
-            {% endfor %}
-        </div>
+            <div class="idek">
+                <label for="message_body" class="labeltext">Details:</label>
+                {{ form.message_body(class="inputBox") }}
+                {% for validation_error in form.message_body.errors %}
+                    <span class="validation-error">{{ validation_error }}</span>
+                {% endfor %}
+            </div>
 
-        <button type="submit" class="submitbutton">Submit</button>
-    </form>
+            <button type="submit" class="submitbutton">Submit</button>
+        </form>
     </div>
 </body>
 

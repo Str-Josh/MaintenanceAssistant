@@ -19125,3 +19125,350 @@ INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 01:37:16] "[36mGET /static/pages/style
 INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 01:37:16] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 01:37:16] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 01:37:16] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:app:assignments structure:
+[[<User 28>, <Asset 171fe35c>, <Activity 1>, <ActivityAssetUser 28, 1, 171fe35c>], [<User 28>, <Asset 6e1b758c>, <Activity 1>, <ActivityAssetUser 28, 1, 6e1b758c>], [<User 28>, <Asset 40a09698>, <Activity 2>, <ActivityAssetUser 28, 2, 40a09698>], [<User 28>, <Asset bb4fc98c>, <Activity 2>, <ActivityAssetUser 28, 2, bb4fc98c>], [<User 28>, <Asset 7c559413>, <Activity 3>, <ActivityAssetUser 28, 3, 7c559413>], [<User 28>, <Asset d726a188>, <Activity 3>, <ActivityAssetUser 28, 3, d726a188>], [<User 28>, <Asset 171fe35c>, <Activity 7>, <ActivityAssetUser 28, 7, 171fe35c>], [<User 28>, <Asset 6e1b758c>, <Activity 7>, <ActivityAssetUser 28, 7, 6e1b758c>], [<User 28>, <Asset 40a09698>, <Activity 8>, <ActivityAssetUser 28, 8, 40a09698>], [<User 28>, <Asset bb4fc98c>, <Activity 8>, <ActivityAssetUser 28, 8, bb4fc98c>], [<User 28>, <Asset 7c559413>, <Activity 9>, <ActivityAssetUser 28, 9, 7c559413>], [<User 28>, <Asset d726a188>, <Activity 9>, <ActivityAssetUser 28, 9, d726a188>]]
+
+
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:50] "GET /static/layouts/navigation_bar_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:50] "GET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:50] "GET /static/pages/stylesheet.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:50] "GET /static/js/navigation.js HTTP/1.1" 200 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:52] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:52] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:58] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:58] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:58] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:58] "GET /static/img/mail.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:58] "GET /static/img/search.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:33:58] "GET /static/pages/Director/DirectorHome_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:34:04] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:34:04] "GET /static/pages/PublicAccess/SendMessage.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:34:04] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:34:04] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:34:04] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:34:04] "[33mGET /message-team-members/static/img/logo.png HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /message-team-members/manager [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\app.py", line 525, in message_team_members
+    return redirect(url_for("message_team_members", member_role=role))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\helpers.py", line 232, in url_for
+    return current_app.url_for(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'message_team_members' with values ['member_role']. Did you forget to specify values ['role']?
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:34:09] "[35m[1mPOST /message-team-members/manager HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /message-team-members/manager [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\app.py", line 525, in message_team_members
+    return redirect(url_for("message_team_members", member_role=role))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\helpers.py", line 232, in url_for
+    return current_app.url_for(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'message_team_members' with values ['member_role']. Did you forget to specify values ['role']?
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:38:28] "[35m[1mPOST /message-team-members/manager HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /message-team-members/manager [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\app.py", line 525, in message_team_members
+    return redirect(url_for("message_team_members", member_role=role))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\helpers.py", line 232, in url_for
+    return current_app.url_for(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'message_team_members' with values ['member_role']. Did you forget to specify values ['role']?
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:40:05] "[35m[1mPOST /message-team-members/manager HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /message-team-members/manager [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\app.py", line 525, in message_team_members
+    return redirect(url_for("message_team_members", member_role=role))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\helpers.py", line 232, in url_for
+    return current_app.url_for(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'message_team_members' with values ['member_role']. Did you forget to specify values ['role']?
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:40:09] "[35m[1mPOST /message-team-members/manager HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /message-team-members/manager [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\app.py", line 527, in message_team_members
+    return redirect(url_for("message_team_members", member_role=role))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\helpers.py", line 232, in url_for
+    return current_app.url_for(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'message_team_members' with values ['member_role']. Did you forget to specify values ['role']?
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:43:26] "[35m[1mPOST /message-team-members/manager HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:44:58] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:44:58] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:44:58] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:44:58] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:44:58] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:45:00] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:45:00] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:45:00] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:45:00] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:45:00] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:45:46] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:45:46] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:45:47] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:45:47] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:45:47] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:48:33] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:48:33] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:48:33] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:48:33] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:48:33] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:49:49] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:49:49] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:49:49] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:49:49] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:49:49] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:What is going on
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:51:18] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:51:18] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:51:18] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:51:18] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:51:18] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:flask_wtf.csrf:The CSRF token is missing.
+ERROR:app:What is going on
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:52:47] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:52:47] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:52:47] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:52:47] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:52:47] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:55:34] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:55:34] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:55:34] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:55:34] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:55:34] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:flask_wtf.csrf:The CSRF token is missing.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 15:56:42] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:flask_wtf.csrf:The CSRF token is missing.
+ERROR:app:{'recipient_member': None, 'message_subject': None, 'message_body': None, 'csrf_token': None}
+ERROR:app:{'recipient_member': ['This field is required.'], 'message_subject': ['This field is required.'], 'message_body': ['This field is required.'], 'csrf_token': ['The CSRF token is missing.']}
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:01:12] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:flask_wtf.csrf:The CSRF token is missing.
+ERROR:app:{'recipient_member': None, 'message_subject': None, 'message_body': None, 'csrf_token': None}
+ERROR:app:{'recipient_member': ['This field is required.'], 'message_subject': ['This field is required.'], 'message_body': ['This field is required.'], 'csrf_token': ['The CSRF token is missing.']}
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:09:27] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:flask_wtf.csrf:The CSRF token is missing.
+ERROR:app:{'recipient_member': None, 'message_subject': None, 'message_body': None, 'csrf_token': None}
+ERROR:app:{'recipient_member': ['This field is required.'], 'message_subject': ['This field is required.'], 'message_body': ['This field is required.'], 'csrf_token': ['The CSRF token is missing.']}
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:12:15] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:28] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:28] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:28] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:28] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:28] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:28] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:29] "GET /static/img/logo.png HTTP/1.1" 200 -
+INFO:flask_wtf.csrf:The CSRF token is missing.
+ERROR:app:{'recipient_member': None, 'message_subject': None, 'message_body': None, 'csrf_token': None}
+ERROR:app:{'recipient_member': ['This field is required.'], 'message_subject': ['This field is required.'], 'message_body': ['This field is required.'], 'csrf_token': ['The CSRF token is missing.']}
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:32] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:32] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:32] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:32] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:32] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+ERROR:app:<Messages (pending 2812588291136)>
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:49] "[32mPOST /message-team-members/manager HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:49] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:49] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:49] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:49] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:49] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:13:49] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:00] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:00] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:10] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:10] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:10] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:10] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:10] "GET /static/img/AlertRed.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:10] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:10] "GET /static/img/bell.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:27] "POST /asset-details/40a09698 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:28] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:28] "GET /static/pages/PublicAccess/AssetDetails_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:28] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:28] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:28] "GET /static/img/mri.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:28] "[33mGET /asset-details/static/img/logo.png HTTP/1.1[0m" 404 -

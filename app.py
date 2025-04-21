@@ -27,6 +27,7 @@ PORT = 5000
 RESET_DB = False  # Do not change unless you want to recreate the entire database.
 USE_MOCK_DB = True  # Just in case...
 DEMONSTRATION = False  # Will enable using 2FA and CAPTCHA when True
+# LOCAL = True  # Since I prefer to test locally before pushing. Just need to add DB URI.
 
 
 app = Flask(__name__)
@@ -60,7 +61,7 @@ def create_mock_db():
     api.add_row(Activity, mock_activities, multiple_addition=True)
     api.add_row(ActivityAssetUser, mock_activitiesUsers, multiple_addition=True)
 
-
+# if LOCAL:
 # with app.app_context():
 #     if RESET_DB and not USE_MOCK_DB:
 #         db.drop_all()
@@ -116,13 +117,16 @@ def user_loader(username):
 
 
 @app.route("/")
+# @cache.cached(query_string=True)
 def home():
     if current_user.is_authenticated:
         if current_user.username != "Guest":
             role = current_user.role
             if role == 'admin':
+                # return CachedResponse(response=make_response(render_template("pages/Director/DirectorHome.html"), timeout=20))
                 return render_template("pages/Director/DirectorHome.html")
             elif role == 'director':
+                # return CachedResponse(response=make_response(render_template("pages/Director/DirectorHome.html", timeout=20)))
                 return render_template("pages/Director/DirectorHome.html")
             elif role == 'manager':
                 # Backend stuff for viewing devices needing upcoming repairs.
@@ -497,14 +501,13 @@ def schedule_repair(repair_by_date):
 @login_required
 def message_team_members(role):
     form = TeamMemberSendMessage(request.form)
-    # acceptable_roles = ["director", "manager", "staff"]
-    # if role not in acceptable_roles:
-    #     raise NotFound("The requested team member role was unrecognized.")
-
     role_specific_members = User.query.filter_by(user_role=role)
     form.recipient_member.choices = [ (user.first_name, user.first_name) for user in role_specific_members.all() ]
+    if request.method == "POST" and form.validate():
+        # acceptable_roles = ["director", "manager", "staff"]
+        # if role not in acceptable_roles:
+        #     raise NotFound("The requested team member role was unrecognized.")
 
-    if form.validate_on_submit():
         _member = form.recipient_member.data
         _subject = form.message_subject.data
         _body = form.message_body.data
@@ -516,7 +519,41 @@ def message_team_members(role):
             notification_head = _subject,
             notification_body = _body,
         )
-        return redirect(url_for("message_team_members", member_role=role))
+        db.session.add(new_message)
+        app.logger.error(new_message)
+        db.session.commit()
+        # return redirect(url_for("message_team_members", member_role=role))
+        return redirect(url_for("home"))
+
+        # if form.validate_on_submit():
+        # if form.validate():
+        #     _member = form.recipient_member.data
+        #     _subject = form.message_subject.data
+        #     _body = form.message_body.data
+
+        #     new_message = Messages(
+        #         sender = current_user.username,
+        #         recipient = _member,
+        #         notification_send_date = dt.date.today(),
+        #         notification_head = _subject,
+        #         notification_body = _body,
+        #     )
+        #     db.session.add(new_message)
+        #     app.logger.error(new_message)
+        #     db.session.commit()
+        #     # return redirect(url_for("message_team_members", member_role=role))
+        #     return redirect(url_for("home"))
+        # else:
+        #     app.logger.error("What is going on")
+    elif not form.validate():
+        app.logger.error(form.data)
+        app.logger.error(form.errors)
+        # return "This is fucked"
+        return render_template(
+            "pages/PublicAccess/MessageTeamMembers.html", 
+            form=form, 
+            member_role=role
+        )
 
     return render_template(
         "pages/PublicAccess/MessageTeamMembers.html", 
