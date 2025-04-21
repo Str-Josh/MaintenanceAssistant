@@ -10,6 +10,7 @@ from flask import Flask, render_template, make_response, request, url_for, redir
 from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user, current_user, AnonymousUserMixin
 from flask_caching import Cache, CachedResponse
 from werkzeug.exceptions import NotFound
+from rest_api import MaintenanceAssistantAPI
 
 import datetime as dt
 import logging
@@ -17,13 +18,14 @@ import os
 
 from mymodels import db, User, Messages, Asset, Activity, ActivityAssetUser
 import failure_model as f_model
-from mock_hospital import mock_users, mock_notifications, mock_assets
+# from mock_hospital import mock_users, mock_notifications, mock_assets
+from mock_hospital import *
 from env_settings_admin import EnvironmentSettings
 from utils import RegistrationForm, RegisterAssetForm, TeamMemberSendMessage, SearchAssetForm
 
-PORT = 5000  # Uncomment for Josh.
+PORT = 5000
 RESET_DB = False  # Do not change unless you want to recreate the entire database.
-USE_MOCK_DB = False  # Just in case...
+USE_MOCK_DB = True  # Just in case...
 DEMONSTRATION = False  # Will enable using 2FA and CAPTCHA when True
 
 
@@ -43,55 +45,21 @@ login_manager.session_protection = "strong"
 login_manager.init_app(app)
 
 db.init_app(app)
+api = MaintenanceAssistantAPI(db=db)
 
 
 #----------------------------------------------------------------------------#
 # Database Setup.
 #----------------------------------------------------------------------------#
 
-# Don't want it to error out... I know it will :'(
-# def create_mock_db():
-#     for _mock_user in mock_users:
-#         _user = User(
-#             username = _mock_user["username"],
-#             password = _mock_user["password"],
-#             first_name = _mock_user["first_name"],
-#             last_name = _mock_user["last_name"],
-#             user_role = _mock_user["role"],
-#         )
-#         db.session.add(_user)
-#         db.session.commit()
-#     for _mock_notification in mock_notifications:
-#         _notification = Messages(
-#             sender = _mock_notification["sender"],
-#             recipient = _mock_notification["recipient"],
-#             notification_send_date = _mock_notification["notification_send_date"],
-#             notification_head = _mock_notification["notification_head"],
-#             notification_body = _mock_notification["notification_body"],
-#         )
-#         db.session.add(_notification)
-#         db.session.commit()
-#     for _mock_asset in mock_assets:
-#         _asset = Asset(
-#             serial_number = _mock_asset["serial_number"],
-#             device_name = _mock_asset["device_name"],
-#             brand = _mock_asset["brand"],
-#             generic_name = _mock_asset["generic_name"],
-#             manufacturer = _mock_asset["manufacturer"],
-#             department_location = _mock_asset["department_location"],
-#             average_use_per_year = _mock_asset["average_use_per_year"],
-#             total_units_in_service = _mock_asset["total_units_in_service"],
-#             failure_incidents_in_past_year = _mock_asset["failure_incidents_in_past_year"],
-#             total_failures_in_history = _mock_asset["total_failures_in_history"],
-#             last_maintenance_date = _mock_asset["last_maintenance_date"],
-#             total_maintenance_activities_in_past_year = _mock_asset["total_maintenance_activities_in_past_year"],
-#             maintenance_type = _mock_asset["maintenance_type"],
-#             cost_per_maintenance_activity = _mock_asset["cost_per_maintenance_activity"],
-#             total_maintenance_costs_in_past_year = _mock_asset["total_maintenance_costs_in_past_year"],
-#             upcoming_maintenance_action_date = _mock_asset["upcoming_maintenance_action_date"],
-#         )
-#         db.session.add(_asset)
-#         db.session.commit()
+
+def create_mock_db():
+    api.add_row(User, mock_users, multiple_addition=True)
+    api.add_row(Messages, mock_notifications, multiple_addition=True)
+    api.add_row(Asset, mock_assets, multiple_addition=True)
+    api.add_row(Activity, mock_activities, multiple_addition=True)
+    api.add_row(ActivityAssetUser, mock_activitiesUsers, multiple_addition=True)
+
 
 # with app.app_context():
 #     if RESET_DB and not USE_MOCK_DB:
@@ -137,6 +105,7 @@ def user_loader(username):
         return None
     user = LoginUser()
     user.username = username
+    user.id = user_model.user_id
     user.role = user_model.user_role
     return user
 
@@ -186,70 +155,27 @@ def home():
                 #     timeout=10
                 # )
             elif role == 'staff':
-    this_user = User.query.filter_by(username=current_user.username).first()
-    if not this_user:
-        return redirect(url_for("unauthorized"))
-
-    from mymodels import ActivityAssetUser, Activity, Asset
-
-    user_activities = (
-        db.session.query(ActivityAssetUser, Activity, Asset)
-        .join(Activity, Activity.activity_id == ActivityAssetUser.activity_id)
-        .join(Asset, Asset.asset_id == ActivityAssetUser.asset_id)
-        .filter(ActivityAssetUser.user_id == this_user.user_id)
-        .all()
-    )
-
-assignments = (
-    db.session.query(
-        Asset.asset_name,
-        Asset.location,
-        Activity.type.label("activity_type"),
-        ActivityAssetUser.date,
-        ActivityAssetUser.time,
-        ActivityAssetUser.asset_id  # safer if this is what you're joining with
-    )
-    .join(ActivityAssetUser, Asset.asset_id == ActivityAssetUser.asset_id)
-    .join(Activity, Activity.activity_id == ActivityAssetUser.activity_id)
-    .filter(ActivityAssetUser.user_id == current_user.user_id)
-    .all()
-)
-
-
-return render_template("pages/Staff/StaffHome.html", assignments=assignments)
-
-    for link, activity, asset in user_activities:
-        assignments.append({
-            "asset_name": asset.asset_name,
-            "serial_number": asset.serial_number,
-            "location": asset.location,
-            "activity_type": activity.type,
-            "date": link.date,
-            "time": link.time,
-            "notes": link.notes
-        })
-
-
-    return render_template("pages/Staff/StaffHome.html", assignments=assignments)
-
-                # return CachedResponse(
-                #     response=make_response(render_template("pages/Staff/StaffHome.html")),
-                #     timeout=10
-                # )
+                activityAssetUserInstances = ActivityAssetUser.query.filter_by(user_id = current_user.id).all()
+                assignments = []
+                # app.logger.error(f"Act Ass Use:  \n{activityAssetUserInstances}\n\n")
+                for _activityAssetUser in activityAssetUserInstances:
+                    ## grabbing other things from activitiesAssetUsers
+                    assignments.append(
+                        [
+                            ## Wanna add the things but this is easier than implementing a bunch of join stuff imo
+                            User.query.filter_by(user_id = _activityAssetUser.user_id).first(),
+                            Asset.query.filter_by(asset_id = _activityAssetUser.asset_id).first(),
+                            Activity.query.filter_by(activity_id = _activityAssetUser.activity_id).first(),
+                            _activityAssetUser
+                        ]
+                    )
+                app.logger.info(f"assignments structure:\n{assignments}\n\n")
+                return render_template("pages/Staff/StaffHome.html", assignments=assignments)
             else:
                 return redirect(url_for("unauthorized"))
-                # return CachedResponse(
-                #     response=make_response(redirect(url_for("unauthorized"))),
-                #     timeout=10
-                # )
     else:
         app.logger.info("An unauthorized user directed to '/'. Requesting login credentials.")
         return render_template("forms/Login.html")
-        # return CachedResponse(
-        #     response=make_response(render_template("forms/Login.html")),
-        #     timeout=10
-        # )
-    pass
 
 
 #----------------------------------------------------------------------------#
@@ -276,17 +202,6 @@ def register():
             user_role = role,
             email = form.email.data,
         )
-
-        # Below is old version for safe keeping.
-        # user = User(
-        #     username = request.form.get("username"),
-        #     password = request.form.get("password"),
-        #     first_name = request.form.get("firstname"),
-        #     last_name = request.form.get("lastname"),
-        #     user_role = role,
-        #     email = request.form.get("email"),
-        # )
-
         db.session.add(user)
         try:
             db.session.commit()
@@ -294,18 +209,13 @@ def register():
         except:
             app.logger.error("User already exists.")
             return render_template("forms/sign_up.html", form=form)
-            # return render_template("forms/sign_up.html", validators_response=form.errors)
-            return redirect(url_for('register'))
         
         app.logger.info("A new user was registered!")
         return redirect(url_for('home'))
     elif request.method != "POST":
         return render_template("forms/sign_up.html", form=form)
     else:
-        # app.logger.error(form.errors)
         return render_template("forms/sign_up.html", form=form)
-        # return render_template("forms/sign_up.html", validators_response=form.errors)
-        # return render_template("forms/sign_up.html", form=form)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -313,7 +223,7 @@ def login():
     if request.method == "POST":
         user = User.query.filter_by(username = request.form.get("username")).first()
         
-        if user and user.check_password(request.form.get("password")):  # user.password == request.form.get("password"):
+        if user and user.check_password(request.form.get("password")):
             luser = LoginUser()
             luser.id = user.username
             remember = None
@@ -587,9 +497,9 @@ def schedule_repair(repair_by_date):
 @login_required
 def message_team_members(role):
     form = TeamMemberSendMessage(request.form)
-    acceptable_roles = ["director", "manager", "staff"]
-    if role not in acceptable_roles:
-        raise NotFound("The requested team member role was unrecognized.")
+    # acceptable_roles = ["director", "manager", "staff"]
+    # if role not in acceptable_roles:
+    #     raise NotFound("The requested team member role was unrecognized.")
 
     role_specific_members = User.query.filter_by(user_role=role)
     form.recipient_member.choices = [ (user.first_name, user.first_name) for user in role_specific_members.all() ]
@@ -693,11 +603,22 @@ def elevate(id):
 
 @app.route("/user/<username>", methods=["GET"])
 def user_profile(username):
-    user = User.query.filter_by(username=username).first()
-    if user:
-        return render_template("pages/PublicAccess/user_profile.html", user=user)
-    else:
-        return f"User {username} could not be found"
+    user = User.query.all()
+    cn = 1
+    app.logger.info(user)
+    for elem in user:
+        app.logger.info("I'm doing something.")
+        app.logger.info(elem)
+        app.logger.info(elem.username)
+        if cn == 2:
+            break
+        cn = cn + 1
+    return f"I'm doing something"
+    # user = User.query.filter_by(username=username).first()
+    # if user:
+    #     return render_template("pages/PublicAccess/user_profile.html", user=user)
+    # else:
+    #     return f"User {username} could not be found"
     
 
 #----------------------------------------------------------------------------#

@@ -12,27 +12,27 @@
             <h1 class="title">Home</h1>
         </div>
         <div class="content">
-            <div class="alerts">
-                <img class="icon" src="/static/img/AlertRed.png" alt="Alert Icon">
-                
-<div class="slider">
-    <div class="slideElementsContainer">
-        {% for entry in assignments %}
-         <form action="/asset-details/{{ entry.asset_id }}" method="post" class="slideElementContent">
-                <span>{{ entry.asset_name }}</span>
-                <span>Location: {{ entry.location }}</span>
-                <span>Maintenance Type: {{ entry.activity_type }}</span>
-                <span>Date: {{ entry.date }}</span>
-                <span>Time: {{ entry.time }}</span>
-                <span>Notes: {{ entry.notes }}</span>
-                <span><button class="assetDetails" type="submit">See asset details</button></span>
-            </form>
-        {% endfor %}
-    </div>
-</div>
-
+            {% for _asgn in assignments %}
+                <!--  KEEP THIS COMMENT HERE!
+                    [0] gives User
+                    [1] gives Asset
+                    [2] gives Activity
+                    [3] gives ActivityAssetUser 
+                -->
+                <div class="dropdownHeader">
+                    <span id="thisShouldGoOnLeftSide">
+                        {{ _asgn[1].asset_name }}
+                    </span>
+                    <span id="thisShouldGoOnRightSide">
+                        {{ _asgn[2].date }}{{ _asgn[2].time }}
+                    </span>
                 </div>
-            </div>
+                <div class="dropdownBody">
+                    <span>
+                        
+                    </span>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </body>
