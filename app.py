@@ -15,13 +15,14 @@ from rest_api import MaintenanceAssistantAPI
 import datetime as dt
 import logging
 import os
+import urllib
 
 from mymodels import db, User, Messages, Asset, Activity, ActivityAssetUser
 import failure_model as f_model
 # from mock_hospital import mock_users, mock_notifications, mock_assets
 from mock_hospital import *
 from env_settings_admin import EnvironmentSettings
-from utils import RegistrationForm, RegisterAssetForm, TeamMemberSendMessage, SearchAssetForm
+from utils import RegistrationForm, RegisterAssetForm, TeamMemberSendMessage, ReplyMemberMessage, SearchAssetForm
 
 PORT = 5000
 RESET_DB = False  # Do not change unless you want to recreate the entire database.
@@ -615,16 +616,53 @@ def assign_schedule(asset_serial_number, crud_action):
     else:
         return None
 
-@app.route("/delete-notification")
+@app.route("/delete-notification", methods=["POST"])
 @login_required
-def delete_notification(id):
-    notification_to_delete = Messages.query.get(id)
+def delete_notification():
+    id = request.form.get("id")
+    source = request.form.get("source")
+    notification_to_delete = Messages.query.filter_by(notification_id=id).first()
+    deletion_params = True
     if notification_to_delete:
         db.session.delete(notification_to_delete)
-        db.session.commit()
-        return f"Messages has successfully been removed.", 200
+        try:
+            db.session.commit()
+        except:
+            raise Exception("Message does not exist")
+        return redirect(url_for("home", delete_params=deletion_params))
     else:
         return f"Messages was not found.", 404
+
+
+@app.route("/reply/<notification_sender>/<notification_subject>", methods=["POST", "GET"])
+@login_required
+def reply_notification(notification_sender, notification_subject):
+    app.logger.error(f"Accessing: {current_user.username}")
+    form = ReplyMemberMessage(request.form)
+    
+    decoded_subject = urllib.parse.unquote_plus(notification_subject)
+    form.message_subject.data = f"RE: {decoded_subject}"
+    app.logger.error(f"Accessing: {current_user.username}")
+    if request.method == "POST":
+        reply = Messages(
+            sender = current_user.username,
+            recipient = notification_sender,
+            notification_send_date = dt.date.today(),
+            notification_head = form.message_subject.data,
+            notification_body = form.message_body.data,
+        )
+        db.session.add(reply)
+        db.session.commit()
+        # return redirect(url_for("home"))
+        return render_template(
+            "pages/PublicAccess/SendMessagePart.html", 
+            form=form, 
+            notif_data={
+                "sender": notification_sender,
+                "subject": decoded_subject,
+            }
+        )
+    return "this is bug. Please report me."
 
 
 @app.route("/elevate")

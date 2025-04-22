@@ -149,6 +149,18 @@ class TeamMemberSendMessage(FlaskForm):
     ])
 
 
+class ReplyMemberMessage(FlaskForm):
+    message_subject = StringField("Message Subject", [
+        validators.DataRequired(),
+        validators.Length(max=35),
+    ])
+
+    message_body = StringField("Message Body", [
+        # We're gonna require this even though it's nullable in DB since why would they just send subject, it'll be fine. It's not that deep
+        validators.DataRequired(),
+        validators.Length(max=160)
+    ])
+
 
 class SearchAssetForm(FlaskForm):
     search_by = SelectField(

@@ -63,7 +63,13 @@
                                 </div>
                             </div>
                             <div class="responseButtons">
-                                <button>Reply</button>
+                                <!-- <button>Reply</button> -->
+                                
+                                <form action="{{ url_for('reply_notification', notification_sender=notification.sender, notification_subject=notification.notification_head) }}" method="post">
+                                    <!-- <input type="hidden" name="id" value="{{ notification.notification_id }}"> -->
+                                    <!-- <input type="hidden" name="source" value="pages/Manager/ManagerHome.html"> -->
+                                    <button type="submit">Reply</button>
+                                </form>
                                 <!-- <button href="{{ url_for('view_assets') }}">See Details</button> -->
                                 <!-- {% set decomp = notification.notification_head.split(':') %} -->
                                 {% if decomp[0] == "Maintenance Request" %}
@@ -71,7 +77,12 @@
                                     <button href="{{ url_for('elevate', id=notification.notification_id) }}">Elevate to director</button>
                                     <button href="#">Send to</button>
                                 {% endif %}
-                                <button href="{{ url_for('delete_notification', id=notification.notification_id) }}">Delete</button>
+                                <form action="{{ url_for('delete_notification') }}" method="post">
+                                    <input type="hidden" name="id" value="{{ notification.notification_id }}">
+                                    <input type="hidden" name="source" value="pages/Manager/ManagerHome.html">
+                                    <button type="submit">Delete</button>
+                                </form>
+                                
                             </div>
                         </div>
                     {% endfor %}

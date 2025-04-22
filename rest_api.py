@@ -17,8 +17,8 @@ class MaintenanceAssistantAPI():
         if not data or not data[0]:
             raise ValueError("Data param must contain contents.")
         
-        # if type(modelType) not in ["User", "Asset", "Messages", "Activity", "ActivityAssetUser"]:
-            # raise ValueError(f"Expected a valid modelType but got: {modelType}")
+        if modelType not in ["User", "Asset", "Messages", "Activity", "ActivityAssetUser"]:
+            raise ValueError(f"Expected a valid modelType but got: {modelType}")
         
         if multiple_addition:
             modelTypeInstances = []
@@ -36,6 +36,11 @@ class MaintenanceAssistantAPI():
 
 
     def delete_row(self, modelType, data = {}):
+        if not modelType:
+            raise ValueError("modelType must be a valid SQL Table but got: {modelType}.")
+        if modelType not in ["User", "Asset", "Messages", "Activity", "ActivityAssetUser"]:
+            raise ValueError("modelType must be a valid SQL Table but got: {modelType}.")
+        
         if not data:
             raise ValueError("Data param must contain contents.")
 

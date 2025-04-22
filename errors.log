@@ -19472,3 +19472,1448 @@ INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:28] "[36mGET /static/pages/style
 INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:28] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:28] "GET /static/img/mri.png HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 16:14:28] "[33mGET /asset-details/static/img/logo.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:25:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:25:40] "GET /static/layouts/navigation_bar_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:25:40] "GET /static/img/AlertRed.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:25:40] "GET /static/img/bell.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:25:40] "GET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:25:40] "GET /static/pages/stylesheet.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:25:40] "GET /static/js/navigation.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:26] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:26] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:27] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:27] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:27] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:27] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:27] "GET /static/img/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:28] "[31m[1mPOST /delete-notification?id=2 HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:50] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:50] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:50] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:50] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:50] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:50] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:50] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /delete-notification [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: delete_notification() missing 2 required positional arguments: 'id' and 'source'
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:51] "[35m[1mPOST /delete-notification?id=9 HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:28:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:28:52] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:28:52] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:28:53] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:28:53] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:28:53] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:28:53] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:28:53] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /delete-notification [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: delete_notification() missing 2 required positional arguments: 'id' and 'source'
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:28:59] "[35m[1mPOST /delete-notification?id=9&source=pages/Manager/ManagerHome.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:27] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:27] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:28] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:28] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:28] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:28] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:28] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:36] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:36] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:37] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:37] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:37] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:37] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:37] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:37] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:37] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:37] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:37] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:37] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:38] "GET /static/img/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:38] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:38] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:38] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:38] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:38] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:38] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:39] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:39] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:40] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:40] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:40] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:40] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:40] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:40] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:38] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:38] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:38] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:38] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:38] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:38] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:38] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:39] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:39] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:39] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:39] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:39] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:39] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:34:39] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:15] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:15] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:15] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:15] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:15] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:15] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:16] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:39] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:39] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:39] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:39] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:39] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:39] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:40] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+WARNING:app:Checkpoint 1
+WARNING:app:Checkpoint 2
+WARNING:app:Checkpoint 3
+WARNING:app:Checkpoint 4
+WARNING:app:Checkpoint 5
+WARNING:app:Checkpoint 6
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:42] "POST /delete-notification HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:42] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:42] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:42] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:42] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:42] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:35:42] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:51:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:51:49] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:51:49] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:51:49] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:51:49] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:51:49] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:51:49] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:22] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:22] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:22] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:22] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:22] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:22] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:23] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:27] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:27] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:33] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:34] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:34] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:34] "GET /static/img/mail.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:34] "GET /static/img/search.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:34] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:34] "GET /static/pages/Director/DirectorHome_styles.css HTTP/1.1" 200 -
+INFO:flask_wtf.csrf:The CSRF token is missing.
+ERROR:app:{'recipient_member': None, 'message_subject': None, 'message_body': None, 'csrf_token': None}
+ERROR:app:{'recipient_member': ['This field is required.'], 'message_subject': ['This field is required.'], 'message_body': ['This field is required.'], 'csrf_token': ['The CSRF token is missing.']}
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:38] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:38] "GET /static/pages/PublicAccess/SendMessage.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:38] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:38] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:38] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:38] "[33mGET /message-team-members/static/img/logo.png HTTP/1.1[0m" 404 -
+ERROR:app:<Messages (pending 1609828881936)>
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:49] "[32mPOST /message-team-members/manager HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:49] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:50] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:50] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:50] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:50] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:50] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:flask_wtf.csrf:The CSRF token is missing.
+ERROR:app:{'recipient_member': None, 'message_subject': None, 'message_body': None, 'csrf_token': None}
+ERROR:app:{'recipient_member': ['This field is required.'], 'message_subject': ['This field is required.'], 'message_body': ['This field is required.'], 'csrf_token': ['The CSRF token is missing.']}
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:52] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:52] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:52] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:52] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:52] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+ERROR:app:<Messages (pending 1609829078640)>
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:58] "[32mPOST /message-team-members/manager HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:58] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:58] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:58] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:58] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:58] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:55:58] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:00] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:00] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:06] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:06] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:06] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:06] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:06] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:06] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:11] "[32mPOST /delete-notification HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:11] "GET /?delete_params=True HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:11] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:12] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:12] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:12] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:12] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:12] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:20] "[32mPOST /delete-notification HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:20] "GET /?delete_params=True HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:20] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:21] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:21] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:21] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:21] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:56:21] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:58:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:58:09] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:58:09] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:58:09] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:58:09] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:58:09] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:58:09] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:58:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:58:24] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:58:24] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:58:24] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:58:24] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:58:24] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:58:24] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:58:25] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:59:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:59:23] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:59:23] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:59:23] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:59:23] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:59:23] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:59:23] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:59:23] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:59:24] "[33mPOST /reply/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:59:24] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:59:25] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:59:25] "[33mGET /reply/static/img/logo.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:13] "[33mPOST /reply/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:13] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:13] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:15] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:15] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:16] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:16] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:16] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:16] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:16] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:18] "[33mPOST /reply/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:18] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:18] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:53] "[33mPOST /reply/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:53] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:00:53] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:22] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:22] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:22] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:22] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:22] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:22] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:24] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:24] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:24] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:24] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:24] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:24] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:24] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:26] "[33mPOST /reply-notification/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:26] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:26] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:02:26] "[33mGET /reply-notification/static/img/logo.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:52] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:52] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:52] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:52] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:52] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:52] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:54] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:54] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:54] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:54] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:54] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:54] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:54] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:55] "[33mPOST /reply/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:56] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:03:56] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:31] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:31] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:31] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:31] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:31] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:31] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:33] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:33] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:33] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:33] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:33] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:33] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:33] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:47] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:47] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:48] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:48] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:48] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:48] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:48] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:49] "[33mPOST /reply/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:49] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:04:49] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:23] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:23] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:23] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:23] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:23] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:23] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:24] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:24] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:25] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:25] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:25] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:25] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:25] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /reply/2 [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\app.py", line 644, in reply_notification
+    return render_template("pages/PublicAccess/SendMessagePart.html", form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\templates\pages\PublicAccess\SendMessagePart.html", line 5, in template
+    <title>Message - {{ <user class="username"></user> }}</title>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: unexpected '<'
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:26] "[35m[1mPOST /reply/2 HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /reply/2 [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\app.py", line 644, in reply_notification
+    return render_template("pages/PublicAccess/SendMessagePart.html", form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\templates\pages\PublicAccess\SendMessagePart.html", line 16, in template
+    <form action="{{ url_for('reply_notification', notification_id=notification_id') }}" method="post" class="sendmessageForm">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: unexpected char "'" at 546
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:06:57] "[35m[1mPOST /reply/2 HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /reply/2 [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\app.py", line 644, in reply_notification
+    return render_template("pages/PublicAccess/SendMessagePart.html", form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\templates\pages\PublicAccess\SendMessagePart.html", line 1, in top-level template code
+    {% extends "layouts/nav.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\templates\layouts\nav.html", line 180, in top-level template code
+    {% block content %}
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\templates\pages\PublicAccess\SendMessagePart.html", line 5, in block 'content'
+    <title>Message - {{ user.username }}</title>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'user' is undefined
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:07:24] "[35m[1mPOST /reply/2 HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /reply/2 [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\app.py", line 652, in reply_notification
+    return render_template(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\templates\pages\PublicAccess\SendMessagePart.html", line 1, in top-level template code
+    {% extends "layouts/nav.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\templates\layouts\nav.html", line 180, in top-level template code
+    {% block content %}
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\templates\pages\PublicAccess\SendMessagePart.html", line 5, in block 'content'
+    <title>Message - {{ user.username }}</title>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'user' is undefined
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:00] "[35m[1mPOST /reply/2 HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\app.py", line 152, in home
+    return render_template("pages/Manager/ManagerHome.html", assets=maintenance_required, notifications=notifications)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\templates\pages\Manager\ManagerHome.html", line 1, in top-level template code
+    {% extends "layouts/nav.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\templates\layouts\nav.html", line 180, in top-level template code
+    {% block content %}
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\templates\pages\Manager\ManagerHome.html", line 68, in block 'content'
+    <form action="{{ url_for('reply_notification', notification_id=notification.notification_id) }}" method="post">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'reply_notification' with values ['notification_id']. Did you forget to specify values ['notification_sender']?
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:02] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:37] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:37] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:37] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:37] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:37] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:37] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:38] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:39] "[33mPOST /reply/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:39] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:39] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:56] "[33mPOST /reply/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:56] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:56] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:58] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:58] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:59] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:59] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:59] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:59] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:11:59] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /reply/gru [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\app.py", line 652, in reply_notification
+    return render_template(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\templates\pages\PublicAccess\SendMessagePart.html", line 1, in top-level template code
+    {% extends "layouts/nav.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\templates\layouts\nav.html", line 180, in top-level template code
+    {% block content %}
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\templates\pages\PublicAccess\SendMessagePart.html", line 5, in block 'content'
+    <title>Message - {{ user.username }}</title>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'user' is undefined
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:12:01] "[35m[1mPOST /reply/gru HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:12:58] "POST /reply/gru HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:12:59] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:12:59] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:12:59] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:12:59] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:13:42] "POST /reply/gru HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:13:42] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:13:42] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:13:43] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:13:43] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:32] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:32] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:32] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:32] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:32] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:32] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:33] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:33] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:33] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:33] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:33] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:33] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:34] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /reply/gru [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: reply_notification() missing 1 required positional argument: 'notification_subject'
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:35] "[35m[1mPOST /reply/gru HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:20] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:20] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:20] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:20] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:20] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:20] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:21] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:21] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:21] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:21] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:21] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:21] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:22] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /reply/gru [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: reply_notification() missing 1 required positional argument: 'notification_subject'
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:23:23] "[35m[1mPOST /reply/gru?notification_subject=Request+Approved HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:55] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:55] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:55] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:55] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:55] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:55] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:56] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:56] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:56] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:56] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:56] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:56] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:56] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /reply/gru [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: reply_notification() missing 1 required positional argument: 'notification_subject'
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:27:58] "[35m[1mPOST /reply/gru?notification_subject=Request+Approved HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:28:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:28:57] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:28:57] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:28:57] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:28:57] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:28:57] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:28:57] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /reply/gru [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: reply_notification() missing 1 required positional argument: 'notification_subject'
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:28:59] "[35m[1mPOST /reply/gru?notification_subject=Request+Approved HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:30:57] "GET /reply/gru/notification_subject=Request+Approved HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:30:57] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:30:57] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:30:58] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:30:58] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:30:58] "[33mGET /reply/gru/static/img/logo.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:31:16] "GET /reply/gru/notification_subject=Request+Approved HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:31:16] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:31:16] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:31:17] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:31:17] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:35] "GET /reply/gru/notification_subject=Request+Approved HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:35] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:35] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:35] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:35] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:40] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:40] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:40] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:40] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:40] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:40] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:42] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:42] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:43] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:43] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:43] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:43] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:43] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:44] "POST /reply/gru/Request%20Approved HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:44] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:44] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:44] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:34:44] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:33] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:33] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:33] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:33] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:33] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:33] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:35] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:35] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:35] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:35] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:35] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:35] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:35] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:36] "POST /reply/gru/Request%20Approved HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:37] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:37] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:37] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:37] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:53] "[33mPOST /reply// HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:53] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:53] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:35:54] "[33mGET /reply//static/img/logo.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:36:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:36:57] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:36:58] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:36:58] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:36:58] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:36:58] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:36:58] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:00] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:00] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:00] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:00] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:00] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:00] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:00] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:01] "POST /reply/gru/Request%20Approved HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:02] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:02] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:02] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:02] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:39] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:40] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:40] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:40] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:40] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:40] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:41] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:41] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:41] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:41] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:41] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:41] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:41] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:42] "POST /reply/gru/Request%20Approved HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:43] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:43] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:43] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:43] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:47] "POST /reply/gru/Request%20Approved HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:47] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:48] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:48] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:37:48] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:43] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:43] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:43] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:43] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:43] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:43] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:44] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:44] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:44] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:44] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:44] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:44] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:44] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /reply/gru/Request Approved [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\connections.py", line 825, in _read_query_result
+    result.read()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, 'target: maintenance_assistant_db.-.primary: vttablet: rpc error: code = InvalidArgument desc = Data too long for column \'notification_head\' at row 1 (errno 1406) (sqlstate 22001) (CallerID: ctwcm12fklhx6opfffkx): Sql: "insert into Messages(sender, recipient, notification_send_date, notification_head, notification_body) values (:vtg1 /* VARCHAR */, :vtg2 /* VARCHAR */, :vtg3 /* VARCHAR */, :vtg4 /* VARCHAR */, :vtg5 /* VARCHAR */)", BindVars: {REDACTED}')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\Downloads\_Spring2025\_CS483\_BugFixes_Christian2\MaintenanceAssistant\app.py", line 656, in reply_notification
+    db.session.commit()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\scoping.py", line 599, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\connections.py", line 825, in _read_query_result
+    result.read()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.DataError: (pymysql.err.DataError) (1406, 'target: maintenance_assistant_db.-.primary: vttablet: rpc error: code = InvalidArgument desc = Data too long for column \'notification_head\' at row 1 (errno 1406) (sqlstate 22001) (CallerID: ctwcm12fklhx6opfffkx): Sql: "insert into Messages(sender, recipient, notification_send_date, notification_head, notification_body) values (:vtg1 /* VARCHAR */, :vtg2 /* VARCHAR */, :vtg3 /* VARCHAR */, :vtg4 /* VARCHAR */, :vtg5 /* VARCHAR */)", BindVars: {REDACTED}')
+[SQL: INSERT INTO `Messages` (sender, recipient, notification_send_date, notification_head, notification_body) VALUES (%(sender)s, %(recipient)s, %(notification_send_date)s, %(notification_head)s, %(notification_body)s)]
+[parameters: {'sender': 'minion', 'recipient': 'gru', 'notification_send_date': datetime.date(2025, 4, 21), 'notification_head': <wtforms.fields.simple.StringField object at 0x0000029F39F782F0>, 'notification_body': <wtforms.fields.simple.StringField object at 0x0000029F39F782C0>}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:40:46] "[35m[1mPOST /reply/gru/Request%20Approved HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:43] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:43] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:43] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:43] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:43] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:43] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:44] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:44] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:44] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:44] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:44] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:44] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:45] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:46] "POST /reply/gru/Request%20Approved HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:46] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:46] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:47] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:47] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:50] "POST /reply/gru/Request%20Approved HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:50] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:50] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:50] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:41:50] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:01] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:01] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:05] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:06] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:06] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:06] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:06] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:06] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:06] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:16] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:16] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:56] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:app:assignments structure:
+[[<User 28>, <Asset 171fe35c>, <Activity 1>, <ActivityAssetUser 28, 1, 171fe35c>], [<User 28>, <Asset 6e1b758c>, <Activity 1>, <ActivityAssetUser 28, 1, 6e1b758c>], [<User 28>, <Asset 40a09698>, <Activity 2>, <ActivityAssetUser 28, 2, 40a09698>], [<User 28>, <Asset bb4fc98c>, <Activity 2>, <ActivityAssetUser 28, 2, bb4fc98c>], [<User 28>, <Asset 7c559413>, <Activity 3>, <ActivityAssetUser 28, 3, 7c559413>], [<User 28>, <Asset d726a188>, <Activity 3>, <ActivityAssetUser 28, 3, d726a188>], [<User 28>, <Asset 171fe35c>, <Activity 7>, <ActivityAssetUser 28, 7, 171fe35c>], [<User 28>, <Asset 6e1b758c>, <Activity 7>, <ActivityAssetUser 28, 7, 6e1b758c>], [<User 28>, <Asset 40a09698>, <Activity 8>, <ActivityAssetUser 28, 8, 40a09698>], [<User 28>, <Asset bb4fc98c>, <Activity 8>, <ActivityAssetUser 28, 8, bb4fc98c>], [<User 28>, <Asset 7c559413>, <Activity 9>, <ActivityAssetUser 28, 9, 7c559413>], [<User 28>, <Asset d726a188>, <Activity 9>, <ActivityAssetUser 28, 9, d726a188>]]
+
+
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:57] "GET /static/pages/Staff/staffhome.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:57] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:57] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:42:57] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:18] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:18] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+WARNING:app:The user doesn't exist
+INFO:app:The request method for login function was GET
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:24] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:24] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:34] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:34] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:34] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:34] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:34] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:34] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:37] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:38] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:43] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:43] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:43] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:43] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:43] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:43] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:47] "[32mPOST /reply/director/Test HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:48] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:48] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:48] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:48] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:48] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:48] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:52] "[32mPOST /reply/director/Test HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:52] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:53] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:53] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:53] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:53] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:43:53] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:06] "[32mPOST /reply/director/New%20Hire HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:06] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:06] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:06] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:07] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:07] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:07] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:08] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:08] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:09] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:09] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:09] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:09] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:09] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:10] "[32mPOST /reply/director/New%20Hire HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:10] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:10] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:10] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:10] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:10] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:10] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:33] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:33] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:33] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:33] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:33] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:33] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:34] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:36] "[32mPOST /reply/director/Test HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:36] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:36] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:36] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:36] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:36] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:44:36] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:10] "[32mPOST /delete-notification HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:10] "GET /?delete_params=True HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:10] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:10] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:10] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:10] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:10] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:10] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:19] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:19] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:25] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:25] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:25] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:25] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:25] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:25] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:25] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:flask_wtf.csrf:The CSRF token is missing.
+ERROR:app:{'recipient_member': None, 'message_subject': None, 'message_body': None, 'csrf_token': None}
+ERROR:app:{'recipient_member': ['This field is required.'], 'message_subject': ['This field is required.'], 'message_body': ['This field is required.'], 'csrf_token': ['The CSRF token is missing.']}
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:29] "GET /message-team-members/manager HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:30] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:30] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:30] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:30] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+ERROR:app:<Messages (pending 1825115464784)>
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:40] "[32mPOST /message-team-members/manager HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:40] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:41] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:41] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:41] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:41] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:41] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:43] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:43] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:48] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:48] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:48] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:48] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:48] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:48] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:52] "[32mPOST /reply/director/TEST HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:53] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:53] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:53] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:53] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:53] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:46:53] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:22] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:22] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:22] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:22] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:22] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:22] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:23] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+ERROR:app:Accessing: gort
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:25] "[32mPOST /reply/director/TEST HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:26] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:26] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:26] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:26] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:26] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:47:26] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:48:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:48:21] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:48:21] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:48:22] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:48:22] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:48:22] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:48:22] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:48:22] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+ERROR:app:Accessing: gort
+ERROR:app:Accessing: gort
+ERROR:app:Exception on /reply/director/TEST [POST]
+Traceback (most recent call last):
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 939, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcarter11\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1212, in make_response
+    raise TypeError(
+TypeError: The view function for 'reply_notification' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:48:23] "[35m[1mPOST /reply/director/TEST HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:13] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:13] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:13] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:13] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:13] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:13] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:14] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:14] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:14] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:14] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:14] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:14] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:15] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+ERROR:app:Accessing: gort
+ERROR:app:Accessing: gort
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:16] "POST /reply/director/TEST HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:16] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:16] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:16] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:16] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:16] "[33mGET /reply/director/static/img/logo.png HTTP/1.1[0m" 404 -
+ERROR:app:Accessing: gort
+ERROR:app:Accessing: gort
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:24] "POST /reply/director/TEST HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:24] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:24] "[36mGET /static/pages/PublicAccess/SendMessage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:24] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:24] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:39] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:39] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:48] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:48] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:48] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:48] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:48] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:48] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
