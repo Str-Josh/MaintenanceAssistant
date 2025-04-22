@@ -22,7 +22,8 @@ import failure_model as f_model
 # from mock_hospital import mock_users, mock_notifications, mock_assets
 from mock_hospital import *
 from env_settings_admin import EnvironmentSettings
-from utils import RegistrationForm, RegisterAssetForm, TeamMemberSendMessage, ReplyMemberMessage, SearchAssetForm
+# from utils import RegistrationForm, RegisterAssetForm, TeamMemberSendMessage, ReplyMemberMessage, SearchAssetForm\
+from utils import *
 
 PORT = 5000
 RESET_DB = False  # Do not change unless you want to recreate the entire database.
@@ -313,39 +314,50 @@ def director_dashboard():
 
 @app.route("/send-request", methods=["POST", "GET"])
 @login_required
-
 def send_request():
+    form = SendRequestForm(request.form)
     if request.method == "POST":
         maintenance_managers = User.query.filter_by(user_role="manager")
 
-        urgencyLevel = request.form.get("urgencyCheck")  # TODO: Implement this in DB.
-        
-        machineNeedingMaint = request.form.get("subject")
-        subject = "Maintenance Request: " + machineNeedingMaint
-        body = request.form.get("message")
+        generic_name = form.generic_name.data
+        detailed_message = form.detailed_message.data
+
+        subject = "Maintenance Request: " + generic_name
         today = dt.date.today()
+
         # If urgent, elevate immediately
-        if urgencyLevel.lower() == "urgent":
+        if form.urgency_level.data.lower() == "urgent":
             # Elevate to managers immediately
             # client = Client(account_sid, auth_token)
             # message = client.messages.create(to="")
             pass
 
-        for _ in maintenance_managers:
-            notification = Messages(
-                sender = current_user.username,
-                recipient = _.username,
-                notification_send_date = today,
-                notification_head = subject,
-                notification_body = body,
-                # status = "initial-notice"
+        notificationInstances = []
+        for manager in maintenance_managers:
+            notificationInstances.append(
+                {
+                    "sender": current_user.username,
+                    "recipient": manager.username,
+                    "notification_send_date": today,
+                    "notification_head": subject,
+                    "notification_body": detailed_message,
+                },
             )
+            app.logger.info(f"Adding a message to db for {manager.username}.")
+        api.add_row(Messages, multiple_addition=True, data=notificationInstances)
 
-            db.session.add(notification)
-            db.session.commit()
-            app.logger.info(f"Added Messages to db for {_.username}.")
-        return render_template("pages/PublicAccess/SendMaintenanceRequest.html", success_message="Notice Submitted!")
-    return render_template("pages/PublicAccess/SendMaintenanceRequest.html")
+        form.generic_name.data = ""
+        form.detailed_message.data = ""
+        return render_template(
+            "pages/PublicAccess/SendMaintenanceRequest.html", 
+            success_message="Notice Submitted!",
+            form=form,
+        )
+
+    return render_template(
+        "pages/PublicAccess/SendMaintenanceRequest.html",
+        form=form,
+    )
 
 
 @app.route("/update-asset-usage", methods=["POST", "GET"])

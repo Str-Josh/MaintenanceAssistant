@@ -127,6 +127,21 @@ class RegisterAssetForm(FlaskForm):
     ])
 
 
+class SendRequestForm(FlaskForm):
+    generic_name = StringField("Generic Name", [validators.DataRequired()])
+    
+    detailed_message = StringField("Detailed Message")
+    
+    urgency_level = SelectField("Urgency Level", choices=[
+            ("Casual", "Casual"),
+            ("Urgent", "Urgent"),
+        ],
+        validators=[
+            validators.DataRequired(),
+        ]
+    )
+
+
 
 class TeamMemberSendMessage(FlaskForm):
     recipient_member = SelectField(

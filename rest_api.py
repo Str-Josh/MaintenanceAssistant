@@ -17,8 +17,8 @@ class MaintenanceAssistantAPI():
         if not data or not data[0]:
             raise ValueError("Data param must contain contents.")
         
-        if modelType not in ["User", "Asset", "Messages", "Activity", "ActivityAssetUser"]:
-            raise ValueError(f"Expected a valid modelType but got: {modelType}")
+        # if modelType not in ["User", "Asset", "Messages", "Activity", "ActivityAssetUser"]:
+        #     raise ValueError(f"Expected a valid modelType but got: {modelType}")
         
         if multiple_addition:
             modelTypeInstances = []
