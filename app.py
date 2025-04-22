@@ -142,12 +142,14 @@ def home():
                             instance = {
                                 "asset_id": _asset.asset_id,  # TODO: need to change to actual serial number from DB (I don't feel like updating mock DB rn sorry)
                                 "repair_by": _asset.upcoming_maintenance_action_date,
-                                "department_location": _asset.location
+                                "department_location": _asset.location,
+                                "serial_number": _asset.serial_number,
                             }  # dictionary of the important values 
                             maintenance_required.append(instance)
 
                 # Backend stuff for notifications bar.
                 notifications = Messages.query.filter_by(recipient=current_user.username).all()
+                app.logger.warning(maintenance_required)
 
                 return render_template("pages/Manager/ManagerHome.html", assets=maintenance_required, notifications=notifications)
                 # return CachedResponse(
@@ -483,7 +485,9 @@ def asset_details(serial_number):
     if current_user.role not in ["director", "manager"]:
         return redirect(url_for("unauthorized"))
 
-    asset = Asset.query.get(serial_number)
+    # asset = Asset.query.get(serial_number)
+    asset = Asset.query.filter_by(serial_number=serial_number).first()
+    app.logger.error(asset)
     if not asset:
         return "Asset not found", 404
 
@@ -494,8 +498,9 @@ def asset_details(serial_number):
 @login_required
 def schedule_repair(repair_by_date):
     if request.method == "POST":
-        return None
-    return render_template("")
+        return "haha, you thought I implemented this??? HAHAHAHA"
+    return "haha, you thought I implemented this??? HAHAHAHA"
+    # return render_template("")
 
 
 @app.route("/message-team-members/<role>", methods=["GET", "POST"])

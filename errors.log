@@ -20917,3 +20917,264 @@ INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:48] "[36mGET /static/layouts/nav
 INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:48] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:48] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:49:48] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:57:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:57:46] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:57:46] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:57:46] "[36mGET /static/pages/Director/DirectorHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:57:46] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:57:46] "[36mGET /static/img/mail.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:57:46] "[36mGET /static/img/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:57:47] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:app:A user was logged out.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:07] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:app:An unauthorized user directed to '/'. Requesting login credentials.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:08] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:22] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:22] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:22] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:22] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:22] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:22] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:30] "POST /asset-details/171fe35c HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:30] "GET /static/pages/PublicAccess/AssetDetails_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:30] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:30] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:30] "GET /static/img/mri.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:30] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:58:31] "[33mGET /asset-details/static/img/logo.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:16:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:16:48] "GET /static/layouts/navigation_bar_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:16:48] "GET /static/js/navigation.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:16:48] "GET /static/img/bell.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:16:48] "GET /static/img/AlertRed.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:16:48] "GET /static/pages/stylesheet.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:16:48] "GET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:16:48] "GET /static/img/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:16:50] "POST /asset-details/171fe35c HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:16:51] "GET /static/pages/PublicAccess/AssetDetails_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:16:51] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:16:51] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:16:51] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:16:51] "[33mGET /asset-details/static/img/logo.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:33:58] "POST /asset-details/171fe35c HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:33:58] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:33:58] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:33:58] "[36mGET /static/pages/PublicAccess/AssetDetails_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:33:58] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:SELECT `Assets`.asset_id AS `Assets_asset_id`, `Assets`.asset_name AS `Assets_asset_name`, `Assets`.location AS `Assets_location`, `Assets`.brand AS `Assets_brand`, `Assets`.manufacturer AS `Assets_manufacturer`, `Assets`.description AS `Assets_description`, `Assets`.department AS `Assets_department`, `Assets`.image_path AS `Assets_image_path`, `Assets`.serial_number AS `Assets_serial_number`, `Assets`.generic_name AS `Assets_generic_name`, `Assets`.average_use_per_year AS `Assets_average_use_per_year`, `Assets`.total_units_in_service AS `Assets_total_units_in_service`, `Assets`.failure_incidents_in_past_year AS `Assets_failure_incidents_in_past_year`, `Assets`.total_failures_in_history AS `Assets_total_failures_in_history`, `Assets`.last_maintenance_date AS `Assets_last_maintenance_date`, `Assets`.total_maintenance_activities_in_past_year AS `Assets_total_maintenance_activities_in_past_year`, `Assets`.maintenance_type AS `Assets_maintenance_type`, `Assets`.cost_per_maintenance_activity AS `Assets_cost_per_maintenance_activity`, `Assets`.total_maintenance_costs_in_past_year AS `Assets_total_maintenance_costs_in_past_year`, `Assets`.upcoming_maintenance_action_date AS `Assets_upcoming_maintenance_action_date` 
+FROM `Assets` 
+WHERE `Assets`.serial_number = %(serial_number_1)s
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:35:27] "POST /asset-details/171fe35c HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:35:27] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:35:27] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:35:27] "[36mGET /static/pages/PublicAccess/AssetDetails_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:35:27] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:None
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:35:59] "[33mPOST /asset-details/171fe35c HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:35:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:15] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:15] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:15] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:15] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:15] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:15] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:16] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:16] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:17] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:17] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:17] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:17] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:17] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+ERROR:app:None
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:18] "[33mPOST /asset-details/171fe35c HTTP/1.1[0m" 404 -
+ERROR:app:None
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:36:48] "[33mPOST /asset-details/a2c8f136 HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:01] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:01] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:02] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:02] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:02] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:02] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:02] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:19] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:19] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:19] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:19] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:19] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:19] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:20] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:21] "[33mPOST /asset-details/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:21] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:40:21] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:30] "[33mPOST /asset-details/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:31] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:31] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:33] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:34] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:34] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:34] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:34] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:34] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:35] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:35] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:35] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:35] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:35] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:35] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:36] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:36] "[33mPOST /asset-details/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:37] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:41:37] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:03] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:03] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:04] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:04] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:04] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:04] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:05] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:05] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:05] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:05] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:05] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:05] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:05] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:06] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:06] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:06] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:06] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:06] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:06] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:06] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:08] "[33mPOST /asset-details/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:08] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:45:08] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:46:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:46:58] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:46:58] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:46:58] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:46:58] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:46:58] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:46:58] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:00] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:00] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:01] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:01] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:01] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:01] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:01] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:55] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:55] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:55] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:55] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:55] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:55] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:55] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:57] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:57] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:57] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:57] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:57] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:57] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:47:58] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+WARNING:app:[{'asset_id': '171fe35c', 'repair_by': datetime.date(2024, 9, 30), 'department_location': 'Radiology Room 2'}, {'asset_id': '40a09698', 'repair_by': datetime.date(2024, 9, 5), 'department_location': 'Imaging Suite B'}, {'asset_id': '6e1b758c', 'repair_by': datetime.date(2024, 11, 1), 'department_location': 'Imaging Suite B'}, {'asset_id': '7c559413', 'repair_by': datetime.date(2024, 9, 19), 'department_location': 'MRI Lab'}, {'asset_id': '916c556b', 'repair_by': datetime.date(2025, 1, 3), 'department_location': 'Imaging Suite A'}, {'asset_id': 'a2c8f136', 'repair_by': datetime.date(2025, 4, 26), 'department_location': 'Radiology Room 2'}, {'asset_id': 'acf0b3e7', 'repair_by': datetime.date(2025, 1, 18), 'department_location': 'Radiology Room 1'}, {'asset_id': 'bb4fc98c', 'repair_by': datetime.date(2024, 12, 10), 'department_location': 'MRI Lab'}, {'asset_id': 'd333da27', 'repair_by': datetime.date(2024, 8, 11), 'department_location': 'Imaging Suite B'}, {'asset_id': 'd726a188', 'repair_by': datetime.date(2024, 8, 21), 'department_location': 'Radiology Room 2'}, {'asset_id': 'dd4c6513', 'repair_by': datetime.date(2024, 11, 26), 'department_location': 'Imaging Suite A'}, {'asset_id': 'dfae1a32', 'repair_by': datetime.date(2024, 12, 15), 'department_location': 'Radiology Room 2'}, {'asset_id': 'e1d0c3b2', 'repair_by': datetime.date(2025, 3, 14), 'department_location': 'Imaging Suite B'}, {'asset_id': 'e35c5203', 'repair_by': datetime.date(2024, 8, 24), 'department_location': 'Radiology Room 2'}, {'asset_id': 'ebb0dfe2', 'repair_by': datetime.date(2024, 4, 25), 'department_location': 'Imaging Suite A'}]
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:48:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:48:53] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:48:53] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:48:53] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:48:53] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:48:53] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:48:53] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:48:54] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+WARNING:app:[{'asset_id': '171fe35c', 'repair_by': datetime.date(2024, 9, 30), 'department_location': 'Radiology Room 2', 'serial_number': 422933}, {'asset_id': '40a09698', 'repair_by': datetime.date(2024, 9, 5), 'department_location': 'Imaging Suite B', 'serial_number': 205726}, {'asset_id': '6e1b758c', 'repair_by': datetime.date(2024, 11, 1), 'department_location': 'Imaging Suite B', 'serial_number': 619390}, {'asset_id': '7c559413', 'repair_by': datetime.date(2024, 9, 19), 'department_location': 'MRI Lab', 'serial_number': 941655}, {'asset_id': '916c556b', 'repair_by': datetime.date(2025, 1, 3), 'department_location': 'Imaging Suite A', 'serial_number': 317435}, {'asset_id': 'a2c8f136', 'repair_by': datetime.date(2025, 4, 26), 'department_location': 'Radiology Room 2', 'serial_number': 458066}, {'asset_id': 'acf0b3e7', 'repair_by': datetime.date(2025, 1, 18), 'department_location': 'Radiology Room 1', 'serial_number': 149468}, {'asset_id': 'bb4fc98c', 'repair_by': datetime.date(2024, 12, 10), 'department_location': 'MRI Lab', 'serial_number': 871577}, {'asset_id': 'd333da27', 'repair_by': datetime.date(2024, 8, 11), 'department_location': 'Imaging Suite B', 'serial_number': 109070}, {'asset_id': 'd726a188', 'repair_by': datetime.date(2024, 8, 21), 'department_location': 'Radiology Room 2', 'serial_number': 931855}, {'asset_id': 'dd4c6513', 'repair_by': datetime.date(2024, 11, 26), 'department_location': 'Imaging Suite A', 'serial_number': 370478}, {'asset_id': 'dfae1a32', 'repair_by': datetime.date(2024, 12, 15), 'department_location': 'Radiology Room 2', 'serial_number': 444675}, {'asset_id': 'e1d0c3b2', 'repair_by': datetime.date(2025, 3, 14), 'department_location': 'Imaging Suite B', 'serial_number': 438684}, {'asset_id': 'e35c5203', 'repair_by': datetime.date(2024, 8, 24), 'department_location': 'Radiology Room 2', 'serial_number': 647611}, {'asset_id': 'ebb0dfe2', 'repair_by': datetime.date(2024, 4, 25), 'department_location': 'Imaging Suite A', 'serial_number': 526304}]
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:49:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:49:46] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:49:46] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:49:46] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:49:46] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:49:46] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:49:46] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:49:47] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+ERROR:app:<Asset 171fe35c>
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:49:49] "POST /asset-details/422933 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:49:49] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:49:49] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:49:49] "[36mGET /static/pages/PublicAccess/AssetDetails_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:49:49] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+ERROR:app:<Asset 171fe35c>
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:22] "POST /asset-details/422933 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:22] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:22] "[36mGET /static/pages/PublicAccess/AssetDetails_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:22] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:22] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+WARNING:app:[{'asset_id': '171fe35c', 'repair_by': datetime.date(2024, 9, 30), 'department_location': 'Radiology Room 2', 'serial_number': 422933}, {'asset_id': '40a09698', 'repair_by': datetime.date(2024, 9, 5), 'department_location': 'Imaging Suite B', 'serial_number': 205726}, {'asset_id': '6e1b758c', 'repair_by': datetime.date(2024, 11, 1), 'department_location': 'Imaging Suite B', 'serial_number': 619390}, {'asset_id': '7c559413', 'repair_by': datetime.date(2024, 9, 19), 'department_location': 'MRI Lab', 'serial_number': 941655}, {'asset_id': '916c556b', 'repair_by': datetime.date(2025, 1, 3), 'department_location': 'Imaging Suite A', 'serial_number': 317435}, {'asset_id': 'a2c8f136', 'repair_by': datetime.date(2025, 4, 26), 'department_location': 'Radiology Room 2', 'serial_number': 458066}, {'asset_id': 'acf0b3e7', 'repair_by': datetime.date(2025, 1, 18), 'department_location': 'Radiology Room 1', 'serial_number': 149468}, {'asset_id': 'bb4fc98c', 'repair_by': datetime.date(2024, 12, 10), 'department_location': 'MRI Lab', 'serial_number': 871577}, {'asset_id': 'd333da27', 'repair_by': datetime.date(2024, 8, 11), 'department_location': 'Imaging Suite B', 'serial_number': 109070}, {'asset_id': 'd726a188', 'repair_by': datetime.date(2024, 8, 21), 'department_location': 'Radiology Room 2', 'serial_number': 931855}, {'asset_id': 'dd4c6513', 'repair_by': datetime.date(2024, 11, 26), 'department_location': 'Imaging Suite A', 'serial_number': 370478}, {'asset_id': 'dfae1a32', 'repair_by': datetime.date(2024, 12, 15), 'department_location': 'Radiology Room 2', 'serial_number': 444675}, {'asset_id': 'e1d0c3b2', 'repair_by': datetime.date(2025, 3, 14), 'department_location': 'Imaging Suite B', 'serial_number': 438684}, {'asset_id': 'e35c5203', 'repair_by': datetime.date(2024, 8, 24), 'department_location': 'Radiology Room 2', 'serial_number': 647611}, {'asset_id': 'ebb0dfe2', 'repair_by': datetime.date(2024, 4, 25), 'department_location': 'Imaging Suite A', 'serial_number': 526304}]
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:35] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:35] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:35] "[36mGET /static/pages/Manager/ManagerHome_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:35] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:35] "[36mGET /static/img/AlertRed.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:35] "[36mGET /static/img/bell.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:36] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+ERROR:app:<Asset 40a09698>
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:37] "POST /asset-details/205726 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:38] "[36mGET /static/layouts/navigation_bar_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:38] "[36mGET /static/pages/PublicAccess/AssetDetails_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:38] "[36mGET /static/pages/stylesheet.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:59:38] "[36mGET /static/js/navigation.js HTTP/1.1[0m" 304 -
