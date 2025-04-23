@@ -7,8 +7,12 @@
 
 .idek{
     display: grid;
-    grid-template-columns: 20% 60%;
+    grid-template-columns: 20% 60% auto;
     width: 80%;
     padding-bottom: 10px;
 }
 
+.validation-error{
+    padding: 0 10px;
+    color: red;
+}
