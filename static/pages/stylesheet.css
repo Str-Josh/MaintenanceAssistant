@@ -329,7 +329,7 @@ body{
     padding: 20px;
   }
   .messageSection{
-    width: 80%;
+    min-width: max-content;
   }
 
   /* message slider */
