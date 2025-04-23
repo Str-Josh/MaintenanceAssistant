@@ -12,10 +12,10 @@
             <h1 class="title">Send Maintenance Request</h1>
         </div>
 
-        <form class="form" action="/send-request" method="post">
+        <form action="/send-request" method="post">
             {{ form.hidden_tag() }}
 
-            <div class="sendRequestForm">
+            <div class="form">
                 <div>
                     <label for="urgencyCheck" class="labeltext">Level of urgency</label>
                     {{ form.urgency_level(class="doINeedThisClass") }}

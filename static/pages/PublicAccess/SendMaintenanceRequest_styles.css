@@ -39,7 +39,7 @@ align-items: center;
   margin: 0 0 0 2%;
 }
 
-.sendRequestForm {
+.form {
   display: grid;
   grid-template-areas:
     "subject date"
@@ -52,29 +52,29 @@ align-items: center;
     margin: 0 10%;
 }
 
-.sendRequestForm > div.subjectClass {
+.form > div.subjectClass {
   display: grid;
   grid-area: subject;
   grid-template-columns: 10% 90%;
   padding: 20px;
 }
-.sendRequestForm > div.dateClass {
+.form > div.dateClass {
   display: grid;
   grid-area: date;
   grid-template-columns: 10% 90%;
   padding: 20px;
 }
-.sendRequestForm > div.messageClass {
+.form > div.messageClass {
   display: grid;
   grid-area: message;
   grid-template-columns: 5% 95%;
   padding: 20px;
 }
-.sendRequestForm > div.gapClass {
+.form > div.gapClass {
   display: grid;
   grid-area: gap;
 }
-.sendRequestForm > div.buttonClass {
+.form > div.buttonClass {
   display: grid;
   grid-area: button;
   padding: 20px;
