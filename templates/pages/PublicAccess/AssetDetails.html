@@ -29,7 +29,7 @@
                 {% else %}
                     <span>Maintenance needs scheduled: </span>
                     <form action="{{ url_for('schedule_repair') }}">
-                        <button type="submit">Schedule</button>
+                        <button class="submitbutton" type="submit">Schedule</button>
                     </form>
                 {% endif %}
             </div>
