@@ -1,14 +1,5 @@
 
 
-/* .alerts, .messages{
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  width: 300px;
-  height: 280px;
-  margin: 1%;
-} */
-
 .alerts, .messages {
   /* Make the container span the full width */
   width: 100%;
@@ -58,9 +49,9 @@
 
 .slideElementContent {
   background-color: lightslategray; /* Optional: Background color */
-  border: 1px solid #ddd; /* Optional: Border around each item */
+  border: 3px solid var(--main-blue);
   padding: 10px; /* Space inside the slide element */
-  width: 200px; /* Width of each slide */
+  width: max-content; /* Width of each slide */
   margin: 5px; /* Space between slides */
   text-align: center; /* Center the text inside */
   display: flex; /* Ensure the link behaves as a block element */
@@ -72,8 +63,11 @@
   /* gap: 10px; */
 
   text-decoration: none; /* Remove underline from the links */
-  color: #333; /* Set link text color */
+  color: white; /* Set link text color */
   box-sizing: border-box; /* Ensure padding and border are included in the width */
+  border-radius: 20px;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+
 }
 
 .slideElementContent span {
@@ -96,9 +90,8 @@
 
 
 .icon {
-  width: 60px;
-  height: 60px;
-  margin: 10px;
+  max-width: 20%;
+    padding: 20px;
 }
 
 .messageContainer {
@@ -108,17 +101,28 @@
   width: 960px;
   scroll-behavior: smooth;
   overflow-x: scroll;
+  align-items: stretch;
 }
 
 .messageSection {
-  /* width: 80%; */
-  /* width: fit-content; */
-  width: 600px;
-  background-color: lightslategray;
-  padding: 10px;
-  margin: 10px;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: solid var(--main-blue) 3px;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    background-color: lightslategray;
 }
 
-.messageSlider {
-  margin-bottom: 2px;
+
+
+.assetDetails{
+  border-radius: 20px;
+  background: var(--secondary-blue);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  width: max-content;
+  font-size: larger;
+  padding: 5%;
 }

@@ -3,46 +3,58 @@ import datetime as dt
 mock_users = [
     {
         "username": "demo", 
-        "first_name": "",
-        "last_name": "",
-        "role": "admin", 
+        "first_name": "demo",
+        "last_name": "demo",
+        "user_role": "admin",
+        "email": "demo@gmail.com",
         "password": "demo"
     },
-
     {
         "username": "director", 
-        "first_name": "",
-        "last_name": "",
-        "role": "director", 
+        "first_name": "director",
+        "last_name": "director",
+        "user_role": "director", 
+        "email": "director@gmail.com",
         "password": "director"
+    },
+    {
+        "username": "staff", 
+        "first_name": "staff",
+        "last_name": "staff",
+        "user_role": "staff",
+        "email": "staff@gmail.com",
+        "password": "staff"
     },
     {
         "username": "abbyburton", 
         "first_name": "Abby",
         "last_name": "Burton",
-        "role": "director", 
+        "user_role": "director", 
+        "email": "abbyburton@gmail.com",
         "password": "abbyburton"
     },
-
     {
         "username": "john", 
         "first_name": "John",
         "last_name": "Doe",
-        "role": "manager", 
+        "user_role": "manager", 
+        "email": "john@gmail.com",
         "password": "john"
     },
     {
         "username": "mary", 
         "first_name": "Mary",
         "last_name": "Strawberry",
-        "role": "manager", 
+        "user_role": "manager", 
+        "email": "mary@gmail.com",
         "password": "mary"
     },
     {
         "username": "zachwalter", 
         "first_name": "Zach",
         "last_name": "Walter",
-        "role": "manager", 
+        "user_role": "manager", 
+        "email": "zachwalter@gmail.com",
         "password": "zachwalter"
     },
 
@@ -50,14 +62,16 @@ mock_users = [
         "username": "marsolis", 
         "first_name": "Marjorie",
         "last_name": "Solis",
-        "role": "manager", 
+        "user_role": "manager", 
+        "email": "marsolis@gmail.com",
         "password": "marsolis"
     },
     {
         "username": "markhebert", 
         "first_name": "Mark",
         "last_name": "Hebert",
-        "role": "manager", 
+        "user_role": "manager", 
+        "email": "markhebert@gmail.com",
         "password": "markhebert"
     },
 
@@ -65,21 +79,24 @@ mock_users = [
         "username": "jandrews", 
         "first_name": "James",
         "last_name": "Andrews",
-        "role": "staff", 
+        "user_role": "staff", 
+        "email": "jandrews@gmail.com",
         "password": "jandrews"
     },
     {
         "username": "jgriffith", 
         "first_name": "Jason",
         "last_name": "Griffith",
-        "role": "staff", 
+        "user_role": "staff", 
+        "email": "jgriffith@gmail.com",
         "password": "jgriffith"
     },
     {
         "username": "crussell", 
         "first_name": "Cameron",
         "last_name": "Russell",
-        "role": "staff",
+        "user_role": "staff",
+        "email": "crussell@gmail.com",
         "password": "crussell"
     },
 ]
@@ -88,42 +105,42 @@ mock_notifications = [
     {
         "sender": "demo",
         "recipient": "john",
-        "notification_send_date": dt.date.today(),
+        "notification_send_date": dt.date.today() - dt.timedelta(days=1),
         "notification_head": "Help! AED is flashing red light", 
         "notification_body": "AED was being used for ... and when I ... the AED ...",
     },
     {
         "sender": "demo",
         "recipient": "mary",
-        "notification_send_date": dt.date.today(),
+        "notification_send_date": dt.date.today() - dt.timedelta(days=1),
         "notification_head": "Help! AED is flashing red light", 
         "notification_body": "AED was being used for ... and when I ... the AED ...",
     },
     {
         "sender": "demo",
         "recipient": "zachwalter",
-        "notification_send_date": dt.date.today(),
+        "notification_send_date": dt.date.today() - dt.timedelta(days=1),
         "notification_head": "Help! AED is flashing red light", 
         "notification_body": "AED was being used for ... and when I ... the AED ...",
     },
     {
         "sender": "demo",
         "recipient": "marsolis",
-        "notification_send_date": dt.date.today(),
+        "notification_send_date": dt.date.today() - dt.timedelta(days=1),
         "notification_head": "Help! AED is flashing red light", 
         "notification_body": "AED was being used for ... and when I ... the AED ...",
     },
     {
         "sender": "demo",
         "recipient": "markhebert",
-        "notification_send_date": dt.date.today(),
+        "notification_send_date": dt.date.today() - dt.timedelta(days=1),
         "notification_head": "Help! AED is flashing red light", 
         "notification_body": "AED was being used for ... and when I ... the AED ...",
     },
     {
         "sender": "Nurse Magda",
         "recipient": "john",
-        "notification_send_date": dt.date.today(),
+        "notification_send_date": dt.date.today() - dt.timedelta(days=2),
         "notification_head": "X-ray scanner is making a weird noise", 
         "notification_body": "When working with a patient, the scanner started making a deep grumble sound.",
     },
@@ -131,12 +148,13 @@ mock_notifications = [
 
 mock_assets = [
     {
+        "asset_id": 1,
         "serial_number": "0001",
-        "device_name": "CardiGuard 3000",
+        "asset_name": "CardiGuard 3000",
         "brand": "HeartSafe",
         "generic_name": "Automated External Defibrillator (AED)",
         "manufacturer": "",
-        "department_location": "",
+        "location": "",
         "average_use_per_year": "500 uses",
         "total_units_in_service": 20000,
         "failure_incidents_in_past_year": 50,
@@ -149,12 +167,13 @@ mock_assets = [
         "upcoming_maintenance_action_date": dt.date.today() + dt.timedelta(days=2),
     },
     {
+        "asset_id": 2,
         "serial_number": "0010",
-        "device_name": "BioVent Pro",
+        "asset_name": "BioVent Pro",
         "brand": "AirHealth",
         "generic_name": "Mechanical Ventilator",
         "manufacturer": "RespiraTech Ltd.",
-        "department_location": "",
+        "location": "",
         "average_use_per_year": "100000 hours",
         "total_units_in_service": 5000,
         "failure_incidents_in_past_year": 15,
@@ -167,12 +186,13 @@ mock_assets = [
         "upcoming_maintenance_action_date": dt.date.today() + dt.timedelta(days=4),
     },
     {
+        "asset_id": 3,
         "serial_number": "0011",
-        "device_name": "SafePulse Infusion Pump",
+        "asset_name": "SafePulse Infusion Pump",
         "brand": "MedFusion",
         "generic_name": "Infusion Pump",
         "manufacturer": "HealthTech Innovations",
-        "department_location": "",
+        "location": "",
         "average_use_per_year": "50000 hours",
         "total_units_in_service": 10000,
         "failure_incidents_in_past_year": 40,
@@ -185,12 +205,13 @@ mock_assets = [
         "upcoming_maintenance_action_date": dt.date.today() + dt.timedelta(days=5),
     },
     {
+        "asset_id": 4,
         "serial_number": "0100",
-        "device_name": "MediScope 4K",
+        "asset_name": "MediScope 4K",
         "brand": "ScopeVision",
         "generic_name": "Endoscope",
         "manufacturer": "MediScope Technologies",
-        "department_location": "",
+        "location": "",
         "average_use_per_year": "200 uses",
         "total_units_in_service": 12000,
         "failure_incidents_in_past_year": 90,
@@ -203,12 +224,13 @@ mock_assets = [
         "upcoming_maintenance_action_date": dt.date.today() + dt.timedelta(days=8),
     },
     {
+        "asset_id": 5,
         "serial_number": "0101",
-        "device_name": "GlucoTrack 1000",
+        "asset_name": "GlucoTrack 1000",
         "brand": "HealthGlobe",
         "generic_name": "Continuous Glucose Monitor (CGM)",
         "manufacturer": "Diabetech Industries",
-        "department_location": "Emergeny",
+        "location": "Emergeny",
         "average_use_per_year": "300000 sensor readings",
         "total_units_in_service": 50000,
         "failure_incidents_in_past_year": 1000,
@@ -221,12 +243,13 @@ mock_assets = [
         "upcoming_maintenance_action_date": dt.date.today() + dt.timedelta(days=12),
     },
     {
+        "asset_id": 6,
         "serial_number": "0110",
-        "device_name": "NeoPulse ECG Monitor",
+        "asset_name": "NeoPulse ECG Monitor",
         "brand": "PulseMed",
         "generic_name": "Electrocardiogram (ECG)",
         "manufacturer": "CardioCare Solutions",
-        "department_location": "",
+        "location": "",
         "average_use_per_year": "75000 hours",
         "total_units_in_service": 25000,
         "failure_incidents_in_past_year": 175,
@@ -239,12 +262,13 @@ mock_assets = [
         "upcoming_maintenance_action_date": dt.date.today() + dt.timedelta(days=13),
     },
     {
+        "asset_id": 7,
         "serial_number": "0111",
-        "device_name": "SurgiLaser Pro",
+        "asset_name": "SurgiLaser Pro",
         "brand": "LaserTech",
         "generic_name": "Laser Surgical System",
         "manufacturer": "OptiSurgical Inc.",
-        "department_location": "",
+        "location": "",
         "average_use_per_year": "1000 hours",
         "total_units_in_service": 3000,
         "failure_incidents_in_past_year": 30,
@@ -257,12 +281,13 @@ mock_assets = [
         "upcoming_maintenance_action_date": dt.date.today() + dt.timedelta(days=6),
     },
     {
+        "asset_id": 8,
         "serial_number": "1000",
-        "device_name": "DermalScan X-ray",
+        "asset_name": "DermalScan X-ray",
         "brand": "DermTech",
         "generic_name": "X-ray Imaging System",
         "manufacturer": "RadMed Industries",
-        "department_location": "",
+        "location": "",
         "average_use_per_year": "50000 images",
         "total_units_in_service": 2000,
         "failure_incidents_in_past_year": 18,
@@ -275,12 +300,13 @@ mock_assets = [
         "upcoming_maintenance_action_date": dt.date.today() + dt.timedelta(days=14),
     },
     {
+        "asset_id": 9,
         "serial_number": "1001",
-        "device_name": "NephroClean Dialysis Machine",
+        "asset_name": "NephroClean Dialysis Machine",
         "brand": "LifePure",
         "generic_name": "Hemodialysis Machine",
         "manufacturer": "NephroCare Medical",
-        "department_location": "",
+        "location": "",
         "average_use_per_year": "40000 dialysis sessions",
         "total_units_in_service": 8000,
         "failure_incidents_in_past_year": 112,
@@ -293,12 +319,13 @@ mock_assets = [
         "upcoming_maintenance_action_date": dt.date.today() + dt.timedelta(days=22),
     },
     {
+        "asset_id": 10,
         "serial_number": "1010",
-        "device_name": "VisionPlus Retinal Scanner",
+        "asset_name": "VisionPlus Retinal Scanner",
         "brand": "EyeTech",
         "generic_name": "Optical Coherence Tomography (OCT) Scanner",
         "manufacturer": "Visionary Medical Devices",
-        "department_location": "",
+        "location": "",
         "average_use_per_year": "25000 scans",
         "total_units_in_service": 3500,
         "failure_incidents_in_past_year": 21,
@@ -312,17 +339,98 @@ mock_assets = [
     },
 ]
 
+mock_activities = [
+    {
+        "description": "Monthly inspection of HVAC system",
+        "type": "Inspection",
+        "frequency": "Monthly",
+        "date": dt.date(2025, 4, 15),
+        "time": dt.time(9, 0)
+    },
+    {
+        "description": "Quarterly safety drill",
+        "type": "Drill",
+        "frequency": "Quarterly",
+        "date": dt.date(2025, 3, 10),
+        "time": dt.time(14, 30)
+    },
+    {
+        "description": "Software update on workstations",
+        "type": "Maintenance",
+        "frequency": "Bi-annually",
+        "date": dt.date(2025, 4, 5),
+        "time": dt.time(10, 0)
+    },
+    {
+        "description": "Annual fire extinguisher check",
+        "type": "Inspection",
+        "frequency": "Annually",
+        "date": dt.date(2025, 1, 20),
+        "time": dt.time(11, 0)
+    },
+    {
+        "description": "Weekly cleaning of lab equipment",
+        "type": "Cleaning",
+        "frequency": "Weekly",
+        "date": dt.date(2025, 4, 17),
+        "time": dt.time(8, 30)
+    }
+]
+
+mock_activitiesUsers = [
+    {
+        "user_id": 1,
+        "activity_id": 1,
+        "asset_id": "ASSET001",
+        "date": dt.date(2025, 4, 15),
+        "time": dt.time(9, 0),
+        "notes": "System was functioning normally. No issues found."
+    },
+    {
+        "user_id": 2,
+        "activity_id": 2,
+        "asset_id": "ASSET002",
+        "date": dt.date(2025, 3, 10),
+        "time": dt.time(14, 30),
+        "notes": "All staff participated in the drill. Timed at 5 minutes."
+    },
+    {
+        "user_id": 1,
+        "activity_id": 3,
+        "asset_id": "ASSET003",
+        "date": dt.date(2025, 4, 5),
+        "time": dt.time(10, 0),
+        "notes": "Software updated to version 4.5.1"
+    },
+    {
+        "user_id": 3,
+        "activity_id": 4,
+        "asset_id": "ASSET001",
+        "date": dt.date(2025, 1, 20),
+        "time": dt.time(11, 0),
+        "notes": "All extinguishers were fully charged and tagged."
+    },
+    {
+        "user_id": 2,
+        "activity_id": 5,
+        "asset_id": "ASSET002",
+        "date": dt.date(2025, 4, 17),
+        "time": dt.time(8, 30),
+        "notes": "Standard weekly cleaning completed without incident."
+    }
+]
+
 
 
 
 
 """
     {
-        "device_name": "",
+        "asset_name": "",
         "brand": "",
         "generic_name": "",
         "manufacturer": "",
-        "department_location": "",
+        "location": "",
         "average_use_per_year": "",
         "total_units_in_service": 0,
         "failure_incidents_in_past_year": 0,

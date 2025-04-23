@@ -3,57 +3,41 @@
 <head>
     <!-- <link rel="stylesheet" href="/static/pages/Director/DirectorHome_styles.css"> -->
     <title>Maintenance Assistant - Sign In</title>
+    <link rel="stylesheet" href="/static/pages/stylesheet.css">
 </head>
-<body>
-    <div class="container" style="text-align: center;">
-        <h1>Maintenance Assistant - Sign in</h1>
-        <form action="/login" method="post" style="text-align: center;">
-            <div>
+<body class="loginPage">
+    <div style="text-align: center;">
+        <h1>Maintenance Assistant</h1>
+        <h3>Log in</h3>
+        <form action="/login" method="post" class="loginForm">
+            <div class="loginInput">
                 <label for="username">Username:</label>
-                <input type="text" name="username" />
+                <input type="text" name="username" class="loginTextBox"/>
             </div>
             
-            <br />
-            
-            <div>
+            <div class="loginInput">
                 <label for="password">Password:</label>
-                <input type="password" name="password" />
+                <input type="password" name="password" class="loginTextBox"/>
             </div>
             
-            <br />
-            
-            <div>
-                <button type="submit">Login</button>
+            <div class="buttonRow loginInput">
+                <form action="/reset-password" method="post" class="loginForm">
+                    <button type="submit" class="loginButton">Reset Password</button>
+                </form>
+                <button type="submit" class="loginButton">Login</button>
             </div>
-            
-            <br />
-            
+
             <div>
-                <label for="rememberMe">Remember me?</label>
+                Remember Me
                 <input type="checkbox" name="rememberMe" />
             </div>
-            
-            <br />
 
             {% if pswd_fail == 'True' %}
                 <p>Wrong password. Try again.</p>
             {% else %}
             {% endif %}
-
-            <!-- <br /><br />
-            <div>
-                <label>Don't have an account?</label>
-                <a href="/register">Create an account</href>
-            </div> -->
-            
-            <br /><br /><br />
-            <button type="submit">Forgot Password?</button>
         </form>
-        <!-- { if current_user.is_authenticated }
-            -- <h1>You are logged in</h1> --
-            <a href="/logout">Logout</a>
-        { else }
-            -- <h1>You are not logged in</h1> --
-        { endif } -->
+
+        
     </div>
 </body>

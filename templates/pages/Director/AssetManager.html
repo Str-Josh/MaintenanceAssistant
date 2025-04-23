@@ -1,24 +1,32 @@
 {% extends "layouts/nav.html" %}
 {% block content %}
 
-<head><title>Asset Manager</title></head>
 
-<div>
-    <form action="/add-asset" method="post">
-        <div>
-            <button type="submit">Add new asset</button>
+<head>
+    <title>Asset Manager</title>
+    <link rel="stylesheet" href="/static/pages/Director/AssetManager_styles.css">
+    <link rel="stylesheet" href="/static/pages/stylesheet.css">
+</head>
+
+<body class="wholepage">
+    <div class="truebody Special">
+        <div class="general subheader">
+            <h1 class="title">
+                Asset Managment
+            </h1>
         </div>
-    </form>
-    <form action="/view-assets" method="get">
-        <div>
-            <button type="submit">View current devices</button>
+        <div class="buttonGrid">
+            <button type="submit" onclick="window.location.href='/add-asset'" class="assetManagerButton good-news">
+                Add new asset
+            </button>
+            <button type="submit" onclick="window.location.href='/view-assets'" class="assetManagerButton device">
+                View current devices
+            </button>
+            <button type="submit" onclick="window.location.href='/update-asset-usage'" class="assetManagerButton usage">
+                Update device details
+            </button>
         </div>
-    </form>
-    <form action="/update-asset-usage" method="get">
-        <div>
-            <button type="submit">Update device details</button>
-        </div>
-    </form>
-</div>
+    </div>
+</body>
 
 {% endblock %}

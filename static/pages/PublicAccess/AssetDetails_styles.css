@@ -1,0 +1,80 @@
+/* Asset Info Page */
+.info{
+  display: flex;
+      padding: 30px;
+      width: 80%;
+      flex-direction: column;
+      background: var(--grid-info);
+      border-radius: 20px;
+      border: solid 3px var(--main-blue);
+  }
+  .info .labeltext{
+    text-align: left;
+  }
+
+.assetDisplay{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: var(--accent-clr);
+  border: solid 3px var(--main-blue);
+  border-radius: 20px;
+  width: 80%;
+  margin: 20px;
+  padding: 20px;
+}
+
+  .assetCircle{
+    height: 150px;
+    width: 150px;
+    background: var(--light-blue);
+    border-radius: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .assetInfo{
+    text-align: center;
+  }
+
+  .assetHead{
+    font-size: xx-large;
+    font-weight: bolder;
+    padding: 10px;
+  }
+
+  .assetSubHead{
+    font-size: large;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    color: var(--grid-info);
+    font-weight: 600;
+  }
+
+  .displaybox{
+    background-color: var(--light-blue);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    margin: 0 0 0 2%;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .assetSubHead .submitbutton{
+    border-radius: 20px;
+    background: var(--secondary-blue);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: var(--grid-info);
+    width: max-content;
+    font-size: larger;
+    padding: 10px;
+    margin: 0 0 0 20%;
+    font-weight: 600;
+  }

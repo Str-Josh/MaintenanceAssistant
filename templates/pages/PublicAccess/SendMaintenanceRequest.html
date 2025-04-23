@@ -2,65 +2,55 @@
 {% block content %}
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maintenance Request Submission</title>
-    <!-- <title>Document</title> -->
     <link rel="stylesheet" href="/static/pages/PublicAccess/SendMaintenanceRequest_styles.css">
-    <!-- <link rel="icon" type="image/png" href="static/img/logo.png"> -->
+    <link rel="stylesheet" href="/static/pages/stylesheet.css">
 </head>
-<body>
-    <form class="form" action="/send-request" method="post">
-        <!-- <div class="request subheader"> -->
-        <div class="sendRequestForm">
-            <div">
-                <label for="urgencyCheck">Level of urgency</label>
-                <div>
-                    <input type="checkbox" name="casual" />
-                    <label for="casual">Casual</label>
-                    <input type="checkbox" name="urgent" />
-                    <label for="urgent">Urgent</label>
+<body class="wholepage">
+    <div class="truebody Special">
+        <div class="request subheader">
+            <h1 class="title">Send Maintenance Request</h1>
+        </div>
+
+        <form action="/send-request" method="post">
+            {{ form.hidden_tag() }}
+
+            <div class="form">
+                <div class="urgencyClass">
+                    <label for="urgencyCheck" class="labeltext">Level of urgency</label>
+                    {{ form.urgency_level(class="inputBox doINeedThisClass") }}
+                    {% for error in form.urgency_level.errors %}
+                        <span class="error">{{ error }}</span>
+                    {% endfor %}
+                </div>
+        
+                {% if success_message %}
+                    <h2 style="align-items: center;font-size: large;">{{ success_message }}</h2>
+                {% else %}
+                {% endif %}
+
+                <div class="subjectClass">
+                    <label for="DOI" class="labeltext">Device Generic Name</label>
+                    {{ form.generic_name(class="inputBox") }}
+                    {% for validation_error in form.generic_name.errors %}
+                        <span class="validation-error">{{ validation_error }}</span>
+                    {% endfor %}
+                </div>
+
+                <div class="messageClass">
+                    <label for="message" class="labeltext">Optional Detailed Message</label>
+                    {{ form.detailed_message(class="bigBox") }}
+                    {% for validation_error in form.detailed_message.errors %}
+                        <span class="validation-error">{{ validation_error }}</span>
+                    {% endfor %}
+                </div>
+        
+                <div class="buttonClass">
+                <button type="submit" class="submitButton">Send Maintenance Request</button>
                 </div>
             </div>
-    
-            {% if success_message %}
-                <h2 style="align-items: center;font-size: large;">{{ success_message }}</h2>
-            {% else %}
-            {% endif %}
-    
-            <div class="subjectClass">
-                <!-- <label for="subject" class="subjectText">Subject:</label>
-                <input type="text" id="subject" name="subject" class="subjectBox"> -->
-                <label for="DOI">Device Generic Name</label>
-                <input type="text" name="DOI" />
-            </div>
-            <div class="dateClass">
-                <label for="date" class="dateText">Date:</label>
-                <input type="date" id="date" name="date" class="dateBox">
-            </div>
-            <div class="messageClass">
-                <label for="message" class="messageText">Optional Detailed Message:</label>
-                <input type="message" id="message" name="message" class="messageBox">
-            </div>
-    
-            <button type="submit" class="returnHome">Send Maintenance Request</button>
-        </div>
-    </form>
-
-    <!-- <form class="container"> -->
-        <!-- <div class="subjectClass">
-            <label for="subject" class="subjectText">Subject:</label>
-            <input type="text" id="subject" name="subject" class="subjectBox">
-        </div>
-        <div class="dateClass">
-            <label for="date" class="dateText">Date:</label>
-            <input type="date" id="date" name="date" class="dateBox">
-        </div>
-        <div class="messageClass">
-            <label for="message" class="messageText">Message:</label>
-            <input type="message" id="message" name="message" class="messageBox">
-        </div> -->
-    <!-- </form> -->
+        </form>
+    </div>
 </body>
 
 {% endblock %}

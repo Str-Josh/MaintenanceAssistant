@@ -1,15 +1,6 @@
-.sendRequestForm{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* border-top: 1rem; */
-  /* width: 100px;
-  margin-left: auto;
-  margin-right: auto; */
-}
 
-/* END NEW STUFF */
 
+  /* (Bridges) send request */
 .labeltext {
   text-align: right;
   padding: 0 5px;
@@ -22,6 +13,12 @@
   padding: 10px;
   color: var(--main-blue);
 }
+
+.dateText{
+display: flex;
+align-items: center;
+}
+
 
 .inputBox {
   fill: var(--text-box);
@@ -45,13 +42,14 @@
 .form {
   display: grid;
   grid-template-areas:
-    "subject date"
+    "subject urgency"
     "message message"
     "gap button";
     grid-template-columns: 50% 50%;
     gap: 5px;
     padding: 10px;
-    margin: 10px;
+    width: 80%;
+    margin: 0 10%;
 }
 
 .form > div.subjectClass {
@@ -60,26 +58,22 @@
   grid-template-columns: 10% 90%;
   padding: 20px;
 }
-
-.form > div.dateClass {
+.form > div.urgencyClass {
   display: grid;
-  grid-area: date;
+  grid-area: urgency;
   grid-template-columns: 10% 90%;
   padding: 20px;
 }
-
 .form > div.messageClass {
   display: grid;
   grid-area: message;
   grid-template-columns: 5% 95%;
   padding: 20px;
 }
-
 .form > div.gapClass {
   display: grid;
   grid-area: gap;
 }
-
 .form > div.buttonClass {
   display: grid;
   grid-area: button;
@@ -88,76 +82,7 @@
 
 }
 
-
-/* END OF CURRENT CONTENT */
-
-
-
-/* .messageText {
-    padding: 10px;
-}
-.subjectBox {
-    fill: var(--text-box);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-    border-radius: 20px;
-    border: none;
-    padding: 10px;
+.buttonClass .submitbutton{
+  margin: 0;
 }
 
-.dateBox {
-    fill: var(--text-box);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-    border-radius: 20px;
-    border: none;
-    padding: 10px;
-}
-
-.messageBox {
-    fill: var(--text-box);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-    border-radius: 20px;
-    border: none;
-    height: 325px;
-}
-
-.container {
-    display: grid;
-    grid-template-areas:
-      "subject date"
-      "message message"
-      "gap button";
-    grid-template-columns: 50% 50%;
-    gap: 5px;
-    padding: 10px;
-    margin: 10px;
-  }
-
-  .container > div.subjectClass {
-    display: grid;
-    grid-area: subject;
-    grid-template-columns: 10% 90%;
-    padding: 20px;
-  }
-  .container > div.dateClass {
-    display: grid;
-    grid-area: date;
-    grid-template-columns: 10% 90%;
-    padding: 20px;
-  }
-  .container > div.messageClass {
-    display: grid;
-    grid-area: message;
-    grid-template-columns: 5% 95%;
-    padding: 20px;
-  }
-  .container > div.gapClass {
-    display: grid;
-    grid-area: gap;
-  }
-  .container > div.buttonClass {
-    display: grid;
-    grid-area: button;
-    padding: 20px;
-    justify-content: end;
-
-  } */

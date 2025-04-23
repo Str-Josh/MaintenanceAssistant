@@ -1,0 +1,13 @@
+.subGrid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 20px;
+    align-items: center;
+}
+
+.inputUser{
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 20% 70%;
+    align-items: center;
+}

@@ -5,66 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/static/pages/viewdevices_page.css">
+    <link rel="stylesheet" href="/static/pages/Director/AssetManagement/AddNewDevice_styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.35.1/handsontable.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/pages/stylesheet.css">
 </head>
 
-<body>
-    <div>
-        <form action="/add-device" method="post" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 5px;">
-            <br />
-            
-            <div>
-                <div class="tooltip">
-                    <label for="deviceName">Device Name:</label>
-                    <span class="tooltiptext">e.g., NeoPulse ECG Monitor</span>
-                </div>
-                <input type="text" name="deviceName" />
-            </div>
+<body class="wholepage">
+    <div class="truebody">
 
-            <div>
-                <div class="tooltip">
-                    <label for="brandName">Brand Name:</label>
-                    <span class="tooltiptext">e.g., PulseMed</span>
-                </div>
-                <input type="text" name="brandName" />
-            </div>
-            
-            <div>
-                <div class="tooltip">
-                    <label for="genName">Generic Name:</label>
-                    <span class="tooltiptext">e.g., Electrocardiogram</span>
-                </div>
-                <input type="text" name="genName" />
-            </div>
+        <div class="good-news subheader">
+            <h1 class="title">
+                Add New Asset
+            </h1>
+        </div>
 
-            <div>
-                <div class="tooltip">
-                    <label for="manName">Manufacturer:</label>
-                    <span class="tooltiptext">e.g., CardioCare Solutions</span>
-                </div>
-                <input type="text" name="manName" />
-            </div>
+        <form action="/add-device" method="post" class="AssetForm">
+            {{ form.hidden_tag() }}
             
-            <div>
-                <div class="tooltip">
-                    <label for="homeDepLoc">Stored Department:</label>
-                    <span class="tooltiptext">e.g., ICU</span>
+            <div class="subGrid">
+                <div class="assetInput">
+                    <div class="tooltip labeltext">
+                        <label for="device_name">Device Name:</label>
+                        <span class="tooltiptext">e.g., NeoPulse ECG Monitor</span>
+                    </div>
+                    {{ form.device_name(class="inputBox") }}
+                    {% for validation_error in form.device_name.errors %}
+                        <span class="validation-error">{{ validation_error }}</span>
+                    {% endfor %}
                 </div>
-                <input type="text" name="homeDepLoc" />
-            </div>
-            
-            <div>
-                <div class="tooltip">
-                    <label for="instDate">Installation Date:</label>
-                    <span class="tooltiptext">e.g., 06/24/2025</span>
+
+                <div class="assetInput">
+                    <div class="tooltip labeltext">
+                        <label for="brand_name">Brand Name:</label>
+                        <span class="tooltiptext">e.g., PulseMed</span>
+                    </div>
+                    {{ form.brand_name(class="inputBox") }}
+                    {% for validation_error in form.brand_name.errors %}
+                        <span class="validation-error">{{ validation_error }}</span>
+                    {% endfor %}
+
                 </div>
-                <input type="date" name="instDate" />
+                
+                <div class="assetInput">
+                    <div class="tooltip labeltext">
+                        <label for="generic_name">Generic Name:</label>
+                        <span class="tooltiptext">e.g., Electrocardiogram</span>
+                    </div>
+                    {{ form.generic_name(class="inputBox") }}
+                    {% for validation_error in form.generic_name.errors %}
+                        <span class="validation-error">{{ validation_error }}</span>
+                    {% endfor %}
+                </div>
+
+                <div class="assetInput">
+                    <div class="tooltip labeltext">
+                        <label for="manufacturer_name">Manufacturer:</label>
+                        <span class="tooltiptext">e.g., CardioCare Solutions</span>
+                    </div>
+                    {{ form.manufacturer_name(class="inputBox") }}
+                    {% for validation_error in form.manufacturer_name.errors %}
+                        <span class="validation-error">{{ validation_error }}</span>
+                    {% endfor %}
+                </div>
+                
+                <div class="assetInput">
+                    <div class="tooltip labeltext">
+                        <label for="home_dept_location">Stored Department:</label>
+                        <span class="tooltiptext">e.g., ICU</span>
+                    </div>
+                    {{ form.home_dept_location(class="inputBox") }}
+                    {% for validation_error in form.home_dept_location.errors %}
+                        <span class="validation-error">{{ validation_error }}</span>
+                    {% endfor %}
+                </div>
+                
+                <div class="assetInput">
+                    <div class="tooltip labeltext">
+                        <label for="installation_date">Installation Date:</label>
+                        <span class="tooltiptext">e.g., 06/24/2025</span>
+                    </div>
+                    {{ form.installation_date(class="inputBox") }}
+                    {% for validation_error in form.installation_date.errors %}
+                        <span class="validation-error">{{ validation_error }}</span>
+                    {% endfor %}
+                </div>
             </div>
-
-            <button type="submit">Add Device</button>
-
-            <br><br>
 
             <div class="tabs">
                 <div class="tab" onclick="showTab(0)">Failure Data</div>
@@ -74,7 +99,7 @@
         
             <div class="tab-content">
                 <div class="tab-pane" id="tab1">
-                    <main role="main" class="container">
+                    <main role="main" class="tabcontainer">
                         <h3>Failure Data</h3>
                         <p class="lead">Historical failure data for device</p>
                         <div class="container welcome-div">
@@ -84,41 +109,54 @@
                     </main>
                 </div>
                 <div class="tab-pane" id="tab2">
-                    <main role="main" class="container">
+                    <main role="main" class="tabcontainer">
                         <h3>Usage Data</h3>
                         <p class="lead">Historical usage data for device</p>
                         <div class="container welcome-div">
                             <div id="usage"></div>
-                            <div>
+                            <div class="assetInput">
                                 <div class="tooltip">
-                                    <label for="avgUseYear">Average Uses per year:</label>
+                                    <label for="average_uses_per_year">Average Uses per year:</label>
                                     <span class="tooltiptext">e.g., 1400</span>
                                 </div>
-                                <input type="text" name="avgUseYear" />
+                                {{ form.average_uses_per_year(class="inputBox") }}
+                                {% for validation_error in form.average_uses_per_year.errors %}
+                                    <span class="validation-error">{{ validation_error }}</span>
+                                {% endfor %}
                             </div>
                         </div>
                     </main>
                 </div>
                 <div class="tab-pane" id="tab3">
-                    <main role="main" class="container">
+                    <main role="main" class="tabcontainer">
                         <h3>Maintenance Data</h3>
                         <p class="lead">Maintenance data for device</p>
                         <div class="container welcome-div">
                             <div id="maintenance"></div>
                             <div>
-                                <div>
-                                    <label for="maintLastYear">Number of Maint. activities in last year</label>
-                                    <input type="number" name="maintLastYear"/>
+                                <div class="assetInput">
+                                    <label for="maintenance_activities_year">Number of Maint. activities in last year</label>
+                                    <input type="number" name="maintenance_activities_year" class="inputBox"/>
+                                    {{ form.maintenance_activities_year(class="inputBox") }}
+                                    {% for validation_error in form.maintenance_activities_year.errors %}
+                                        <span class="validation-error">{{ validation_error }}</span>
+                                    {% endfor %}
                                 </div>
-                                <div>
-                                    <label for="commMaintAct">Common maint. activities</label>
-                                    <input type="text" name="commMaintAct" />
+                                <div class="assetInput">
+                                    <label for="common_maintenance_activity">Common maint. activities</label>
+                                    <input type="text" name="common_maintenance_activity" class="inputBox"/>
+                                    {{ form.common_maintenance_activity(class="inputBox") }}
+                                    {% for validation_error in form.common_maintenance_activity.errors %}
+                                        <span class="validation-error">{{ validation_error }}</span>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>
                     </main>
                 </div>
             </div>
+
+            <button class="submitbutton" type="submit">Add Device</button>
 
             <script src="js/jquery.min.js"></script>
             <script src="js/bootstrap.min.js"></script>

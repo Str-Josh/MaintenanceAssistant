@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="/static/pages/Manager/ManagerHome_styles.css">
     <link rel="stylesheet" href="/static/pages/stylesheet.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='layouts/navigation_bar_styles.css') }}"> -->
     <title>Home</title>
 </head>
 <body class="wholepage">
@@ -17,15 +18,32 @@
             <div class="alerts">
                 <img class="icon" src="/static/img/AlertRed.png" alt="Alert Icon">
                 <div class="slider">
+                    <!-- <div class="slides"> -->
                     <div class="slideElementsContainer">
                         {% for asset in assets %}
-                            <form action="{{ url_for('asset_details', serial_number=asset.serial_number) }}" method="post" class="slideElementContent">
+                            <!-- <a href="/asset-details" class="slide-1"> -->
+                            <!-- <a href="/asset-details" class="slideElementContent">
+                                <p>Repair needed by<br>{{ asset.repair_by }}</p>
+                                <p>Location: {{ asset.department_location }}</p>
+                                <p><a href="{{ url_for('schedule_repair', repair_by_date=asset.repair_by) }}">Schedule Maintenance</a></p>
+                            </a> -->
+                            <!-- <a href="/asset-details" class="slideElementContent">
                                 <span>Repair needed by</span>
                                 <span>{{ asset.repair_by }}</span>
                                 <span>Location: {{ asset.department_location }}</span>
                                 <span><a href="{{ url_for('schedule_repair', repair_by_date=asset.repair_by) }}">Schedule Maintenance</a></span>
+                            </a> -->
+                            <form action="{{ url_for('asset_details', serial_number=asset.serial_number) }}" method="post" class="slideElementContent">
+                                <!-- <div class="slideElementContent"> -->
+                                <!-- <form action="/asset-detiails/{{ asset.asset_id }}" method="post" class="slideElementContent"> -->
+                                <span>Repair needed by</span>
+                                <span>{{ asset.repair_by }}</span>
+                                <span>Location: {{ asset.department_location }}</span>
+                                <span><a href="{{ url_for('schedule_repair', repair_by_date=asset.repair_by) }}">Schedule Maintenance</a></span>
+                                <!-- <span><a href="{{ url_for('asset_details', serial_number=asset.asset_id) }}">See asset info</a></span> -->
                                 <span><button class="assetDetails" type="submit">See asset details</button></span>
                             </form>
+                            <!-- </div> -->
                         {% endfor %}
                     </div>
                 </div>
@@ -45,9 +63,15 @@
                                 </div>
                             </div>
                             <div class="responseButtons">
+                                <!-- <button>Reply</button> -->
+                                
                                 <form action="{{ url_for('reply_notification', notification_sender=notification.sender, notification_subject=notification.notification_head) }}" method="post">
+                                    <!-- <input type="hidden" name="id" value="{{ notification.notification_id }}"> -->
+                                    <!-- <input type="hidden" name="source" value="pages/Manager/ManagerHome.html"> -->
                                     <button type="submit">Reply</button>
                                 </form>
+                                <!-- <button href="{{ url_for('view_assets') }}">See Details</button> -->
+                                <!-- {% set decomp = notification.notification_head.split(':') %} -->
                                 {% if decomp[0] == "Maintenance Request" %}
                                     <button href="#">Assign to me</button>
                                     <button href="{{ url_for('elevate', id=notification.notification_id) }}">Elevate to director</button>
@@ -57,7 +81,8 @@
                                     <input type="hidden" name="id" value="{{ notification.notification_id }}">
                                     <input type="hidden" name="source" value="pages/Manager/ManagerHome.html">
                                     <button type="submit">Delete</button>
-                                </form>                                
+                                </form>
+                                
                             </div>
                         </div>
                     {% endfor %}

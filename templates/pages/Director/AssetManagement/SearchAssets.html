@@ -1,0 +1,67 @@
+{% extends "layouts/nav.html" %}
+{% block content %}
+
+<head>
+    <title>Maintenance Assistant - Find Asset</title>
+    <link rel="stylesheet" href="/static/pages/Director/AssetManagement/SearchAssets.css">
+    <link rel="stylesheet" href="/static/pages/stylesheet.css">
+</head>
+<body class="wholepage">
+    <div class="truebody">
+        <div class="device subheader">
+            <h1 class="title">
+                Find Asset
+            </h1>
+        </div>
+        
+        {% if found_assets %}
+            <div class="results">
+                {% for _asset in found_assets %}
+                <div class="assetresult">
+                    <span class="resultText">{{ _asset.asset_name }}</span>
+                </div>
+                {% endfor %}
+            </div>
+
+        {% else %}
+
+            {% if no_assets_found %}
+
+                <div class="noasset">
+                    <h1>
+                        Unfortunately, your search had 0 results. Please try again :]
+                    </h1>
+                </div>
+
+            {% else %}
+
+                <!-- Should prolly search everything to string so serverside can convert if necessary -->
+                <form action="/search-asset" method="post" class="searchassetForm">
+                    {{ form.hidden_tag() }}
+
+                    <div class="idek">
+                        <label for="search_by" class="labeltext">Search by:</label>
+                        {{ form.search_by(class="inputBox") }}
+                        {% for validation_error in form.search_by.errors %}
+                            <span class="validation-error">{{ validation_error }}</span>
+                        {% endfor %}
+                    </div>
+
+                    <div class="idek">
+                        <label for="search_phrase" class="labeltext">Search Phrase:</label>
+                        {{ form.search_phrase(class="inputBox") }}
+                        {% for validation_error in form.search_phrase.errors %}
+                            <span class="validation-error">{{ validation_error }}</span>
+                        {% endfor %}
+                    </div>
+
+                    <button type="submit" class="submitbutton">Search</button>
+                </form>
+
+            {% endif %}
+
+        {% endif %}
+        
+    </div>
+</body>
+{% endblock %}

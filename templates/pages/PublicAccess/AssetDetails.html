@@ -4,41 +4,61 @@
 <head>
     <title>Asset Information</title>
     <link rel="stylesheet" href="/static/pages/PublicAccess/AssetDetails_styles.css">
+    <link rel="stylesheet" href="/static/pages/stylesheet.css">
 </head>
-<body>
+<body class="wholepage">
+    <div class="truebody">
     <div class="device subheader">
         <h1 class="title">
-            Information on Asset
+            {{ asset.generic_name }} Information
         </h1>
     </div>
 
     <div class="assetDisplay">
-        <div class="assetCircle">
+        <!-- <div class="assetCircle">
             <img src="/static/img/mri.png">
-        </div>
+            MR 770: Radiology Room 42
+        </div> -->
         <div class="assetInfo">
             <div class="assetHead">
-                MR 770: Radiology Room 42
+                {{ asset.location }}
             </div>
-            <div class="assetSubHead"> 
-                Maintenance Scheduled on April 20
+            <div class="assetSubHead">
+                {% if maintenance_scheduled %}
+                    <span>Maintenance Scheduled on {{ asset.upcoming_maintenance_action_date }}</span>
+                {% else %}
+                    <span>Maintenance needs scheduled: </span>
+                    <form action="{{ url_for('schedule_repair') }}">
+                        <button class="submitbutton" type="submit">Schedule</button>
+                    </form>
+                {% endif %}
             </div>
         </div>
     </div>
 
     <div class="info">
-        <h3 class="labeltext">
-            Description
-        </h3>
-        <div class="inputBox">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
+        <h3 class="labeltext">Generic Name:</h3>
+        <div class="displaybox">{{ asset.generic_name }}</div>
+        
+        <h3 class="labeltext">Brand Name:</h3>
+        <div class="displaybox">{{ asset.brand }}</div>
+
+        <h3 class="labeltext">Manufacturer:</h3>
+        <div class="displaybox">{{ asset.manufacturer }}</div>
+
+        <h3 class="labeltext">Average uses per year:</h3>
+        <div class="displaybox">{{ asset.average_use_per_year }}</div>
+
+        <h3 class="labeltext">Total units in service:</h3>
+        <div class="displaybox">{{ asset.total_units_in_service }}</div>
+
+        <h3 class="labeltext">last maintenance date:</h3>
+        <div class="displaybox">{{ asset.last_maintenance_date }}</div>
+
+        <h3 class="labeltext">Total maintenance costs in past year:</h3>
+        <div class="displaybox">{{ asset.total_maintenance_costs_in_past_year }}</div>
     </div>
-    
+   </div> 
 </body>
 </html>
 

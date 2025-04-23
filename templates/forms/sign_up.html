@@ -3,57 +3,100 @@
 
 <head>
     <title>Create new user</title>
+    <link rel="stylesheet" href="/static/forms/signup.css">
+    <link rel="stylesheet" href="/static/pages/stylesheet.css">
     <!-- <link rel="stylesheet" href="/static/pages/Director/DirectorHome_styles.css"> -->
 </head>
-<body>
-<div class="container" style="text-align: center;">
-    <h1>Register new user account</h1>
-    <form action="/register" method="post">
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" name="username" />
+<body class="wholepage">
+    <div class="truebody Special">
+        <div class="general subheader">
+            <h1 class="title">
+                Register new user account
+            </h1>
         </div>
+        
+        <form action="/register" method="post" class="subGrid">
+            {{ form.hidden_tag() }}
 
-        <div>
-            <label for="firstname">First name:</label>
-            <input type="text" name="firstname" />
-        </div>
+            <div class="inputUser">
+                <label for="username" class="labeltext">Username:</label>
+                {{ form.username(class="inputBox") }}
+                {% for validation_error in form.username.errors %}
+                    <span class="validation-error">{{ validation_error }}</span>
+                {% endfor %}
+            </div>
 
-        <div>
-            <label for="lastname">Last name:</label>
-            <input type="text" name="lastname" />
-        </div>
+            <div class="inputUser">
+                <label for="password" class="labeltext">Password:</label>
+                {{ form.password(class="inputBox") }}
+                {% for validation_error in form.password.errors %}
+                    <span class="validation-error">{{ validation_error }}</span>
+                {% endfor %}
+            </div>
 
-        <div>
-            <label for="email">Email:</label>
-            <input type="text" name="email" />
-        </div>
+            <div class="inputUser">
+                <label for="first_name" class="labeltext">First name:</label>
+                {{ form.first_name(class="inputBox") }}
+                {% for validation_error in form.first_name.errors %}
+                    <span class="validation-error">{{ validation_error }}</span>
+                {% endfor %}
+            </div>
 
-        <div>
-            <label for="phoneNumber">Phone Number:</label>
-            <input type="number" name="phoneNumber" />
-        </div>
+            <div class="inputUser">
+                <label for="last_name" class="labeltext">Last name:</label>
+                {{ form.last_name(class="inputBox") }}
+                {% for validation_error in form.last_name.errors %}
+                    <span class="validation-error">{{ validation_error }}</span>
+                {% endfor %}
+            </div>
 
-        <div>
-            <label for="user_role">User role:</label>
-            <select class="dropdown-content" name="user_role" multiple>
-                <!-- <option value="" disabled selected>Select a role</option> -->
-                <!-- <option value="Admin">Admin</option> -->
-                <option value="Director">Director</option>
-                <option value="Manager">Maintenance Manager</option>
-                <option value="Staff">Maintenance Staff</option>
-            </select>
-        </div>
+            <div class="inputUser">
+                <label for="email" class="labeltext">Email:</label>
+                {{ form.email(class="inputBox") }}
+                {% for validation_error in form.email.errors %}
+                    <span class="validation-error">{{ validation_error }}</span>
+                {% endfor %}
+            </div>
 
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" name="password" />
-        </div>
+            <div class="inputUser">
+                <label for="phone_number" class="labeltext">Phone Number:</label>
+                {{ form.phone_number(class="inputBox") }}
+                {% for validation_error in form.phone_number.errors %}
+                    <span class="validation-error">{{ validation_error }}</span>
+                {% endfor %}
+            </div>
 
+            <div class="inputUser">
+                <label for="user_role" class="labeltext">User role:</label>
+                {{ form.user_role(class="dropdown-content inputBox") }}
+                {% for error in form.user_role.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+                <!-- <select class="dropdown-content inputBox" name="user_role" multiple>
+                    <option value="Director">Director</option>
+                    <option value="Manager">Maintenance Manager</option>
+                    <option value="Staff">Maintenance Staff</option>
+                </select> -->
+            </div>
+
+            <div>
+                <button type="submit" class="submitbutton">Submit</button>
+            </div>
+        </form>
         <div>
-            <button type="submit">Submit</button>
+        {% if validators_response %}
+            {% for field_error, validator_errors in validators_response.items() %}
+                <span>{{ field_error }}:</span>
+                {% for validator_error in validator_errors %}
+                    <span>{{ validator_error }}</span>
+                    <br />
+                {% endfor %}
+                <br />
+            {% endfor %}
+        {% else %}
+        {% endif %}
         </div>
-    </form>
+        
 </div>
 </body>
 

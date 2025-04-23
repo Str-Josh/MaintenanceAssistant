@@ -8,76 +8,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Assets</title>
     <link rel="stylesheet" href="/static/pages/Director/AssetManagement/ViewDevices_styles.css">
+    <link rel="stylesheet" href="/static/pages/stylesheet.css">
 </head>
 
-<body>
-    <div class="device subheader">
-        <h1 class="title">
-            Find Asset
-        </h1>
-    </div>
+<body class="wholepage">
+    <div class="truebody Special">
+        <div class="device subheader">
+            <h1 class="title">
+                Find Asset
+            </h1>
+        </div>
 
-    <form class="searchbar">
-            <label for="lookup" class="labeltext"><h4>Search Asset:</h4></label>
-            <input type="text" id="lookup" name="lookup" class="textbox">
-    </form>
+        <form class="searchbar">
+                <label for="lookup" class="labeltext"><h4>Search Asset:</h4></label>
+                <input type="text" id="lookup" name="lookup" class="textbox">
+        </form>
 
-    
-    <button type="button" onclick="window.location.href='/asset-details'" class="results" >
-            <div class="gridLeft upperLeft">
-                <img src="/static/img/mri.png">
+        
+        <button type="button" onclick="window.location.href='/asset-details'" class="results" >
+                <div class="gridLeft upperLeft">
+                    <img src="/static/img/mri.png">
+                </div>
+                <div class="gridRight upperRight">
+                    <div class="assetDescrip">
+                        MR 770: Room 42
+                    </div>
+                    <div class="scheduled">
+                        Maintenance Scheduled on April 20
+                    </div>
+                </div>
+            </button>
+            <button class="results">
+                <div class="gridLeft">
+                    <img src="/static/img/ultrasound.png">
+                </div>
+                <div class="gridRight">
+                    <div class="assetDescrip">
+                        EPIQ Elite: Room 20A
+                    </div>
+                    <div class="scheduled" style="display:none">
+                        Maintenance Scheduled on April 20
+                    </div>
+                </div>
+            </button>
+            <button class="results">
+                <div class="gridLeft">
+                    <img src="/static/img/pagewriter.png">
+                </div>
+                <div class="gridRight">
+                    <div class="assetDescrip">
+                        PageWriter TC70: Room 64B
+                    </div>
+                    <div class="scheduled" style="display:none">
+                        Maintenance Scheduled on April 20
+                    </div>
+                </div>
+            </button>
+            <button class="results">
+            <div class="gridLeft bottomLeft">
+                <img src="/static/img/logo.png">
             </div>
-            <div class="gridRight upperRight">
+            <div class="gridRight bottomRight">
                 <div class="assetDescrip">
                     MR 770: Room 42
                 </div>
-                <div class="scheduled">
-                    Maintenance Scheduled on April 20
-                </div>
-            </div>
-        </button>
-        <button class="results">
-            <div class="gridLeft">
-                <img src="/static/img/ultrasound.png">
-            </div>
-            <div class="gridRight">
-                <div class="assetDescrip">
-                    EPIQ Elite: Room 20A
-                </div>
                 <div class="scheduled" style="display:none">
                     Maintenance Scheduled on April 20
                 </div>
             </div>
-        </button>
-        <button class="results">
-            <div class="gridLeft">
-                <img src="/static/img/pagewriter.png">
-            </div>
-            <div class="gridRight">
-                <div class="assetDescrip">
-                    PageWriter TC70: Room 64B
-                </div>
-                <div class="scheduled" style="display:none">
-                    Maintenance Scheduled on April 20
-                </div>
-            </div>
-        </button>
-        <button class="results">
-        <div class="gridLeft bottomLeft">
-            <img src="/static/img/logo.png">
-        </div>
-        <div class="gridRight bottomRight">
-            <div class="assetDescrip">
-                MR 770: Room 42
-            </div>
-            <div class="scheduled" style="display:none">
-                Maintenance Scheduled on April 20
-            </div>
-        </div>
-        </button>
+            </button>
 
-    
-
+        
+    </div>
 </body>
 </html>
 

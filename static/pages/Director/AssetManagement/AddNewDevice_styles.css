@@ -1,0 +1,65 @@
+.AssetForm{
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 10px;
+}
+
+.tabcontainer {
+    padding: 10px;
+    margin: 10px;
+}
+
+.tabs{
+    display: flex;
+}
+
+
+
+.tab{
+    background: var(--accent-clr);
+    color: white;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.active-tab{
+    background-color: var(--main-blue) !important;
+    color: var(--grey) !important;
+}
+
+.tab-content{
+    border: var(--main-blue) solid 3px;
+    border-radius: 20px;
+    background-color: var(--accent-clr);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin: 0px 20px 20px;
+}
+
+.tab-content h3{
+    color: white;
+}
+
+.tab-content label{
+    color: white;
+}
+
+.tab-content p{
+    color: var(--grey);
+}
+
+.subGrid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 20px;
+}
+
+.assetInput {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
