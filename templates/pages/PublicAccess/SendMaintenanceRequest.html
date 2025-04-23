@@ -16,9 +16,9 @@
             {{ form.hidden_tag() }}
 
             <div class="form">
-                <div>
+                <div class="urgencyClass">
                     <label for="urgencyCheck" class="labeltext">Level of urgency</label>
-                    {{ form.urgency_level(class="doINeedThisClass") }}
+                    {{ form.urgency_level(class="inputBox doINeedThisClass") }}
                     {% for error in form.urgency_level.errors %}
                         <span class="error">{{ error }}</span>
                     {% endfor %}
@@ -45,7 +45,9 @@
                     {% endfor %}
                 </div>
         
+                <div class="buttonClass">
                 <button type="submit" class="submitButton">Send Maintenance Request</button>
+                </div>
             </div>
         </form>
     </div>

@@ -42,7 +42,7 @@ align-items: center;
 .form {
   display: grid;
   grid-template-areas:
-    "subject date"
+    "subject urgency"
     "message message"
     "gap button";
     grid-template-columns: 50% 50%;
@@ -58,9 +58,9 @@ align-items: center;
   grid-template-columns: 10% 90%;
   padding: 20px;
 }
-.form > div.dateClass {
+.form > div.urgencyClass {
   display: grid;
-  grid-area: date;
+  grid-area: urgency;
   grid-template-columns: 10% 90%;
   padding: 20px;
 }
