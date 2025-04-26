@@ -136,7 +136,7 @@
                             <div>
                                 <div class="assetInput">
                                     <label for="maintenance_activities_year">Number of Maint. activities in last year</label>
-                                    <input type="number" name="maintenance_activities_year" class="inputBox"/>
+                                    <!--<input type="number" name="maintenance_activities_year" class="inputBox"/>-->
                                     {{ form.maintenance_activities_year(class="inputBox") }}
                                     {% for validation_error in form.maintenance_activities_year.errors %}
                                         <span class="validation-error">{{ validation_error }}</span>
@@ -144,7 +144,7 @@
                                 </div>
                                 <div class="assetInput">
                                     <label for="common_maintenance_activity">Common maint. activities</label>
-                                    <input type="text" name="common_maintenance_activity" class="inputBox"/>
+                                    <!--<input type="text" name="common_maintenance_activity" class="inputBox"/>-->
                                     {{ form.common_maintenance_activity(class="inputBox") }}
                                     {% for validation_error in form.common_maintenance_activity.errors %}
                                         <span class="validation-error">{{ validation_error }}</span>
