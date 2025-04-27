@@ -131,6 +131,12 @@ def home():
                 # return CachedResponse(response=make_response(render_template("pages/Director/DirectorHome.html", timeout=20)))
                 return render_template("pages/Director/DirectorHome.html")
             elif role == 'manager':
+                teamMembersListing = User.query.all()
+                teamMembers = []
+                for _ in teamMembersListing:
+                    teamMembers.append( { "name": _.first_name + " " + _.last_name } )
+
+
                 # Backend stuff for viewing devices needing upcoming repairs.
                 company_assets = Asset.query.all()
                 maintenance_required = []
@@ -152,7 +158,12 @@ def home():
                 notifications = Messages.query.filter_by(recipient=current_user.username).all()
                 app.logger.warning(maintenance_required)
 
-                return render_template("pages/Manager/ManagerHome.html", assets=maintenance_required, notifications=notifications)
+                return render_template(
+                    "pages/Manager/ManagerHome.html",
+                    assets=maintenance_required,
+                    notifications=notifications,
+                    teamMembers=teamMembers
+                )
                 # return CachedResponse(
                 #     response=make_response(
                 #         render_template(
